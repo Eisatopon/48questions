@@ -746,10 +746,12 @@
 
           // Preview questions
           const previewList = document.getElementById('featured-preview-list');
-          if (previewList && latest.preview) {
+          if (previewList && latest.preview && latest.preview.length > 0) {
             previewList.innerHTML = latest.preview.map((q, i) =>
-              `<div class="preview-q"><span class="preview-num">${String((i+1)*5).padStart(2,'0')}</span>${q}</div>`
+              `<div class="preview-q"><span class="preview-num">${String(i+1).padStart(2,'0')}</span>${q}</div>`
             ).join('');
+          } else if (previewList) {
+            previewList.innerHTML = '<div class="preview-q" style="color:var(--muted)">Questions loading...</div>';
           }
         }
 
