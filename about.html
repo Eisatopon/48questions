@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About | 48Questions</title>
+  <meta name="description" content="48Questions breaks complex events into clear, honest questions. No jargon. No spin. Just understanding." />
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRYY70ZVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SZRYY70ZVE');
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --paper-dark: #ede8dc;
+      --accent: #c0392b;
+      --muted: #4a4535;
+      --border: #d4ccbc;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 300;
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 50;
+    }
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-brand span { color: var(--accent); }
+
+    .content {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 5rem 2rem 6rem;
+    }
+
+    .eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 2.5rem;
+    }
+
+    h1 em { font-style: italic; color: var(--accent); }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.85;
+      margin-bottom: 2rem;
+      color: var(--ink);
+    }
+
+    p {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 3rem 0;
+    }
+
+    .principle {
+      margin-bottom: 2rem;
+    }
+
+    .principle-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 0.5rem;
+    }
+
+    .cta-block {
+      background: var(--paper-dark);
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin-top: 3rem;
+    }
+
+    .cta-block p {
+      margin-bottom: 1rem;
+      color: var(--ink);
+    }
+
+    .cta-link {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--accent);
+    }
+
+    footer {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2rem 2rem 4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1rem;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .footer-brand span { color: var(--accent); }
+
+    footer p { font-size: 0.78rem; color: var(--muted); margin: 0; }
+
+    @media (max-width: 600px) {
+      .content { padding: 3rem 1.2rem 4rem; }
+      footer { padding: 2rem 1.2rem 3rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/index.html" class="nav-brand"><span>48</span>Questions</a>
+  </nav>
+
+  <div class="content">
+    <p class="eyebrow">About</p>
+    <h1>We ask the questions<br><em>no one thinks to ask.</em></h1>
+
+    <p class="lead">
+      Every major event has a story behind the story. A reason behind the reason. A context that most coverage skips — because it's complicated, or inconvenient, or simply takes too long to explain.
+    </p>
+
+    <p>
+      48Questions exists to fill that gap. We take complex events — wars, economic crises, scientific discoveries, political upheavals — and break them down into clear, honest questions. The kind a curious person would actually ask. Not a journalist. Not a professor. A person who wants to genuinely understand.
+    </p>
+
+    <p>
+      We are a small team of educators and researchers. We don't have a political agenda. We don't take advertising. We don't simplify to the point of distortion. We just ask questions — and try to answer them honestly.
+    </p>
+
+    <hr class="divider">
+
+    <div class="principle">
+      <p class="principle-title">The goal is not to know more facts.</p>
+      <p>It's to ask better questions. Facts without context are just noise. A well-asked question cuts through the noise and gets to what actually matters.</p>
+    </div>
+
+    <div class="principle">
+      <p class="principle-title">We don't tell you what to think.</p>
+      <p>We show you what happened, who was involved, and what the consequences were. The conclusions are yours. That's the point.</p>
+    </div>
+
+    <div class="principle">
+      <p class="principle-title">Every article ends with an open question.</p>
+      <p>Because understanding isn't a destination. It's a direction.</p>
+    </div>
+
+    <hr class="divider">
+
+    <p>
+      48Questions is independent. It is not affiliated with any media organization, political party, or institution. It is funded by nothing except the belief that clear thinking is worth the effort.
+    </p>
+
+    <div class="cta-block">
+      <p>Have a topic you'd like us to cover? A question we haven't asked yet?</p>
+      <a href="https://x.com/48_questions" target="_blank" class="cta-link">Find us on X @48_questions →</a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="/index.html" class="footer-brand"><span>48</span>Questions</a>
+    <p>Understand anything. One question at a time.</p>
+  </footer>
+
+</body>
+</html>
