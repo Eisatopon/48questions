@@ -630,25 +630,20 @@
   <div class="divider"></div>
 
   <!-- FEATURED TOPIC -->
-  <section class="featured">
+  <section class="featured" id="featured-section">
     <div class="featured-content">
-      <p class="featured-label">Featured Topic</p>
-      <h2 class="featured-title">The Gulf War<br>in <em>48 Questions</em></h2>
-      <p class="featured-desc">You think you know the Gulf War. A quick war, Saddam lost, the end. But why did Arab nations fight another Arab nation? And why did the West leave Saddam in power after defeating him?</p>
+      <p class="featured-label">Latest Topic</p>
+      <h2 class="featured-title" id="featured-title">—</h2>
+      <p class="featured-desc" id="featured-desc">—</p>
       <div class="featured-meta">
-        <div><strong>48</strong> Questions</div>
+        <div><strong id="featured-qs">—</strong> Questions</div>
         <div><strong>4</strong> Parts</div>
-        <div><strong>~12 min</strong> Read</div>
       </div>
-      <a href="topics/history/gulf-war.html" class="btn-primary">Read Now</a>
+      <a href="#" id="featured-btn" class="btn-primary">Read Now</a>
     </div>
     <div class="featured-preview">
       <p class="preview-title">Sample Questions</p>
-      <div class="preview-q"><span class="preview-num">05</span>Why did Saddam believe no one would stop him?</div>
-      <div class="preview-q"><span class="preview-num">10</span>Why did Arab countries join a coalition against another Arab nation?</div>
-      <div class="preview-q"><span class="preview-num">18</span>What were Scud missiles — and why did they matter?</div>
-      <div class="preview-q"><span class="preview-num">21</span>Why didn't the coalition march to Baghdad?</div>
-      <div class="preview-q"><span class="preview-num">25</span>What was the long-term impact — and does it connect to 9/11?</div>
+      <div id="featured-preview-list"></div>
     </div>
   </section>
 
@@ -733,6 +728,31 @@
         });
         window._allTopics = topics;
         window._publishedTopics = topics.filter(t => t.status === 'published');
+
+        // Update featured section with latest published topic
+        const latest = window._publishedTopics[0];
+        if (latest) {
+          document.getElementById('featured-title').innerHTML = latest.title + '<br>in <em>' + latest.questions + ' Questions</em>';
+          document.getElementById('featured-desc').textContent = latest.hook;
+          document.getElementById('featured-qs').textContent = latest.questions;
+          document.getElementById('featured-btn').href = latest.url;
+
+          // Hero CTA
+          const heroBtn = document.querySelector('.btn-secondary');
+          if (heroBtn) {
+            heroBtn.textContent = 'Read: ' + latest.title.split(':')[0];
+            heroBtn.href = latest.url;
+          }
+
+          // Preview questions
+          const previewList = document.getElementById('featured-preview-list');
+          if (previewList && latest.preview) {
+            previewList.innerHTML = latest.preview.map((q, i) =>
+              `<div class="preview-q"><span class="preview-num">${String((i+1)*5).padStart(2,'0')}</span>${q}</div>`
+            ).join('');
+          }
+        }
+
         renderTopics(topics);
       })
       .catch(() => {
