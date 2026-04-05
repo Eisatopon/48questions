@@ -99,7 +99,75 @@
       text-transform: uppercase;
     }
 
-    /* ── HERO ── */
+    /* ── HERO BANNER ── */
+    .hero-banner {
+      background: #1a0f0f;
+      position: relative;
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, #3d1a1a 0%, #1a0f0f 70%);
+    }
+
+    .hero-banner-deco {
+      position: absolute;
+      right: -3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(10rem, 22vw, 20rem);
+      font-weight: 900;
+      color: rgba(255,255,255,0.04);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-banner-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .hero-banner .category-tag {
+      color: var(--accent);
+      border-color: rgba(192,57,43,0.5);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-banner h1 {
+      color: #f5f0e8;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-banner h1 em {
+      color: var(--accent);
+    }
+
+    .hero-banner .hero-intro {
+      color: rgba(245,240,232,0.65);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+    }
+
+    .hero-banner .hero-meta {
+      color: rgba(245,240,232,0.45);
+    }
+
+    .hero-banner .hero-meta strong {
+      color: rgba(245,240,232,0.9);
+    }
+
+    /* ── HERO (text-only fallback, kept for structure) ── */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -396,19 +464,22 @@
     <span class="nav-counter" id="nav-counter">0 / 48 answered</span>
   </nav>
 
-  <!-- HERO -->
-  <header class="hero">
-    <span class="category-tag">History</span>
-    <h1>The Gulf War<br>in <em>48 Questions</em></h1>
-    <p class="hero-intro">
-      You think you know the Gulf War. A quick war, Saddam lost, the end. But why did he invade? Why did Arab nations fight another Arab nation? And why did the West leave Saddam in power after defeating him? The answers are more surprising than you think.
-    </p>
-    <div class="hero-meta">
-      <div><strong>48</strong> Questions</div>
-      <div><strong>4</strong> Parts</div>
-      <div><strong>~12 min</strong> Read</div>
+  <!-- HERO BANNER -->
+  <div class="hero-banner">
+    <div class="hero-banner-deco" aria-hidden="true">1991</div>
+    <div class="hero-banner-inner">
+      <span class="category-tag">History</span>
+      <h1>The Gulf War<br>in <em>48 Questions</em></h1>
+      <p class="hero-intro">
+        You think you know the Gulf War. A quick war, Saddam lost, the end. But why did he invade? Why did Arab nations fight another Arab nation? And why did the West leave Saddam in power after defeating him? The answers are more surprising than you think.
+      </p>
+      <div class="hero-meta">
+        <div><strong>48</strong> Questions</div>
+        <div><strong>4</strong> Parts</div>
+        <div><strong>~12 min</strong> Read</div>
+      </div>
     </div>
-  </header>
+  </div>
 
   <!-- TABLE OF CONTENTS -->
   <nav class="toc" aria-label="Jump to section">
