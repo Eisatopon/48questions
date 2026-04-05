@@ -695,83 +695,12 @@
   <section class="topics-section" id="topics">
     <p class="section-label">All Topics</p>
     <h2 class="section-title">Pick your next question.</h2>
-
-    <div class="topics-grid">
-
-      <a href="topics/history/gulf-war.html" class="topic-card">
-        <p class="topic-cat">History</p>
-        <h3 class="topic-title">The Gulf War</h3>
-        <p class="topic-hook">Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?</p>
-        <div class="topic-footer">
-          <span class="topic-qs">44 questions</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="topics/politics/trumps-tariffs.html" class="topic-card">
-        <p class="topic-cat">Politics</p>
-        <h3 class="topic-title">Trump's Tariffs Explained</h3>
-        <p class="topic-hook">You think tariffs are someone else's problem. They're not — you've already paid them.</p>
-        <div class="topic-footer">
-          <span class="topic-qs">44 questions</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="#" class="topic-card">
-        <p class="topic-cat">History</p>
-        <h3 class="topic-title">The Fall of Constantinople</h3>
-        <p class="topic-hook">The city had survived a thousand years. What finally brought it down in 1453?</p>
-        <div class="topic-footer">
-          <span class="topic-qs">Coming soon</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="#" class="topic-card">
-        <p class="topic-cat">Science</p>
-        <h3 class="topic-title">The Discovery of Penicillin</h3>
-        <p class="topic-hook">A contaminated petri dish. A distracted scientist. And the drug that saved 200 million lives.</p>
-        <div class="topic-footer">
-          <span class="topic-qs">Coming soon</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="#" class="topic-card">
-        <p class="topic-cat">Business</p>
-        <h3 class="topic-title">The 2008 Financial Crisis</h3>
-        <p class="topic-hook">Everyone felt it. Almost no one understands what actually happened — or who let it.</p>
-        <div class="topic-footer">
-          <span class="topic-qs">Coming soon</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="#" class="topic-card">
-        <p class="topic-cat">Politics</p>
-        <h3 class="topic-title">How Dictatorships Rise</h3>
-        <p class="topic-hook">They never start with tanks. They start with something much more ordinary.</p>
-        <div class="topic-footer">
-          <span class="topic-qs">Coming soon</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
-      <a href="#" class="topic-card">
-        <p class="topic-cat">Psychology</p>
-        <h3 class="topic-title">How Manipulation Works</h3>
-        <p class="topic-hook">You think you'd notice. The research says otherwise.</p>
-        <div class="topic-footer">
-          <span class="topic-qs">Coming soon</span>
-          <span class="topic-arrow">→</span>
-        </div>
-      </a>
-
+    <div class="topics-grid" id="topics-grid">
+      <!-- loaded from topics.json -->
     </div>
   </section>
 
-  <!-- PHILOSOPHY STRIP -->
+    <!-- PHILOSOPHY STRIP -->
   <section class="philosophy">
     <div class="philosophy-inner">
       <p class="philosophy-quote">"The goal is not to know more facts. The goal is to ask better questions."</p>
@@ -794,26 +723,45 @@
   </footer>
 
   <script>
+    // Load topics from JSON
+    fetch('topics.json')
+      .then(r => r.json())
+      .then(topics => {
+        const grid = document.getElementById('topics-grid');
+        const published = topics.filter(t => t.status === 'published');
+
+        // Update Surprise Me with published topics
+        window._publishedTopics = published;
+
+        topics.forEach(t => {
+          const isPublished = t.status === 'published';
+          const card = document.createElement(isPublished ? 'a' : 'div');
+          if (isPublished) card.href = t.url;
+          card.className = 'topic-card';
+          card.innerHTML = `
+            <p class="topic-cat">${t.category}</p>
+            <h3 class="topic-title">${t.title}</h3>
+            <p class="topic-hook">${t.hook}</p>
+            <div class="topic-footer">
+              <span class="topic-qs">${isPublished ? t.questions + ' questions' : 'Coming soon'}</span>
+              <span class="topic-arrow">→</span>
+            </div>`;
+          grid.appendChild(card);
+        });
+      })
+      .catch(() => {
+        // fallback if JSON fails
+        document.getElementById('topics-grid').innerHTML = '<p style="padding:2rem; color:var(--muted);">Topics loading...</p>';
+      });
+
     // Nav background on scroll
     const nav = document.getElementById('nav');
     window.addEventListener('scroll', () => {
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // Surprise me — picks a random available topic
-    const topics = [
-      { url: 'topics/history/gulf-war.html', title: 'The Gulf War' },
-    ];
-
-    // Future topics (coming soon) — excluded until published
-    // { url: 'topics/constantinople.html', title: 'The Fall of Constantinople' },
-    // { url: 'topics/penicillin.html', title: 'The Discovery of Penicillin' },
-
     function surpriseMe() {
-      if (topics.length === 1) {
-        window.location.href = topics[0].url;
-        return;
-      }
+      const topics = window._publishedTopics || [{ url: 'topics/history/gulf-war.html' }];
       const pick = topics[Math.floor(Math.random() * topics.length)];
       window.location.href = pick.url;
     }
