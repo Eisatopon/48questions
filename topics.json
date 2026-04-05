@@ -6,7 +6,14 @@
     "questions": 41,
     "url": "topics/politics/rare-earths.html",
     "status": "published",
-    "date": "2026-04-05"
+    "date": "2026-04-05",
+    "preview": [
+      "How many rare earth elements are in your phone right now?",
+      "Why did China cut off Japan in 2010?",
+      "Could this trigger a war?",
+      "Why can't we just use something else?",
+      "Which country will be the next China in rare earths?"
+    ]
   },
   {
     "title": "Trump's Tariffs Explained",
@@ -15,7 +22,14 @@
     "questions": 44,
     "url": "topics/politics/trumps-tariffs.html",
     "status": "published",
-    "date": "2026-04-04"
+    "date": "2026-04-04",
+    "preview": [
+      "Who actually pays a tariff?",
+      "Why did Trump target China specifically?",
+      "What happened to American farmers?",
+      "Could this lead to a recession?",
+      "Every tariff has a flag on it. The bill never does."
+    ]
   },
   {
     "title": "The Gulf War",
@@ -24,7 +38,14 @@
     "questions": 44,
     "url": "topics/history/gulf-war.html",
     "status": "published",
-    "date": "2026-04-03"
+    "date": "2026-04-03",
+    "preview": [
+      "Why did Saddam believe no one would stop him?",
+      "Why did Arab countries join a coalition against another Arab nation?",
+      "What were Scud missiles — and why did they matter?",
+      "Why didn't the coalition march to Baghdad?",
+      "What was the long-term impact — and does it connect to 9/11?"
+    ]
   },
   {
     "title": "The Fall of Constantinople",
@@ -33,7 +54,8 @@
     "questions": 0,
     "url": "",
     "status": "coming-soon",
-    "date": ""
+    "date": "",
+    "preview": []
   },
   {
     "title": "The 2008 Financial Crisis",
@@ -42,7 +64,8 @@
     "questions": 0,
     "url": "",
     "status": "coming-soon",
-    "date": ""
+    "date": "",
+    "preview": []
   },
   {
     "title": "How Dictatorships Rise",
@@ -51,6 +74,7 @@
     "questions": 0,
     "url": "",
     "status": "coming-soon",
-    "date": ""
+    "date": "",
+    "preview": []
   }
 ]
