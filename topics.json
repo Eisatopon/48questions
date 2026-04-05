@@ -1,11 +1,12 @@
 [
   {
-    "title": "The Gulf War",
-    "hook": "Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?",
-    "category": "History",
-    "questions": 44,
-    "url": "topics/history/gulf-war.html",
-    "status": "published"
+    "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
+    "hook": "They're in your phone, your car, your weapons. And one country controls the supply.",
+    "category": "Politics",
+    "questions": 41,
+    "url": "topics/politics/rare-earths.html",
+    "status": "published",
+    "date": "2026-04-05"
   },
   {
     "title": "Trump's Tariffs Explained",
@@ -13,15 +14,17 @@
     "category": "Politics",
     "questions": 44,
     "url": "topics/politics/trumps-tariffs.html",
-    "status": "published"
+    "status": "published",
+    "date": "2026-04-04"
   },
   {
-    "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
-    "hook": "They're in your phone, your car, your weapons. And one country controls the supply.",
-    "category": "Geopolitics",
-    "questions": 41,
-    "url": "topics/politics/rare-earths.html",
-    "status": "published"
+    "title": "The Gulf War",
+    "hook": "Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?",
+    "category": "History",
+    "questions": 44,
+    "url": "topics/history/gulf-war.html",
+    "status": "published",
+    "date": "2026-04-03"
   },
   {
     "title": "The Fall of Constantinople",
@@ -29,7 +32,8 @@
     "category": "History",
     "questions": 0,
     "url": "",
-    "status": "coming-soon"
+    "status": "coming-soon",
+    "date": ""
   },
   {
     "title": "The 2008 Financial Crisis",
@@ -37,7 +41,8 @@
     "category": "Business",
     "questions": 0,
     "url": "",
-    "status": "coming-soon"
+    "status": "coming-soon",
+    "date": ""
   },
   {
     "title": "How Dictatorships Rise",
@@ -45,6 +50,7 @@
     "category": "Politics",
     "questions": 0,
     "url": "",
-    "status": "coming-soon"
+    "status": "coming-soon",
+    "date": ""
   }
 ]
