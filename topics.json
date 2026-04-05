@@ -1,0 +1,50 @@
+[
+  {
+    "title": "The Gulf War",
+    "hook": "Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?",
+    "category": "History",
+    "questions": 44,
+    "url": "topics/history/gulf-war.html",
+    "status": "published"
+  },
+  {
+    "title": "Trump's Tariffs Explained",
+    "hook": "You think tariffs are someone else's problem. They're not — you've already paid them.",
+    "category": "Politics",
+    "questions": 44,
+    "url": "topics/politics/trumps-tariffs.html",
+    "status": "published"
+  },
+  {
+    "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
+    "hook": "They're in your phone, your car, your weapons. And one country controls the supply.",
+    "category": "Geopolitics",
+    "questions": 41,
+    "url": "topics/politics/rare-earths.html",
+    "status": "published"
+  },
+  {
+    "title": "The Fall of Constantinople",
+    "hook": "The city had survived a thousand years. What finally brought it down in 1453?",
+    "category": "History",
+    "questions": 0,
+    "url": "",
+    "status": "coming-soon"
+  },
+  {
+    "title": "The 2008 Financial Crisis",
+    "hook": "Everyone felt it. Almost no one understands what actually happened — or who let it.",
+    "category": "Business",
+    "questions": 0,
+    "url": "",
+    "status": "coming-soon"
+  },
+  {
+    "title": "How Dictatorships Rise",
+    "hook": "They never start with tanks. They start with something much more ordinary.",
+    "category": "Politics",
+    "questions": 0,
+    "url": "",
+    "status": "coming-soon"
+  }
+]
