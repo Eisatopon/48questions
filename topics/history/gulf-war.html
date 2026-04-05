@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Gulf War in 48 Questions | 48Questions</title>
-  <meta name="description" content="You think you know the Gulf War. You don't — yet. 48 questions that reveal what really happened." />
+  <meta name="description" content="The Gulf War explained in clear questions. Why it started, how it ended, and why it still matters today." />
 
   <!-- Open Graph -->
   <meta property="og:title" content="The Gulf War in 48 Questions" />
@@ -475,9 +475,11 @@
       <h1>The Gulf War<br>in <em>48 Questions</em></h1>
       <p class="hero-intro">
         You think you know the Gulf War. A quick war, Saddam lost, the end. But why did he invade? Why did Arab nations fight another Arab nation? And why did the West leave Saddam in power after defeating him? The answers are more surprising than you think.
+      <br><br>
+      <strong style="color:#f5f0e8; font-weight:400;">This guide breaks it into clear questions — so you actually understand what happened.</strong>
       </p>
       <div class="hero-meta">
-        <div><strong>48</strong> Questions</div>
+        <div><strong id="hero-q-count">—</strong> Questions</div>
         <div><strong>4</strong> Parts</div>
         <div><strong>~12 min</strong> Read</div>
       </div>
@@ -892,7 +894,20 @@
       document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
     });
 
-    // Intersection observer for fade-in
+    // Set dynamic question count in hero
+    const qCount = document.querySelectorAll('#qa-list > .qa-item').length;
+    const heroCount = document.getElementById('hero-q-count');
+    if (heroCount) heroCount.textContent = qCount;
+
+    // Auto-open first question
+    const firstItem = document.querySelector('#qa-list > .qa-item');
+    if (firstItem) {
+      firstItem.classList.add('open');
+      const btn = firstItem.querySelector('.qa-question');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      firstItem.querySelector('.qa-toggle').textContent = '×';
+    }
+    updateCounter();
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
