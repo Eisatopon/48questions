@@ -382,8 +382,11 @@
 
     .cat-item:hover { background: var(--paper); }
 
-    .cat-badge {
-      display: inline-block;
+    .cat-item { cursor: pointer; }
+    .cat-item.active { background: var(--ink); }
+    .cat-item.active .cat-name,
+    .cat-item.active .cat-count { color: var(--paper); }
+    .cat-badge { display: inline-block;
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -657,43 +660,43 @@
       <p class="section-label">Browse by Category</p>
       <h2 class="section-title">What do you want to understand?</h2>
       <div class="cat-grid">
-        <a href="#" class="cat-item cat-featured">
+        <div class="cat-item cat-featured" onclick="filterTopics('all')" data-cat="all">
+          <div class="cat-icon">🌐</div>
+          <p class="cat-name">All Topics</p>
+          <p class="cat-count">Everything we've covered</p>
+        </div>
+        <div class="cat-item" onclick="filterTopics('History')" data-cat="History">
           <div class="cat-icon">🪖</div>
           <p class="cat-name">History <span class="cat-badge">Start here</span></p>
           <p class="cat-count">Wars, empires, turning points</p>
-        </a>
-        <a href="#" class="cat-item">
+        </div>
+        <div class="cat-item" onclick="filterTopics('Science')" data-cat="Science">
           <div class="cat-icon">🔬</div>
           <p class="cat-name">Science</p>
           <p class="cat-count">Discoveries, breakthroughs, how things work</p>
-        </a>
-        <a href="topics/politics/trumps-tariffs.html" class="cat-item">
+        </div>
+        <div class="cat-item" onclick="filterTopics('Politics')" data-cat="Politics">
           <div class="cat-icon">🏛️</div>
           <p class="cat-name">Politics</p>
           <p class="cat-count">Power, decisions, consequences</p>
-        </a>
-        <a href="#" class="cat-item">
+        </div>
+        <div class="cat-item" onclick="filterTopics('Geopolitics')" data-cat="Geopolitics">
+          <div class="cat-icon">🌍</div>
+          <p class="cat-name">Geopolitics</p>
+          <p class="cat-count">Power, resources, the world order</p>
+        </div>
+        <div class="cat-item" onclick="filterTopics('Business')" data-cat="Business">
           <div class="cat-icon">💰</div>
           <p class="cat-name">Business</p>
           <p class="cat-count">Companies, crises, systems</p>
-        </a>
-        <a href="#" class="cat-item">
-          <div class="cat-icon">🧠</div>
-          <p class="cat-name">Psychology</p>
-          <p class="cat-count">How the mind works — and fails</p>
-        </a>
-        <a href="#" class="cat-item">
-          <div class="cat-icon">🌍</div>
-          <p class="cat-name">Environment</p>
-          <p class="cat-count">Climate, crises, what's at stake</p>
-        </a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- TOPICS GRID -->
   <section class="topics-section" id="topics">
-    <p class="section-label">All Topics</p>
+    <p class="section-label" id="topics-label">All Topics</p>
     <h2 class="section-title">Pick your next question.</h2>
     <div class="topics-grid" id="topics-grid">
       <!-- loaded from topics.json -->
@@ -724,35 +727,54 @@
 
   <script>
     // Load topics from JSON
-    fetch('topics.json')
+    fetch('/topics.json')
       .then(r => r.json())
       .then(topics => {
-        const grid = document.getElementById('topics-grid');
-        const published = topics.filter(t => t.status === 'published');
-
-        // Update Surprise Me with published topics
-        window._publishedTopics = published;
-
-        topics.forEach(t => {
-          const isPublished = t.status === 'published';
-          const card = document.createElement(isPublished ? 'a' : 'div');
-          if (isPublished) card.href = t.url;
-          card.className = 'topic-card';
-          card.innerHTML = `
-            <p class="topic-cat">${t.category}</p>
-            <h3 class="topic-title">${t.title}</h3>
-            <p class="topic-hook">${t.hook}</p>
-            <div class="topic-footer">
-              <span class="topic-qs">${isPublished ? t.questions + ' questions' : 'Coming soon'}</span>
-              <span class="topic-arrow">→</span>
-            </div>`;
-          grid.appendChild(card);
+        topics.sort((a, b) => {
+          if (a.status === 'published' && b.status === 'published') return new Date(b.date) - new Date(a.date);
+          if (a.status === 'published') return -1;
+          if (b.status === 'published') return 1;
+          return 0;
         });
+        window._allTopics = topics;
+        window._publishedTopics = topics.filter(t => t.status === 'published');
+        renderTopics(topics);
       })
       .catch(() => {
-        // fallback if JSON fails
         document.getElementById('topics-grid').innerHTML = '<p style="padding:2rem; color:var(--muted);">Topics loading...</p>';
       });
+
+    function renderTopics(topics) {
+      const grid = document.getElementById('topics-grid');
+      grid.innerHTML = '';
+      topics.forEach(t => {
+        const isPublished = t.status === 'published';
+        const card = document.createElement(isPublished ? 'a' : 'div');
+        if (isPublished) card.href = t.url;
+        card.className = 'topic-card';
+        card.innerHTML = `
+          <p class="topic-cat">${t.category}</p>
+          <h3 class="topic-title">${t.title}</h3>
+          <p class="topic-hook">${t.hook}</p>
+          <div class="topic-footer">
+            <span class="topic-qs">${isPublished ? t.questions + ' questions' : 'Coming soon'}</span>
+            <span class="topic-arrow">→</span>
+          </div>`;
+        grid.appendChild(card);
+      });
+      if (topics.length === 0) {
+        grid.innerHTML = '<p style="padding:2rem; color:var(--muted); grid-column:1/-1;">No topics in this category yet.</p>';
+      }
+    }
+
+    function filterTopics(cat) {
+      const all = window._allTopics || [];
+      const filtered = cat === 'all' ? all : all.filter(t => t.category === cat);
+      renderTopics(filtered);
+      document.getElementById('topics-label').textContent = cat === 'all' ? 'All Topics' : cat;
+      document.querySelectorAll('.cat-item').forEach(el => el.classList.toggle('active', el.dataset.cat === cat));
+      document.getElementById('topics').scrollIntoView({ behavior: 'smooth' });
+    }
 
     // Nav background on scroll
     const nav = document.getElementById('nav');
