@@ -32,7 +32,7 @@
   </script>
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -42,7 +42,7 @@
       --paper-dark: #ede8dc;
       --accent: #c0392b;
       --accent-soft: #e8d5d3;
-      --muted: #4a4535;
+      --muted: #5a5040; /* CHANGE: was #4a4535, improved contrast */
       --border: #d4ccbc;
       --progress-h: 3px;
     }
@@ -153,22 +153,23 @@
       color: var(--accent);
     }
 
+    /* CHANGE: was rgba(245,240,232,0.85) — too transparent, now fully opaque */
     .hero-banner .hero-intro {
-      color: rgba(245,240,232,0.85);
+      color: rgba(245,240,232,0.95);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
     }
 
     .hero-banner .hero-meta {
-      color: rgba(245,240,232,0.45);
+      color: rgba(245,240,232,0.55);
     }
 
     .hero-banner .hero-meta strong {
-      color: rgba(245,240,232,0.9);
+      color: rgba(245,240,232,0.95);
     }
 
-    /* ── HERO (text-only fallback, kept for structure) ── */
+    /* ── HERO (text-only fallback) ── */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -201,9 +202,10 @@
       color: var(--accent);
     }
 
+    /* CHANGE: was var(--muted), now var(--ink) — body text must be readable */
     .hero-intro {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: var(--ink);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
@@ -347,6 +349,7 @@
       to   { opacity: 1; transform: translateY(0); }
     }
 
+    /* CHANGE: was color: var(--ink) — good, keeping it */
     .qa-answer p {
       font-size: 0.97rem;
       color: var(--ink);
@@ -354,6 +357,7 @@
       font-style: italic;
     }
 
+    /* CHANGE: was color: var(--ink) — good, keeping it */
     .qa-answer .insight {
       display: block;
       margin-top: 0.6rem;
@@ -922,6 +926,7 @@
       firstItem.querySelector('.qa-toggle').textContent = '×';
     }
     updateCounter();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
