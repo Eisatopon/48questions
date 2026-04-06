@@ -7,6 +7,9 @@
   <meta name="description" content="Complex events. Clear questions. 48Questions turns history, science, and world affairs into something you actually understand." />
   <meta name="theme-color" content="#f5f0e8" />
 
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://48questions.com/" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="48Questions — You Think You Know. You Don't." />
   <meta property="og:description" content="Complex events. Clear questions. Understand anything." />
@@ -17,7 +20,7 @@
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" />
+  <link rel="preload" as="style" crossorigin href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 
   <style>
@@ -589,7 +592,26 @@
       transition: opacity 0.2s, transform 0.2s;
     }
 
-    /* ── SKELETON LOADING ── */
+    /* ── FEATURED SKELETON ── */
+    .featured-skeleton {
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .featured-skeleton .sk {
+      background: linear-gradient(90deg, var(--paper-dark) 25%, var(--paper-mid) 50%, var(--paper-dark) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 2px;
+    }
+
+    .featured-skeleton .sk-label  { height: 0.6rem; width: 30%; }
+    .featured-skeleton .sk-title  { height: 1.6rem; width: 80%; margin-top: 0.4rem; }
+    .featured-skeleton .sk-title2 { height: 1.6rem; width: 55%; }
+    .featured-skeleton .sk-desc   { height: 0.85rem; width: 90%; margin-top: 0.8rem; }
+    .featured-skeleton .sk-desc2  { height: 0.85rem; width: 70%; }
+    .featured-skeleton .sk-btn    { height: 2.4rem; width: 7rem; margin-top: 1rem; }
     .skeleton-card {
       background: var(--paper);
       padding: 1.8rem;
@@ -745,15 +767,16 @@
   </div>
 
   <!-- HERO -->
+  <main id="main-content">
   <section class="hero">
     <p class="hero-eyebrow">A new way to understand the world</p>
     <h1 class="hero-headline">You think<br>you <em>know.</em></h1>
     <p class="hero-sub">You don't — yet.</p>
     <p class="hero-desc">Every major event has a story behind the story. 48Questions breaks it down into clear, honest questions — the ones no one thinks to ask.</p>
     <div class="hero-cta">
-      <a href="#topics" class="btn-primary">Explore Topics</a>
-      <a href="topics/history/gulf-war.html" class="btn-secondary">Read: The Gulf War</a>
-      <button class="btn-surprise" onclick="surpriseMe()" title="Take me to a random topic">↝ Surprise me</button>
+      <a href="#topics" class="btn-primary" onclick="gtag('event','click',{event_category:'cta',event_label:'explore_topics'})">Explore Topics</a>
+      <a href="topics/history/gulf-war.html" class="btn-secondary" onclick="gtag('event','click',{event_category:'cta',event_label:'hero_read_topic'})">Read: The Gulf War</a>
+      <button class="btn-surprise" onclick="gtag('event','click',{event_category:'cta',event_label:'surprise_me'});surpriseMe()" title="Take me to a random topic">↝ Surprise me</button>
     </div>
     <div class="hero-deco" aria-hidden="true">48</div>
   </section>
@@ -762,15 +785,27 @@
 
   <!-- FEATURED TOPIC -->
   <section class="featured" id="featured-section">
-    <div class="featured-content">
-      <p class="featured-label">Just Published</p>
-      <h2 class="featured-title" id="featured-title">—</h2>
-      <p class="featured-desc" id="featured-desc">—</p>
-      <div class="featured-meta">
-        <div><strong id="featured-qs">—</strong> Questions</div>
-        <div><strong>4</strong> Parts</div>
+    <div class="featured-content" id="featured-content">
+      <!-- skeleton shown until JSON loads -->
+      <div class="featured-skeleton" id="featured-skeleton">
+        <div class="sk sk-label"></div>
+        <div class="sk sk-title"></div>
+        <div class="sk sk-title2"></div>
+        <div class="sk sk-desc"></div>
+        <div class="sk sk-desc2"></div>
+        <div class="sk sk-btn"></div>
       </div>
-      <a href="#" id="featured-btn" class="btn-primary">Read Now</a>
+      <!-- real content, hidden until loaded -->
+      <div id="featured-real" style="display:none;">
+        <p class="featured-label">Just Published</p>
+        <h2 class="featured-title" id="featured-title"></h2>
+        <p class="featured-desc" id="featured-desc"></p>
+        <div class="featured-meta">
+          <div><strong id="featured-qs">—</strong> Questions</div>
+          <div><strong>4</strong> Parts</div>
+        </div>
+        <a href="#" id="featured-btn" class="btn-primary">Read Now</a>
+      </div>
     </div>
     <div class="featured-preview">
       <p class="preview-title">Sample Questions</p>
@@ -861,6 +896,8 @@
     </div>
   </section>
 
+  </main>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-brand-wrap">
@@ -910,6 +947,8 @@
 
     // ── FEATURED FALLBACK ──
     function setFeaturedFallback() {
+      document.getElementById('featured-skeleton').style.display = 'none';
+      document.getElementById('featured-real').style.display = '';
       document.getElementById('featured-title').textContent = 'Topics loading…';
       document.getElementById('featured-desc').textContent = 'Check back in a moment.';
       document.getElementById('featured-qs').textContent = '—';
@@ -920,7 +959,10 @@
 
     // ── LOAD TOPICS ──
     fetch('/topics.json')
-      .then(r => r.json())
+      .then(r => {
+        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+        return r.json();
+      })
       .then(topics => {
         topics.sort((a, b) => {
           if (a.status === 'published' && b.status === 'published') return new Date(b.date) - new Date(a.date);
@@ -934,26 +976,48 @@
         // Update featured section with latest published topic
         const latest = window._publishedTopics[0];
         if (latest) {
+          // Hide skeleton, show real content
+          document.getElementById('featured-skeleton').style.display = 'none';
+          document.getElementById('featured-real').style.display = '';
+
           document.getElementById('featured-title').innerHTML = latest.title + '<br>in <em>' + latest.questions + ' Questions</em>';
           document.getElementById('featured-desc').textContent = latest.hook;
           document.getElementById('featured-qs').textContent = latest.questions;
           document.getElementById('featured-btn').href = latest.url;
+          document.getElementById('featured-btn').setAttribute('onclick', `gtag('event','click',{event_category:'cta',event_label:'featured_read_now'})`);
 
           // Hero CTA
           const heroBtn = document.querySelector('.btn-secondary');
           if (heroBtn) {
             heroBtn.textContent = 'Read: ' + latest.title.split(':')[0];
             heroBtn.href = latest.url;
+            heroBtn.setAttribute('onclick', `gtag('event','click',{event_category:'cta',event_label:'hero_read_topic'})`);
           }
 
-          // Preview questions
+          // Preview questions — safe DOM creation (no innerHTML with external data)
           const previewList = document.getElementById('featured-preview-list');
-          if (previewList && latest.preview && latest.preview.length > 0) {
-            previewList.innerHTML = latest.preview.map((q, i) =>
-              `<div class="preview-q"><span class="preview-num">${String(i+1).padStart(2,'0')}</span>${q}</div>`
-            ).join('');
-          } else if (previewList) {
-            previewList.innerHTML = '<div class="preview-q" style="color:var(--muted)">Questions loading...</div>';
+          if (previewList) {
+            previewList.innerHTML = '';
+            if (latest.preview && latest.preview.length > 0) {
+              latest.preview.forEach((q, i) => {
+                const row = document.createElement('div');
+                row.className = 'preview-q';
+                const num = document.createElement('span');
+                num.className = 'preview-num';
+                num.textContent = String(i + 1).padStart(2, '0');
+                const text = document.createElement('span');
+                text.textContent = q;
+                row.appendChild(num);
+                row.appendChild(text);
+                previewList.appendChild(row);
+              });
+            } else {
+              const empty = document.createElement('div');
+              empty.className = 'preview-q';
+              empty.style.color = 'var(--muted)';
+              empty.textContent = 'Questions loading...';
+              previewList.appendChild(empty);
+            }
           }
         } else {
           setFeaturedFallback();
