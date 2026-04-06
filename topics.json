@@ -1,5 +1,21 @@
 [
   {
+    "title": "How AI Actually Works",
+    "hook": "You use AI every day. You probably don't understand how it works. Here's the honest explanation — no jargon, no hype.",
+    "category": "Science",
+    "questions": 48,
+    "url": "topics/science/how-ai-works.html",
+    "status": "published",
+    "date": "2026-04-07",
+    "preview": [
+      "What is artificial intelligence — really?",
+      "Does ChatGPT understand, or just predict?",
+      "Why does AI sometimes make things up?",
+      "Will AI take your job?",
+      "Should we be afraid?"
+    ]
+  },
+  {
     "title": "The US–Iran War: What Is Actually Happening",
     "hook": "On February 28, 2026, the US and Israel launched a war with Iran. Here's everything you need to understand — in 52 questions.",
     "category": "Politics",
