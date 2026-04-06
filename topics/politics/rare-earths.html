@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rare Earth Minerals: The Hidden War Behind Your Phone (45 Questions) | 48Questions</title>
-  <meta name="description" content="Rare earth minerals explained. The hidden materials powering your phone, your car, and the next world war — in 45 clear questions." />
+  <title>Rare Earth Minerals: The Hidden War Behind Your Phone (41 Questions) | 48Questions</title>
+  <meta name="description" content="Rare earth minerals explained. The hidden materials powering your phone, your car, and the next world war — in 41 clear questions." />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Rare Earth Minerals: The Hidden War Behind Your Phone (45 Questions)" />
+  <meta property="og:title" content="Rare Earth Minerals: The Hidden War Behind Your Phone" />
   <meta property="og:description" content="They are inside your phone, your car, and your weapons. And one country controls the supply. This is the hidden war behind modern technology." />
   <meta property="og:type" content="article" />
   <meta property="og:url" content="https://48questions.com/topics/politics/rare-earths" />
@@ -54,7 +54,7 @@
       --paper-dark: #ede8dc;
       --accent: #c0392b;
       --accent-soft: #e8d5d3;
-      --muted: #4a4535;
+      --muted: #5a5040; /* CHANGE: was #4a4535, improved contrast */
       --border: #d4ccbc;
       --progress-h: 3px;
     }
@@ -70,7 +70,6 @@
       min-height: 100vh;
     }
 
-    /* ── PROGRESS BAR ── */
     #progress-bar {
       position: fixed;
       top: 0; left: 0;
@@ -81,7 +80,6 @@
       transition: width 0.1s linear;
     }
 
-    /* ── NAV ── */
     nav {
       position: sticky;
       top: var(--progress-h);
@@ -112,7 +110,6 @@
       text-transform: uppercase;
     }
 
-    /* ── HERO BANNER ── */
     .hero-banner {
       background: #0a0f1a;
       position: relative;
@@ -161,26 +158,19 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero-banner h1 em {
-      color: var(--accent);
-    }
+    .hero-banner h1 em { color: var(--accent); }
 
+    /* CHANGE: was rgba(245,240,232,0.85) — increased to 0.95 for readability */
     .hero-banner .hero-intro {
-      color: rgba(245,240,232,0.85);
+      color: rgba(245,240,232,0.95);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
     }
 
-    .hero-banner .hero-meta {
-      color: rgba(245,240,232,0.45);
-    }
+    .hero-banner .hero-meta { color: rgba(245,240,232,0.55); }
+    .hero-banner .hero-meta strong { color: rgba(245,240,232,0.95); }
 
-    .hero-banner .hero-meta strong {
-      color: rgba(245,240,232,0.9);
-    }
-
-    /* ── HERO (text-only fallback, kept for structure) ── */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -208,14 +198,12 @@
       margin-bottom: 1.5rem;
     }
 
-    h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    h1 em { font-style: italic; color: var(--accent); }
 
+    /* CHANGE: was color: var(--muted) — body text must be readable */
     .hero-intro {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: var(--ink);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
@@ -237,7 +225,6 @@
       font-family: 'Playfair Display', serif;
     }
 
-    /* ── SECTION HEADERS ── */
     .part-header {
       max-width: 760px;
       margin: 3.5rem auto 0;
@@ -269,7 +256,6 @@
       margin-bottom: 1.5rem;
     }
 
-    /* ── Q&A ITEMS ── */
     .qa-list {
       max-width: 760px;
       margin: 0 auto;
@@ -284,10 +270,7 @@
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
-    .qa-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .qa-item.visible { opacity: 1; transform: translateY(0); }
 
     .qa-question {
       display: flex;
@@ -332,27 +315,12 @@
       font-size: 0.8rem;
     }
 
-    .qa-item.open .qa-toggle {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
+    .qa-item.open .qa-toggle { background: var(--accent); border-color: var(--accent); color: white; }
+    .qa-item.auto-opened .qa-toggle { background: var(--border); border-color: var(--border); color: var(--muted); }
 
-    .qa-item.auto-opened .qa-toggle {
-      background: var(--border);
-      border-color: var(--border);
-      color: var(--muted);
-    }
+    .qa-answer { display: none; padding: 0 0 1.4rem 3rem; }
 
-    .qa-answer {
-      display: none;
-      padding: 0 0 1.4rem 3rem;
-    }
-
-    .qa-item.open .qa-answer {
-      display: block;
-      animation: slideDown 0.25s ease;
-    }
+    .qa-item.open .qa-answer { display: block; animation: slideDown 0.25s ease; }
 
     @keyframes slideDown {
       from { opacity: 0; transform: translateY(-6px); }
@@ -377,13 +345,8 @@
       background: var(--accent-soft);
     }
 
-    .insight::before {
-      content: 'Key insight: ';
-      font-weight: 400;
-      color: var(--accent);
-    }
+    .insight::before { content: 'Key insight: '; font-weight: 400; color: var(--accent); }
 
-    /* ── TABLE OF CONTENTS ── */
     .toc {
       max-width: 760px;
       margin: 2rem auto 0;
@@ -391,6 +354,7 @@
       background: var(--paper-dark);
       border-left: 3px solid var(--accent);
     }
+
     .toc-title {
       font-size: 0.72rem;
       letter-spacing: 0.15em;
@@ -398,7 +362,9 @@
       color: var(--muted);
       margin-bottom: 0.8rem;
     }
+
     .toc-links { display: flex; gap: 0.5rem; flex-wrap: wrap; list-style: none; }
+
     .toc-links a {
       font-size: 0.82rem;
       color: var(--ink);
@@ -408,6 +374,7 @@
       transition: all 0.2s;
       font-weight: 400;
     }
+
     .toc-links a:hover { border-color: var(--accent); color: var(--accent); }
 
     .controls {
@@ -431,12 +398,8 @@
       transition: all 0.2s;
     }
 
-    .btn:hover {
-      background: var(--ink);
-      color: var(--paper);
-    }
+    .btn:hover { background: var(--ink); color: var(--paper); }
 
-    /* ── FOOTER ── */
     footer {
       max-width: 760px;
       margin: 5rem auto 0;
@@ -458,20 +421,14 @@
     }
 
     .footer-brand span { color: var(--accent); }
+    footer p { font-size: 0.78rem; color: var(--muted); }
 
-    footer p {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero { padding: 3rem 1.2rem 2rem; }
       .qa-list, .part-header, .controls, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
       .hero-meta { flex-direction: column; gap: 1rem; }
     }
   </style>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRYY70ZVE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -489,7 +446,6 @@
     <span class="nav-counter" id="nav-counter">— / — explored</span>
   </nav>
 
-  <!-- HERO BANNER -->
   <div class="hero-banner">
     <div class="hero-banner-deco" aria-hidden="true">REE</div>
     <div class="hero-banner-inner">
@@ -511,7 +467,6 @@
     </div>
   </div>
 
-  <!-- TABLE OF CONTENTS -->
   <nav class="toc" aria-label="Jump to section">
     <p class="toc-title">Jump to</p>
     <ul class="toc-links">
@@ -523,14 +478,12 @@
     </ul>
   </nav>
 
-  <!-- BEFORE YOU START -->
   <div class="toc" style="margin-top:1rem; border-left-color: var(--ink);">
     <p style="font-size:0.95rem; line-height:1.7;">
       <strong>Before you start:</strong> This is not a story about rocks. It is a story about power — who has it, who wants it, and what happens when one country controls what the whole world needs.
     </p>
   </div>
 
-  <!-- PART 1 -->
   <div class="part-header">
     <span id="part-1" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
     <div class="part-label">Part 1</div>
@@ -552,7 +505,7 @@
       </div>
       <div class="qa-answer">
         <p>A group of 17 metallic elements with extraordinary magnetic, luminescent, and electrochemical properties. They don't look like much — most are dull grey metals. But their properties make them irreplaceable in modern technology.
-          <span class="insight">Key insight: The name is misleading. "Rare earth" is a historical accident — early chemists found them hard to isolate, not because they were scarce, but because they cluster together and resist separation.</span>
+          <span class="insight">The name is misleading. "Rare earth" is a historical accident — early chemists found them hard to isolate, not because they were scarce, but because they cluster together and resist separation.</span>
         </p>
       </div>
     </li>
@@ -602,7 +555,7 @@
       </div>
       <div class="qa-answer">
         <p>Their electron configuration — the way electrons are arranged around the nucleus — gives them unusual magnetic and optical behaviors. Neodymium magnets, for example, are 10 times stronger than regular iron magnets of the same size. This can't be replicated with other materials.
-          <span class="insight">Key insight: Physics, not politics, is why rare earths are irreplaceable. You can't negotiate with the periodic table.</span>
+          <span class="insight">Physics, not politics, is why rare earths are irreplaceable. You can't negotiate with the periodic table.</span>
         </p>
       </div>
     </li>
@@ -627,7 +580,7 @@
       </div>
       <div class="qa-answer">
         <p>Your smartphone contains up to 16 rare earth elements. Your laptop, headphones, electric car motor, wind turbine, MRI machine, LED lights, camera lens, and hard drive all depend on them. The F-35 fighter jet requires nearly 920 pounds of rare earth materials.
-          <span class="insight">Key insight: You are not reading about something abstract. You are holding rare earth minerals right now.</span>
+          <span class="insight">You are not reading about something abstract. You are holding rare earth minerals right now.</span>
         </p>
       </div>
     </li>
@@ -659,7 +612,7 @@
       </div>
       <div class="qa-answer">
         <p>Three things converged: the green energy transition (which requires massive amounts of rare earths), the AI revolution (which requires rare earth-dependent chips and hardware), and the US-China trade war (which made China's dominance a national security issue rather than just an economic one).
-          <span class="insight">Key insight: Rare earths were always strategically important. What changed is that the West finally started paying attention.</span>
+          <span class="insight">Rare earths were always strategically important. What changed is that the West finally started paying attention.</span>
         </p>
       </div>
     </li>
@@ -697,7 +650,7 @@
       </div>
       <div class="qa-answer">
         <p>Guided missiles, radar systems, night vision equipment, jet engines, submarines, satellite communications — all require rare earth elements. The F-35 fighter needs 920 pounds of them. A Virginia-class submarine needs 9,200 pounds. Modern warfare runs on rare earths.
-          <span class="insight">Key insight: A country that controls rare earths controls the inputs for its adversary's weapons. That is not a trade issue. That is a security issue.</span>
+          <span class="insight">A country that controls rare earths controls the inputs for its adversary's weapons. That is not a trade issue. That is a security issue.</span>
         </p>
       </div>
     </li>
@@ -754,7 +707,7 @@
       </div>
       <div class="qa-answer">
         <p>Even countries that mine their own rare earths often send the ore to China for processing — because China has built the refining infrastructure that no one else has. Australia mines rare earths and ships them to China. The US has a mine in California that sends its ore to China.
-          <span class="insight">Key insight: The West didn't just let China mine more. It let China build the entire processing industry. That is the dependency that is almost impossible to reverse quickly.</span>
+          <span class="insight">The West didn't just let China mine more. It let China build the entire processing industry. That is the dependency that is almost impossible to reverse quickly.</span>
         </p>
       </div>
     </li>
@@ -767,7 +720,7 @@
       </div>
       <div class="qa-answer">
         <p>Deliberate, patient, decades-long strategy. In the 1980s, Deng Xiaoping said: "The Middle East has oil. China has rare earths." Beijing subsidized production, accepted environmental damage, and undercut Western competitors on price until they shut down. It wasn't an accident. It was a plan.
-          <span class="insight">Key insight: China played a 40-year game. The West played a quarterly earnings game. The results speak for themselves.</span>
+          <span class="insight">China played a 40-year game. The West played a quarterly earnings game. The results speak for themselves.</span>
         </p>
       </div>
     </li>
@@ -792,7 +745,7 @@
       </div>
       <div class="qa-answer">
         <p>Yes — in 2010, during a territorial dispute with Japan over the Senkaku/Diaoyu Islands. China halted rare earth exports to Japan for weeks. Japanese manufacturers that depended on rare earths were immediately affected. China denied it was political. Everyone knew it was.
-          <span class="insight">Key insight: China has used the weapon once — and only once. The threat that it might use it again is powerful enough that it rarely needs to.</span>
+          <span class="insight">China has used the weapon once — and only once. The threat that it might use it again is powerful enough that it rarely needs to.</span>
         </p>
       </div>
     </li>
@@ -818,7 +771,7 @@
       </div>
       <div class="qa-answer">
         <p>After China's export restrictions, Japan responded with the most serious rare earth diversification effort in history. It invested in mines in Australia and Canada, funded recycling technology, and worked to reduce rare earth content in its products. A decade later, Japan is significantly less dependent on China than it was.
-          <span class="insight">Key insight: Japan showed it's possible to reduce dependence — but it took a crisis, a decade, and billions of dollars to do it.</span>
+          <span class="insight">Japan showed it's possible to reduce dependence — but it took a crisis, a decade, and billions of dollars to do it.</span>
         </p>
       </div>
     </li>
@@ -850,7 +803,7 @@
       </div>
       <div class="qa-answer">
         <p>Because the 20th century ran on oil — and wars were fought over it, alliances built around it, and economies shaped by who controlled it. The 21st century runs on technology — and rare earths are to technology what oil was to industry. The geopolitics are strikingly similar.
-          <span class="insight">Key insight: The difference is that oil was distributed across many countries. Rare earth processing is concentrated in one. That makes it more dangerous, not less.</span>
+          <span class="insight">The difference is that oil was distributed across many countries. Rare earth processing is concentrated in one. That makes it more dangerous, not less.</span>
         </p>
       </div>
     </li>
@@ -900,7 +853,7 @@
       </div>
       <div class="qa-answer">
         <p>Africa has enormous rare earth deposits — particularly in Tanzania, South Africa, Madagascar, and the DRC. China has been investing heavily in African mining for decades, often in exchange for infrastructure. The West is now competing for the same deposits, but China has a significant head start.
-          <span class="insight">Key insight: The rare earth competition is also a competition for Africa. What looks like an infrastructure deal is often a strategic resource grab.</span>
+          <span class="insight">The rare earth competition is also a competition for Africa. What looks like an infrastructure deal is often a strategic resource grab.</span>
         </p>
       </div>
     </li>
@@ -925,7 +878,7 @@
       </div>
       <div class="qa-answer">
         <p>Closer than most people realize. Demand is growing faster than supply diversification. If China imposed even a partial export restriction today, the effects would be felt within months in defense, clean energy, and consumer electronics. There is almost no strategic stockpile in the West.
-          <span class="insight">Key insight: The world has oil reserves measured in months or years. For rare earths, most Western countries have almost nothing in reserve.</span>
+          <span class="insight">The world has oil reserves measured in months or years. For rare earths, most Western countries have almost nothing in reserve.</span>
         </p>
       </div>
     </li>
@@ -957,7 +910,7 @@
       </div>
       <div class="qa-answer">
         <p>For some applications, yes — but with significant performance penalties. Ferrite magnets can replace neodymium magnets in some motors, but they are much heavier and weaker. Researchers are working on rare earth-free motors, but they remain less efficient. For now, there is no substitute that matches rare earth performance.
-          <span class="insight">Key insight: Science is working on alternatives. But technology transitions take decades — and the demand crisis is now.</span>
+          <span class="insight">Science is working on alternatives. But technology transitions take decades — and the demand crisis is now.</span>
         </p>
       </div>
     </li>
@@ -1007,7 +960,7 @@
       </div>
       <div class="qa-answer">
         <p>Multiple approaches simultaneously: subsidizing domestic mining, investing in processing capacity, funding recycling research, securing supply deals with friendly countries (Australia, Canada), and funding research into substitutes. The US Inflation Reduction Act included significant rare earth provisions. The EU's Critical Raw Materials Act does the same.
-          <span class="insight">Key insight: All of this is happening 20 years too late. The question is whether it's happening fast enough.</span>
+          <span class="insight">All of this is happening 20 years too late. The question is whether it's happening fast enough.</span>
         </p>
       </div>
     </li>
@@ -1032,7 +985,7 @@
       </div>
       <div class="qa-answer">
         <p>Up to 16 out of 17 rare earth elements can be found in a modern smartphone. Neodymium in the speakers and vibration motor. Europium and terbium in the screen. Lanthanum in the camera lens. Dysprosium in the battery. Your phone is a rare earth museum.
-          <span class="insight">Key insight: The geopolitical crisis you just read about fits in your pocket.</span>
+          <span class="insight">The geopolitical crisis you just read about fits in your pocket.</span>
         </p>
       </div>
     </li>
@@ -1058,7 +1011,7 @@
       </div>
       <div class="qa-answer">
         <p>Extremely. Processing rare earth ore produces large amounts of toxic and mildly radioactive waste — because rare earth deposits often contain thorium and uranium. In China, this has caused significant environmental damage near mining areas. The green technology revolution is built on a foundation of environmental destruction somewhere else.
-          <span class="insight">Key insight: Every wind turbine blade contains rare earths mined and processed in conditions that would be illegal in the countries using the turbine.</span>
+          <span class="insight">Every wind turbine blade contains rare earths mined and processed in conditions that would be illegal in the countries using the turbine.</span>
         </p>
       </div>
     </li>
@@ -1083,7 +1036,7 @@
       </div>
       <div class="qa-answer">
         <p>Australia is the strongest candidate — it has deposits, a stable government, and Western alliances. But to truly challenge China, a country needs not just mines but processing capacity. No country is close to building that at scale yet. The race is wide open — and whoever wins it will have extraordinary leverage for decades.
-          <span class="insight">Final thought: Rare earths are not just minerals. They are the physical foundation of the next world order. The country that controls them controls the future — not with armies, but with chemistry.</span>
+          <span class="insight">Rare earths are not just minerals. They are the physical foundation of the next world order. The country that controls them controls the future — not with armies, but with chemistry.</span>
         </p>
       </div>
     </li>
@@ -1091,23 +1044,21 @@
   </ul>
 
   <!-- CTA -->
-    <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+  <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
     <div>
       <p style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.4rem;">Next Topic</p>
-      <a href="#" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">The US-Iran War in 48 Questions →</a>
+      <a href="iran-war.html" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">The US-Iran War in 52 Questions →</a>
       <p style="font-size:0.88rem; color:var(--muted); margin-top:1rem; font-style:italic;">If you understood this, you now know more than 95% of people about how the modern world actually works.</p>
     </div>
     <a href="../../index.html" style="font-size:0.82rem; color:var(--muted); text-decoration:none; border: 1px solid var(--border); padding: 0.5rem 1.2rem; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">All Topics</a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <a href="../../index.html" class="footer-brand"><span>48</span>Questions</a>
     <p>Understand anything. One question at a time.</p>
   </footer>
 
   <script>
-    // Toggle Q&A
     function toggle(el) {
       const item = el.closest('.qa-item');
       const isOpen = item.classList.contains('open');
@@ -1118,7 +1069,6 @@
       updateCounter();
     }
 
-    // Keyboard support for accordion
     document.querySelectorAll('.qa-question').forEach(btn => {
       btn.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
@@ -1149,19 +1099,16 @@
       document.getElementById('nav-counter').textContent = `${open} / ${total} answered`;
     }
 
-    // Progress bar
     window.addEventListener('scroll', () => {
       const doc = document.documentElement;
       const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
       document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
     });
 
-    // Set dynamic question count in hero
     const qCount = document.querySelectorAll('#qa-list > .qa-item').length;
     const heroCount = document.getElementById('hero-q-count');
     if (heroCount) heroCount.textContent = qCount;
 
-    // Auto-open first question
     const firstItem = document.querySelector('#qa-list > .qa-item');
     if (firstItem) {
       firstItem.classList.add('open');
@@ -1170,6 +1117,7 @@
       firstItem.querySelector('.qa-toggle').textContent = '×';
     }
     updateCounter();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
