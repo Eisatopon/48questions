@@ -50,7 +50,7 @@
       --paper-dark: #ede8dc;
       --accent: #c0392b;
       --accent-soft: #e8d5d3;
-      --muted: #4a4535;
+      --muted: #5a5040; /* CHANGE: was #4a4535, improved contrast */
       --border: #d4ccbc;
       --progress-h: 3px;
     }
@@ -66,7 +66,6 @@
       min-height: 100vh;
     }
 
-    /* ── PROGRESS BAR ── */
     #progress-bar {
       position: fixed;
       top: 0; left: 0;
@@ -77,7 +76,6 @@
       transition: width 0.1s linear;
     }
 
-    /* ── NAV ── */
     nav {
       position: sticky;
       top: var(--progress-h);
@@ -108,7 +106,6 @@
       text-transform: uppercase;
     }
 
-    /* ── HERO BANNER ── */
     .hero-banner {
       background: #0f0d1a;
       position: relative;
@@ -123,7 +120,8 @@
       background: radial-gradient(ellipse at 30% 50%, #1a1530 0%, #0f0d1a 70%);
     }
 
-    .hero-banner-deco { text-shadow: 0 0 40px rgba(192,57,43,0.15);
+    .hero-banner-deco {
+      text-shadow: 0 0 40px rgba(192,57,43,0.15);
       position: absolute;
       right: 5%;
       top: 50%;
@@ -152,31 +150,20 @@
       margin-bottom: 1.5rem;
     }
 
-    .hero-banner h1 {
-      color: #f5f0e8;
-      margin-bottom: 1.5rem;
-    }
+    .hero-banner h1 { color: #f5f0e8; margin-bottom: 1.5rem; }
+    .hero-banner h1 em { color: var(--accent); }
 
-    .hero-banner h1 em {
-      color: var(--accent);
-    }
-
+    /* CHANGE: was rgba(245,240,232,0.85) — increased to 0.95 for readability */
     .hero-banner .hero-intro {
-      color: rgba(245,240,232,0.85);
+      color: rgba(245,240,232,0.95);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
     }
 
-    .hero-banner .hero-meta {
-      color: rgba(245,240,232,0.45);
-    }
+    .hero-banner .hero-meta { color: rgba(245,240,232,0.55); }
+    .hero-banner .hero-meta strong { color: rgba(245,240,232,0.95); }
 
-    .hero-banner .hero-meta strong {
-      color: rgba(245,240,232,0.9);
-    }
-
-    /* ── HERO (text-only fallback, kept for structure) ── */
     .hero {
       max-width: 760px;
       margin: 0 auto;
@@ -204,14 +191,12 @@
       margin-bottom: 1.5rem;
     }
 
-    h1 em {
-      font-style: italic;
-      color: var(--accent);
-    }
+    h1 em { font-style: italic; color: var(--accent); }
 
+    /* CHANGE: was color: var(--muted) — body text must be readable */
     .hero-intro {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: var(--ink);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
@@ -233,7 +218,6 @@
       font-family: 'Playfair Display', serif;
     }
 
-    /* ── SECTION HEADERS ── */
     .part-header {
       max-width: 760px;
       margin: 3.5rem auto 0;
@@ -251,12 +235,7 @@
       margin-bottom: 0.5rem;
     }
 
-    .part-label::after {
-      content: '';
-      flex: 1;
-      height: 1px;
-      background: var(--border);
-    }
+    .part-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 
     .part-title {
       font-family: 'Playfair Display', serif;
@@ -265,7 +244,6 @@
       margin-bottom: 1.5rem;
     }
 
-    /* ── Q&A ITEMS ── */
     .qa-list {
       max-width: 760px;
       margin: 0 auto;
@@ -280,10 +258,7 @@
       transition: opacity 0.4s ease, transform 0.4s ease;
     }
 
-    .qa-item.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .qa-item.visible { opacity: 1; transform: translateY(0); }
 
     .qa-question {
       display: flex;
@@ -328,39 +303,18 @@
       font-size: 0.8rem;
     }
 
-    .qa-item.open .qa-toggle {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: white;
-    }
+    .qa-item.open .qa-toggle { background: var(--accent); border-color: var(--accent); color: white; }
+    .qa-item.auto-opened .qa-toggle { background: var(--border); border-color: var(--border); color: var(--muted); }
 
-    .qa-item.auto-opened .qa-toggle {
-      background: var(--border);
-      border-color: var(--border);
-      color: var(--muted);
-    }
-
-    .qa-answer {
-      display: none;
-      padding: 0 0 1.4rem 3rem;
-    }
-
-    .qa-item.open .qa-answer {
-      display: block;
-      animation: slideDown 0.25s ease;
-    }
+    .qa-answer { display: none; padding: 0 0 1.4rem 3rem; }
+    .qa-item.open .qa-answer { display: block; animation: slideDown 0.25s ease; }
 
     @keyframes slideDown {
       from { opacity: 0; transform: translateY(-6px); }
       to   { opacity: 1; transform: translateY(0); }
     }
 
-    .qa-answer p {
-      font-size: 0.97rem;
-      color: var(--ink);
-      line-height: 1.8;
-      font-style: italic;
-    }
+    .qa-answer p { font-size: 0.97rem; color: var(--ink); line-height: 1.8; font-style: italic; }
 
     .qa-answer .insight {
       display: block;
@@ -373,13 +327,8 @@
       background: var(--accent-soft);
     }
 
-    .insight::before {
-      content: 'Key insight: ';
-      font-weight: 400;
-      color: var(--accent);
-    }
+    .insight::before { content: 'Key insight: '; font-weight: 400; color: var(--accent); }
 
-    /* ── TABLE OF CONTENTS ── */
     .toc {
       max-width: 760px;
       margin: 2rem auto 0;
@@ -387,32 +336,13 @@
       background: var(--paper-dark);
       border-left: 3px solid var(--accent);
     }
-    .toc-title {
-      font-size: 0.72rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.8rem;
-    }
+
+    .toc-title { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
     .toc-links { display: flex; gap: 0.5rem; flex-wrap: wrap; list-style: none; }
-    .toc-links a {
-      font-size: 0.82rem;
-      color: var(--ink);
-      text-decoration: none;
-      border: 1px solid var(--border);
-      padding: 0.25rem 0.7rem;
-      transition: all 0.2s;
-      font-weight: 400;
-    }
+    .toc-links a { font-size: 0.82rem; color: var(--ink); text-decoration: none; border: 1px solid var(--border); padding: 0.25rem 0.7rem; transition: all 0.2s; font-weight: 400; }
     .toc-links a:hover { border-color: var(--accent); color: var(--accent); }
 
-    .controls {
-      max-width: 760px;
-      margin: 2rem auto 0;
-      padding: 0 2rem;
-      display: flex;
-      gap: 1rem;
-    }
+    .controls { max-width: 760px; margin: 2rem auto 0; padding: 0 2rem; display: flex; gap: 1rem; }
 
     .btn {
       font-family: 'Source Serif 4', serif;
@@ -427,12 +357,8 @@
       transition: all 0.2s;
     }
 
-    .btn:hover {
-      background: var(--ink);
-      color: var(--paper);
-    }
+    .btn:hover { background: var(--ink); color: var(--paper); }
 
-    /* ── FOOTER ── */
     footer {
       max-width: 760px;
       margin: 5rem auto 0;
@@ -445,29 +371,16 @@
       gap: 1rem;
     }
 
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-weight: 900;
-      font-size: 1rem;
-      color: var(--muted);
-      text-decoration: none;
-    }
-
+    .footer-brand { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--muted); text-decoration: none; }
     .footer-brand span { color: var(--accent); }
+    footer p { font-size: 0.78rem; color: var(--muted); }
 
-    footer p {
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-
-    /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .hero { padding: 3rem 1.2rem 2rem; }
       .qa-list, .part-header, .controls, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
       .hero-meta { flex-direction: column; gap: 1rem; }
     }
   </style>
-  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRYY70ZVE"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -485,7 +398,6 @@
     <span class="nav-counter" id="nav-counter">— / — explored</span>
   </nav>
 
-  <!-- HERO BANNER -->
   <div class="hero-banner">
     <div class="hero-banner-deco" aria-hidden="true">AI</div>
     <div class="hero-banner-inner">
@@ -507,7 +419,6 @@
     </div>
   </div>
 
-  <!-- TABLE OF CONTENTS -->
   <nav class="toc" aria-label="Jump to section">
     <p class="toc-title">Jump to</p>
     <ul class="toc-links">
@@ -520,14 +431,12 @@
     </ul>
   </nav>
 
-  <!-- BEFORE YOU START -->
   <div class="toc" style="margin-top:1rem; border-left-color: var(--ink);">
     <p style="font-size:0.95rem; line-height:1.7;">
       <strong>Before you start:</strong> This guide assumes you know nothing about AI — and treats you like someone intelligent enough to understand it properly. No dumbing down. No overselling.
     </p>
   </div>
 
-  <!-- PART 1 -->
   <div class="part-header">
     <span id="part-1" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
     <div class="part-label">Part 1</div>
@@ -549,7 +458,7 @@
       </div>
       <div class="qa-answer">
         <p>Software that can perform tasks that normally require human intelligence — recognizing images, understanding language, making decisions, generating text. The key word is "normally." AI doesn't think like a human. It mimics the outputs of thinking without the underlying process.
-          <span class="insight">Key insight: "Intelligence" is a loaded word. AI does not understand the world. It recognizes patterns in data and produces outputs that look like understanding. That distinction matters enormously.</span>
+          <span class="insight">"Intelligence" is a loaded word. AI does not understand the world. It recognizes patterns in data and produces outputs that look like understanding. That distinction matters enormously.</span>
         </p>
       </div>
     </li>
@@ -586,7 +495,7 @@
       </div>
       <div class="qa-answer">
         <p>The term "artificial intelligence" was coined in 1956 at a conference at Dartmouth College. The field is 70 years old. But for most of that time, progress was painfully slow. The AI that exists today — the kind that can write essays, generate images, and hold conversations — is largely a product of the last 10 years.
-          <span class="insight">Key insight: AI is not a new idea. The ideas behind neural networks go back to the 1940s. What changed is not the concept — it's the computing power and data to make it work.</span>
+          <span class="insight">AI is not a new idea. The ideas behind neural networks go back to the 1940s. What changed is not the concept — it's the computing power and data to make it work.</span>
         </p>
       </div>
     </li>
@@ -612,7 +521,7 @@
       </div>
       <div class="qa-answer">
         <p>Three things converged: vastly more data (the internet), vastly more computing power (especially GPUs), and a breakthrough algorithm called the "transformer" (2017). The transformer architecture, developed at Google, is the foundation of virtually every major AI model today — including ChatGPT.
-          <span class="insight">Key insight: The "Attention Is All You Need" paper — published by Google researchers in 2017 — may be the most consequential scientific paper of the 21st century. Almost no one outside AI had heard of it.</span>
+          <span class="insight">The "Attention Is All You Need" paper — published by Google researchers in 2017 — may be the most consequential scientific paper of the 21st century. Almost no one outside AI had heard of it.</span>
         </p>
       </div>
     </li>
@@ -625,7 +534,7 @@
       </div>
       <div class="qa-answer">
         <p>A mathematical system loosely inspired by how neurons in the brain connect. It consists of layers of simple computational units ("neurons") that pass signals to each other. Each connection has a "weight" — a number that determines how strongly one neuron influences another. The network learns by adjusting these weights.
-          <span class="insight">Key insight: "Inspired by the brain" is true but misleading. A biological brain has 86 billion neurons with extraordinarily complex chemistry. A neural network is a vastly simpler mathematical abstraction of that idea.</span>
+          <span class="insight">"Inspired by the brain" is true but misleading. A biological brain has 86 billion neurons with extraordinarily complex chemistry. A neural network is a vastly simpler mathematical abstraction of that idea.</span>
         </p>
       </div>
     </li>
@@ -670,7 +579,7 @@
       </div>
       <div class="qa-answer">
         <p>You type a message. ChatGPT converts it into tokens (chunks of text). It processes those tokens through its neural network — billions of mathematical operations. It predicts what token should come next. Then the next. Then the next. The result looks like a coherent response — because the model has learned that certain sequences of tokens follow other sequences with high probability.
-          <span class="insight">Key insight: ChatGPT is not retrieving answers from a database. It is generating each word based on statistical patterns learned during training. It has no memory of previous conversations (unless given one). It does not "know" anything in the way you know things.</span>
+          <span class="insight">ChatGPT is not retrieving answers from a database. It is generating each word based on statistical patterns learned during training. It has no memory of previous conversations (unless given one). It does not "know" anything in the way you know things.</span>
         </p>
       </div>
     </li>
@@ -695,12 +604,9 @@
 
         <script>
         (function() {
-          // Simple tokenizer approximating GPT-style BPE
           const COLORS = ['#c0392b22','#2980b922','#27ae6022','#8e44ad22','#e67e2222','#16a08522'];
-          
           function tokenize(text) {
             if (!text.trim()) return [];
-            // Split on whitespace and common punctuation, approximating BPE behavior
             const tokens = [];
             const regex = /'s|'t|'re|'ve|'m|'ll|'d|\s+|[^\s\w]|\w+/g;
             let match;
@@ -708,7 +614,6 @@
             while ((match = regex.exec(text)) !== null) {
               const tok = match[0];
               if (tok.trim() === '' && tok.length > 0) {
-                // whitespace — attach to next token visually
                 tokens.push({ text: tok, color: 'transparent', isSpace: true });
               } else if (tok.trim()) {
                 tokens.push({ text: tok, color: COLORS[colorIdx % COLORS.length], isSpace: false });
@@ -717,21 +622,17 @@
             }
             return tokens;
           }
-
           const input = document.getElementById('token-input');
           const output = document.getElementById('token-output');
           const countEl = document.getElementById('token-count');
-
           input.addEventListener('input', function() {
             const tokens = tokenize(this.value);
             const realTokens = tokens.filter(t => !t.isSpace);
-            
             output.innerHTML = tokens.map(t => {
               if (t.isSpace) return '<span>' + t.text.replace(/ /g, '&nbsp;') + '</span>';
               return '<span style="background:' + t.color + '; border:1px solid ' + t.color.replace('22','66') + '; border-radius:3px; padding:0 3px; margin:0 1px; font-family:monospace; font-size:0.88rem;">' + t.text.replace(/</g,'&lt;') + '</span>';
             }).join('');
-
-            countEl.textContent = realTokens.length > 0 
+            countEl.textContent = realTokens.length > 0
               ? realTokens.length + ' token' + (realTokens.length !== 1 ? 's' : '') + ' — roughly ' + Math.ceil(realTokens.length * 0.75) + ' word' + (Math.ceil(realTokens.length * 0.75) !== 1 ? 's' : '') + ' to the model'
               : '';
           });
@@ -761,7 +662,7 @@
       </div>
       <div class="qa-answer">
         <p>The text used to train LLMs comes from: the entire crawlable internet (Common Crawl), books (BookCorpus and others), Wikipedia, code repositories (GitHub), academic papers, and more. GPT-4 was trained on an estimated several trillion words — more text than any human could read in thousands of lifetimes.
-          <span class="insight">Key insight: The model has been trained on your writing, books you've read, articles you've shared. In a very real sense, LLMs are a distillation of human language and thought — with all its biases, errors, and brilliance included.</span>
+          <span class="insight">The model has been trained on your writing, books you've read, articles you've shared. In a very real sense, LLMs are a distillation of human language and thought — with all its biases, errors, and brilliance included.</span>
         </p>
       </div>
     </li>
@@ -786,7 +687,7 @@
       </div>
       <div class="qa-answer">
         <p>Because it is designed to produce fluent, coherent text — not to be accurate. When it doesn't have reliable information, it doesn't say "I don't know." It generates text that sounds plausible given the context. This is called "hallucination." It's not a bug in the traditional sense — it's a consequence of how LLMs fundamentally work.
-          <span class="insight">Key insight: An LLM has no way to distinguish between what it knows confidently and what it's guessing. It produces text with equal fluency whether it's right or wrong. That is its deepest limitation.</span>
+          <span class="insight">An LLM has no way to distinguish between what it knows confidently and what it's guessing. It produces text with equal fluency whether it's right or wrong. That is its deepest limitation.</span>
         </p>
       </div>
     </li>
@@ -818,7 +719,7 @@
       </div>
       <div class="qa-answer">
         <p>Genuinely reason from first principles. Learn continuously from new experience (without retraining). Reliably verify its own accuracy. Understand physical causation. Form genuine intentions or goals. Exercise judgment in novel situations it wasn't trained for. And — crucially — know when it doesn't know something.
-          <span class="insight">Key insight: AI is extraordinarily capable within the distribution of its training data. Outside that distribution — genuinely new situations — it can fail badly and confidently.</span>
+          <span class="insight">AI is extraordinarily capable within the distribution of its training data. Outside that distribution — genuinely new situations — it can fail badly and confidently.</span>
         </p>
       </div>
     </li>
@@ -856,7 +757,7 @@
       </div>
       <div class="qa-answer">
         <p>It produces text that sounds like opinions — but they reflect patterns in training data, not genuine views. AI models are also heavily fine-tuned to be "helpful, harmless, and honest" — which means their apparent opinions are shaped by human feedback during training. The AI that says "I think X" is producing a response that humans rated positively, not expressing a belief.
-          <span class="insight">Key insight: AI opinions are a mirror of the opinions of the people who created the training data and the people who rated the outputs during fine-tuning. They are not neutral.</span>
+          <span class="insight">AI opinions are a mirror of the opinions of the people who created the training data and the people who rated the outputs during fine-tuning. They are not neutral.</span>
         </p>
       </div>
     </li>
@@ -881,7 +782,7 @@
       </div>
       <div class="qa-answer">
         <p>Not in the way humans do. Once trained, a model's weights are fixed. It cannot update its knowledge from new conversations (unless the conversation is within its context window). To truly learn new information, the model must be retrained — an enormously expensive process. This is why ChatGPT has a "knowledge cutoff" date.
-          <span class="insight">Key insight: Every time you correct ChatGPT in a conversation, it acknowledges the correction — but forgets it the moment the conversation ends. The next user asking the same question gets the same wrong answer.</span>
+          <span class="insight">Every time you correct ChatGPT in a conversation, it acknowledges the correction — but forgets it the moment the conversation ends. The next user asking the same question gets the same wrong answer.</span>
         </p>
       </div>
     </li>
@@ -924,8 +825,8 @@
         <span class="qa-toggle" aria-hidden="true">+</span>
       </div>
       <div class="qa-answer">
-        <p>Nominally, a nonprofit board controls OpenAI. In practice, Sam Altman (CEO) and Microsoft (largest investor) have enormous influence. The board fired Altman in November 2023 — and rehired him four days later after mass employee revolt and investor pressure. Notably, Anthropic — the company behind Claude — was founded by former OpenAI researchers who left precisely over concerns about safety and governance. The history of AI is partly a history of people leaving OpenAI.
-          <span class="insight">Key insight: The organization meant to ensure AI benefits humanity is now one of the most commercially pressured companies in the world. Whether those two goals are compatible is an open question.</span>
+        <p>Nominally, a nonprofit board controls OpenAI. In practice, Sam Altman (CEO) and Microsoft (largest investor) have enormous influence. The board fired Altman in November 2023 — and rehired him four days later after mass employee revolt and investor pressure. Notably, Anthropic — the company behind Claude — was founded by former OpenAI researchers who left precisely over concerns about safety and governance.
+          <span class="insight">The organization meant to ensure AI benefits humanity is now one of the most commercially pressured companies in the world. Whether those two goals are compatible is an open question.</span>
         </p>
       </div>
     </li>
@@ -950,7 +851,7 @@
       </div>
       <div class="qa-answer">
         <p>Google's entire business model depends on people using search — and clicking ads. If people ask AI instead of Google, Google loses revenue. ChatGPT launched in November 2022 and reached 100 million users in two months — the fastest product adoption in history. Google declared an internal "red alert" and rushed Gemini to market. The search business that Google built over 25 years is genuinely threatened.
-          <span class="insight">Key insight: Google invented the transformer architecture that makes ChatGPT possible — then watched a competitor use it to threaten Google's core business. One of the great ironies of the AI era.</span>
+          <span class="insight">Google invented the transformer architecture that makes ChatGPT possible — then watched a competitor use it to threaten Google's core business. One of the great ironies of the AI era.</span>
         </p>
       </div>
     </li>
@@ -975,7 +876,7 @@
       </div>
       <div class="qa-answer">
         <p>GPT-4 reportedly cost over $100 million to train. The next generation of models may cost $1 billion or more. DeepSeek claimed to train a comparable model for under $6 million — a claim that shocked the industry and sent Nvidia's stock down 17% in one day. If true, it suggests the cost of frontier AI may be falling faster than expected.
-          <span class="insight">Key insight: The economics of AI training determine who can compete. At $100 million per model, only a handful of companies worldwide can afford to build frontier AI. At $6 million, dozens can.</span>
+          <span class="insight">The economics of AI training determine who can compete. At $100 million per model, only a handful of companies worldwide can afford to build frontier AI. At $6 million, dozens can.</span>
         </p>
       </div>
     </li>
@@ -1020,7 +921,7 @@
       </div>
       <div class="qa-answer">
         <p>Your email spam filter. The autocomplete on your phone. The face recognition that unlocks it. The algorithm that decides what you see on Instagram. The fraud detection that blocked your card abroad. The voice recognition in Siri and Alexa. Navigation apps predicting traffic. Job application screening software that may have rejected your resume before a human saw it.
-          <span class="insight">Key insight: You interact with AI dozens of times per day — almost entirely without knowing. The visible, chatty AI (ChatGPT) is the tip of the iceberg.</span>
+          <span class="insight">You interact with AI dozens of times per day — almost entirely without knowing. The visible, chatty AI (ChatGPT) is the tip of the iceberg.</span>
         </p>
       </div>
     </li>
@@ -1057,7 +958,7 @@
       </div>
       <div class="qa-answer">
         <p>A neural network is trained on millions of labeled face images. It learns to extract a set of numerical features ("face embeddings") — distances between eyes, shape of jaw, position of nose — that uniquely identify a face. Your face is converted to a string of numbers. That string is compared to a database. If the numbers are close enough, it's a match.
-          <span class="insight">Key insight: Facial recognition works differently for different people. Studies have found significantly higher error rates for darker-skinned faces — because training datasets historically contained more lighter-skinned faces. Bias in data becomes bias in the system.</span>
+          <span class="insight">Facial recognition works differently for different people. Studies have found significantly higher error rates for darker-skinned faces — because training datasets historically contained more lighter-skinned faces. Bias in data becomes bias in the system.</span>
         </p>
       </div>
     </li>
@@ -1107,7 +1008,7 @@
       </div>
       <div class="qa-answer">
         <p>Not replace — but significantly augment. AI already outperforms radiologists at detecting certain cancers from scans. It can analyze genetic data to predict disease risk. It can flag drug interactions. But medicine requires judgment, empathy, and contextual reasoning that AI cannot reliably provide. The more realistic future: AI handles pattern recognition; doctors handle complexity and the human relationship.
-          <span class="insight">Key insight: The question "can AI replace X?" is usually the wrong question. The better question: "which parts of X's job are pattern recognition, and which require genuine judgment?"</span>
+          <span class="insight">The question "can AI replace X?" is usually the wrong question. The better question: "which parts of X's job are pattern recognition, and which require genuine judgment?"</span>
         </p>
       </div>
     </li>
@@ -1164,7 +1065,7 @@
       </div>
       <div class="qa-answer">
         <p>Some jobs — yes. Jobs that are primarily pattern recognition and text generation are most at risk: certain kinds of writing, data entry, basic coding, customer service. Jobs requiring physical dexterity, complex judgment, or genuine human connection are more resilient. The honest answer: AI will transform most jobs more than it will eliminate them — but the disruption will be real and unevenly distributed.
-          <span class="insight">Key insight: Every previous technological revolution created more jobs than it destroyed — eventually. The word "eventually" is doing a lot of work in that sentence.</span>
+          <span class="insight">Every previous technological revolution created more jobs than it destroyed — eventually. The word "eventually" is doing a lot of work in that sentence.</span>
         </p>
       </div>
     </li>
@@ -1189,7 +1090,7 @@
       </div>
       <div class="qa-answer">
         <p>That it thinks. It doesn't — not in any meaningful sense. It processes. It predicts. It generates. The outputs can be extraordinary, but there is no understanding, no intention, no experience behind them. Treating AI as if it thinks leads to both over-reliance (trusting outputs uncritically) and misplaced fear (anthropomorphizing a mathematical system).
-          <span class="insight">Key insight: The most dangerous thing about AI is not that it will become malevolent. It is that we will trust it uncritically because its outputs look so much like the product of a thinking mind.</span>
+          <span class="insight">The most dangerous thing about AI is not that it will become malevolent. It is that we will trust it uncritically because its outputs look so much like the product of a thinking mind.</span>
         </p>
       </div>
     </li>
@@ -1227,7 +1128,7 @@
       </div>
       <div class="qa-answer">
         <p>AI is not magic. It is mathematics — extraordinarily sophisticated mathematics, applied to enormous amounts of data, at massive scale. Understanding that doesn't make it less impressive. It makes you better equipped to use it wisely, question it critically, and engage with the decisions society is making about it right now — decisions that will shape the next century.
-          <span class="insight">Key insight: The people who shape AI will be the people who understand it. That understanding is no longer optional.</span>
+          <span class="insight">The people who shape AI will be the people who understand it. That understanding is no longer optional.</span>
         </p>
       </div>
     </li>
@@ -1235,23 +1136,21 @@
   </ul>
 
   <!-- CTA -->
-    <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+  <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
     <div>
       <p style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.4rem;">Next Topic</p>
-      <a href="#" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">The US–Iran War: What Is Actually Happening →</a>
+      <a href="../politics/iran-war.html" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">The US–Iran War: What Is Actually Happening →</a>
       <p style="font-size:0.88rem; color:var(--muted); margin-top:1rem; font-style:italic;">If you read this far, you now understand AI better than most people who use it every day.</p>
     </div>
     <a href="../../index.html" style="font-size:0.82rem; color:var(--muted); text-decoration:none; border: 1px solid var(--border); padding: 0.5rem 1.2rem; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">All Topics</a>
   </div>
 
-  <!-- FOOTER -->
   <footer>
     <a href="../../index.html" class="footer-brand"><span>48</span>Questions</a>
     <p>Understand anything. One question at a time.</p>
   </footer>
 
   <script>
-    // Toggle Q&A
     function toggle(el) {
       const item = el.closest('.qa-item');
       const isOpen = item.classList.contains('open');
@@ -1262,7 +1161,6 @@
       updateCounter();
     }
 
-    // Keyboard support for accordion
     document.querySelectorAll('.qa-question').forEach(btn => {
       btn.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
@@ -1293,19 +1191,16 @@
       document.getElementById('nav-counter').textContent = `${open} / ${total} answered`;
     }
 
-    // Progress bar
     window.addEventListener('scroll', () => {
       const doc = document.documentElement;
       const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
       document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
     });
 
-    // Set dynamic question count in hero
     const qCount = document.querySelectorAll('#qa-list > .qa-item:not(.part-header)').length;
     const heroCount = document.getElementById('hero-q-count');
     if (heroCount) heroCount.textContent = qCount;
 
-    // Auto-open first question
     const firstItem = document.querySelector('#qa-list > .qa-item');
     if (firstItem) {
       firstItem.classList.add('open');
@@ -1314,6 +1209,7 @@
       firstItem.querySelector('.qa-toggle').textContent = '×';
     }
     updateCounter();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
