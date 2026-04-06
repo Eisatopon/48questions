@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>48Questions — You Think You Know. You Don't.</title>
   <meta name="description" content="Complex events. Clear questions. 48Questions turns history, science, and world affairs into something you actually understand." />
+  <meta name="theme-color" content="#f5f0e8" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="48Questions — You Think You Know. You Don't." />
@@ -15,6 +16,7 @@
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <!-- CHANGE: added display=swap to avoid render-blocking -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 
   <style>
@@ -371,22 +373,29 @@
       border: 1px solid var(--border);
     }
 
+    /* CHANGE: cat-item is now a <button> — reset browser defaults */
     .cat-item {
       background: var(--paper-dark);
       padding: 2rem 1.5rem;
       cursor: pointer;
       transition: background 0.2s;
-      text-decoration: none;
+      text-align: left;
+      font-family: inherit;
+      color: inherit;
+      border: none;
+      width: 100%;
       display: block;
     }
 
     .cat-item:hover { background: var(--paper); }
+    .cat-item:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
 
-    .cat-item { cursor: pointer; }
     .cat-item.active { background: var(--ink); }
     .cat-item.active .cat-name,
     .cat-item.active .cat-count { color: var(--paper); }
-    .cat-badge { display: inline-block;
+
+    .cat-badge {
+      display: inline-block;
       font-size: 0.62rem;
       letter-spacing: 0.1em;
       text-transform: uppercase;
@@ -434,6 +443,7 @@
       margin-top: 2.5rem;
     }
 
+    /* CHANGE: always <a>, published ones get href, coming-soon don't */
     .topic-card {
       background: var(--paper);
       padding: 1.8rem;
@@ -443,14 +453,24 @@
       position: relative;
       outline: 2px solid transparent;
       outline-offset: -2px;
+      color: inherit;
     }
 
-    .topic-card:hover {
+    .topic-card:not([href]) {
+      cursor: default;
+    }
+
+    .topic-card[href]:hover {
       background: var(--paper-mid);
       outline-color: var(--accent);
     }
 
-    .topic-card:hover .topic-arrow { opacity: 1; transform: translateX(0); }
+    .topic-card[href]:hover .topic-arrow { opacity: 1; transform: translateX(0); }
+
+    /* Coming soon: subtly different */
+    .topic-card:not([href]) {
+      opacity: 0.7;
+    }
 
     .topic-cat {
       font-size: 0.68rem;
@@ -497,6 +517,31 @@
       opacity: 0;
       transform: translateX(-4px);
       transition: opacity 0.2s, transform 0.2s;
+    }
+
+    /* ── SKELETON LOADING ── */
+    .skeleton-card {
+      background: var(--paper);
+      padding: 1.8rem;
+      display: block;
+    }
+
+    .skeleton-line {
+      background: linear-gradient(90deg, var(--paper-dark) 25%, var(--paper-mid) 50%, var(--paper-dark) 75%);
+      background-size: 200% 100%;
+      animation: shimmer 1.4s infinite;
+      border-radius: 2px;
+      margin-bottom: 0.7rem;
+    }
+
+    .skeleton-line.short  { height: 0.6rem; width: 35%; }
+    .skeleton-line.medium { height: 0.9rem; width: 75%; }
+    .skeleton-line.long   { height: 0.8rem; width: 90%; }
+    .skeleton-line.full   { height: 0.8rem; width: 100%; }
+
+    @keyframes shimmer {
+      0%   { background-position: 200% 0; }
+      100% { background-position: -200% 0; }
     }
 
     /* ── PHILOSOPHY STRIP ── */
@@ -603,8 +648,8 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav id="nav">
+  <!-- CHANGE: added role="navigation" and aria-label -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
     <a href="index.html" class="brand"><span>48</span>Questions</a>
     <ul class="nav-links">
       <li><a href="#topics">Topics</a></li>
@@ -655,31 +700,32 @@
       <p class="section-label">Browse by Category</p>
       <h2 class="section-title">What do you want to understand?</h2>
       <div class="cat-grid">
-        <div class="cat-item cat-featured" onclick="filterTopics('all')" data-cat="all">
+        <!-- CHANGE: div → button for accessibility (keyboard nav, screen readers) -->
+        <button class="cat-item" onclick="filterTopics('all')" data-cat="all">
           <div class="cat-icon">🌐</div>
           <p class="cat-name">All Topics</p>
           <p class="cat-count">Everything we've covered</p>
-        </div>
-        <div class="cat-item" onclick="filterTopics('History')" data-cat="History">
+        </button>
+        <button class="cat-item" onclick="filterTopics('History')" data-cat="History">
           <div class="cat-icon">🪖</div>
           <p class="cat-name">History <span class="cat-badge">Start here</span></p>
           <p class="cat-count">Wars, empires, turning points</p>
-        </div>
-        <div class="cat-item" onclick="filterTopics('Science')" data-cat="Science">
+        </button>
+        <button class="cat-item" onclick="filterTopics('Science')" data-cat="Science">
           <div class="cat-icon">🔬</div>
           <p class="cat-name">Science</p>
           <p class="cat-count">Discoveries, breakthroughs, how things work</p>
-        </div>
-        <div class="cat-item" onclick="filterTopics('Politics')" data-cat="Politics">
+        </button>
+        <button class="cat-item" onclick="filterTopics('Politics')" data-cat="Politics">
           <div class="cat-icon">🏛️</div>
           <p class="cat-name">Politics</p>
           <p class="cat-count">Power, decisions, consequences</p>
-        </div>
-        <div class="cat-item" onclick="filterTopics('Business')" data-cat="Business">
+        </button>
+        <button class="cat-item" onclick="filterTopics('Business')" data-cat="Business">
           <div class="cat-icon">💰</div>
           <p class="cat-name">Business</p>
           <p class="cat-count">Companies, crises, systems</p>
-        </div>
+        </button>
       </div>
     </div>
   </section>
@@ -689,11 +735,39 @@
     <p class="section-label" id="topics-label">All Topics</p>
     <h2 class="section-title">Pick your next question.</h2>
     <div class="topics-grid" id="topics-grid">
-      <!-- loaded from topics.json -->
+      <!-- CHANGE: loading skeleton instead of plain text -->
+      <div class="skeleton-card">
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line long"></div>
+        <div class="skeleton-line full"></div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line long"></div>
+        <div class="skeleton-line full"></div>
+      </div>
+      <div class="skeleton-card">
+        <div class="skeleton-line short"></div>
+        <div class="skeleton-line medium"></div>
+        <div class="skeleton-line long"></div>
+        <div class="skeleton-line full"></div>
+      </div>
     </div>
   </section>
 
-    <!-- PHILOSOPHY STRIP -->
+  <!-- SEO FALLBACK: pre-rendered topics for crawlers (hidden when JS runs) -->
+  <noscript>
+    <section style="max-width:1100px;margin:0 auto;padding:2rem 2.5rem;">
+      <h2>Topics</h2>
+      <ul>
+        <li><a href="topics/history/gulf-war.html">The Gulf War</a></li>
+      </ul>
+    </section>
+  </noscript>
+
+  <!-- PHILOSOPHY STRIP -->
   <section class="philosophy">
     <div class="philosophy-inner">
       <p class="philosophy-quote">"The goal is not to know more facts. The goal is to ask better questions."</p>
@@ -758,7 +832,8 @@
         renderTopics(topics);
       })
       .catch(() => {
-        document.getElementById('topics-grid').innerHTML = '<p style="padding:2rem; color:var(--muted);">Topics loading...</p>';
+        document.getElementById('topics-grid').innerHTML =
+          '<p style="padding:2rem; color:var(--muted); grid-column:1/-1;">Topics could not be loaded.</p>';
       });
 
     function renderTopics(topics) {
@@ -766,7 +841,8 @@
       grid.innerHTML = '';
       topics.forEach(t => {
         const isPublished = t.status === 'published';
-        const card = document.createElement(isPublished ? 'a' : 'div');
+        // CHANGE: always <a> — published ones get href, coming-soon don't (no href = not clickable, valid HTML)
+        const card = document.createElement('a');
         if (isPublished) card.href = t.url;
         card.className = 'topic-card';
         card.innerHTML = `
@@ -775,7 +851,7 @@
           <p class="topic-hook">${t.hook}</p>
           <div class="topic-footer">
             <span class="topic-qs">${isPublished ? t.questions + ' questions' : 'Coming soon'}</span>
-            <span class="topic-arrow">→</span>
+            <span class="topic-arrow">${isPublished ? '→' : ''}</span>
           </div>`;
         grid.appendChild(card);
       });
@@ -799,8 +875,13 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
+    // CHANGE: improved fallback if topics haven't loaded yet
     function surpriseMe() {
-      const topics = window._publishedTopics || [{ url: 'topics/history/gulf-war.html' }];
+      if (!window._publishedTopics || window._publishedTopics.length === 0) {
+        window.location.href = 'topics/history/gulf-war.html';
+        return;
+      }
+      const topics = window._publishedTopics;
       const pick = topics[Math.floor(Math.random() * topics.length)];
       window.location.href = pick.url;
     }
