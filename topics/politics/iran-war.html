@@ -50,7 +50,7 @@
       --paper-dark: #ede8dc;
       --accent: #c0392b;
       --accent-soft: #e8d5d3;
-      --muted: #4a4535;
+      --muted: #5a5040; /* CHANGE: was #4a4535, improved contrast */
       --border: #d4ccbc;
       --progress-h: 3px;
     }
@@ -161,19 +161,20 @@
       color: var(--accent);
     }
 
+    /* CHANGE: was rgba(245,240,232,0.85) — increased to 0.95 for readability */
     .hero-banner .hero-intro {
-      color: rgba(245,240,232,0.85);
+      color: rgba(245,240,232,0.95);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
     }
 
     .hero-banner .hero-meta {
-      color: rgba(245,240,232,0.45);
+      color: rgba(245,240,232,0.55);
     }
 
     .hero-banner .hero-meta strong {
-      color: rgba(245,240,232,0.9);
+      color: rgba(245,240,232,0.95);
     }
 
     /* ── HERO (text-only fallback, kept for structure) ── */
@@ -209,9 +210,10 @@
       color: var(--accent);
     }
 
+    /* CHANGE: was color: var(--muted) — body text must be readable */
     .hero-intro {
       font-size: 1.05rem;
-      color: var(--muted);
+      color: var(--ink);
       max-width: 560px;
       line-height: 1.8;
       margin-bottom: 2rem;
@@ -548,7 +550,7 @@
       </div>
       <div class="qa-answer">
         <p>Yes. Since February 28, 2026, the US and Israel have conducted coordinated military operations against Iran — codenamed Operation Epic Fury (US) and Operation Roaring Lion (Israel). This is not a proxy conflict or a limited strike. It is active, sustained warfare between two states.
-          <span class="insight">Key insight: Despite the scale of the conflict, Congress never voted. Trump launched the war under executive authority. The last time the US formally declared war was 1942.</span>
+          <span class="insight">Despite the scale of the conflict, Congress never voted. Trump launched the war under executive authority. The last time the US formally declared war was 1942.</span>
         </p>
       </div>
     </li>
@@ -561,7 +563,7 @@
       </div>
       <div class="qa-answer">
         <p>February 28, 2026, at approximately 9:45 a.m. Iran Standard Time — during Ramadan morning prayers. The timing was deliberate: unusual for Israeli operations, it achieved tactical surprise. The first strikes hit Tehran and multiple Iranian cities simultaneously.
-          <span class="insight">Key insight: Oman had reported a diplomatic "breakthrough" just 24 hours earlier. Iran's foreign minister was publicly talking about peace. The speed of the decision shocked even US allies.</span>
+          <span class="insight">Oman had reported a diplomatic "breakthrough" just 24 hours earlier. Iran's foreign minister was publicly talking about peace. The speed of the decision shocked even US allies.</span>
         </p>
       </div>
     </li>
@@ -599,7 +601,7 @@
       </div>
       <div class="qa-answer">
         <p>Supreme Leader Ali Khamenei was assassinated in the opening strikes on February 28. Ali Larijani now heads an Interim Leadership Council. Khamenei's son Mojtaba has been formally selected as successor — a process that bypassed the normal clerical election and deepened internal divisions.
-          <span class="insight">Key insight: Killing the Supreme Leader was the most significant targeted assassination in modern history. It either accelerates regime collapse or galvanizes resistance. Five weeks in, we don't yet know which.</span>
+          <span class="insight">Killing the Supreme Leader was the most significant targeted assassination in modern history. It either accelerates regime collapse or galvanizes resistance. Five weeks in, we don't yet know which.</span>
         </p>
       </div>
     </li>
@@ -656,7 +658,7 @@
       </div>
       <div class="qa-answer">
         <p>Three factors aligned: Iran was at its weakest point in years — its economy in freefall, its proxies decimated by years of Israeli strikes, its population protesting. Its nuclear program had reached a threshold the US considered unacceptable. And Trump had returned to office with a mandate to act where Biden had hesitated.
-          <span class="insight">Key insight: Wars rarely happen when one side is strong. They happen when one side calculates the other is weak enough that the cost will be acceptable. That calculation may yet prove wrong.</span>
+          <span class="insight">Wars rarely happen when one side is strong. They happen when one side calculates the other is weak enough that the cost will be acceptable. That calculation may yet prove wrong.</span>
         </p>
       </div>
     </li>
@@ -669,7 +671,7 @@
       </div>
       <div class="qa-answer">
         <p>Equal partner, not subordinate. Israel conducted its largest combat sortie in history — over 1,200 bombs in the first 24 hours, targeting 500+ military sites. Netanyahu cited an "existential threat." Israel and the US coordinated closely, but Israeli officials emphasize they acted on independent decision-making, not American orders.
-          <span class="insight">Key insight: This is not America's war with Israeli support. It is a joint war — with different primary objectives. The US wants to end Iran's nuclear program. Israel wants to end the regime.</span>
+          <span class="insight">This is not America's war with Israeli support. It is a joint war — with different primary objectives. The US wants to end Iran's nuclear program. Israel wants to end the regime.</span>
         </p>
       </div>
     </li>
@@ -719,7 +721,7 @@
       </div>
       <div class="qa-answer">
         <p>Central architect and sole commander. Trump ordered the strikes from Air Force One. He defines all war objectives personally and manages the conflict through social media announcements and national addresses. His stated goals have shifted multiple times — from "regime change encouragement" to "unconditional surrender" to hints of negotiations — sometimes within 24 hours.
-          <span class="insight">Key insight: Parsing Trump's actual strategy from his rhetoric on this war is genuinely difficult. That ambiguity may be intentional — or it may be the absence of a clear strategy.</span>
+          <span class="insight">Parsing Trump's actual strategy from his rhetoric on this war is genuinely difficult. That ambiguity may be intentional — or it may be the absence of a clear strategy.</span>
         </p>
       </div>
     </li>
@@ -763,7 +765,7 @@
       </div>
       <div class="qa-answer">
         <p>Over 8,000 Iranian military targets — nuclear facilities (Natanz repeatedly), missile production sites, 130+ naval vessels destroyed, IRGC bases, government buildings including parliament, and leadership compounds. Civilian infrastructure including hospitals, schools, and bridges has also been struck.
-          <span class="insight">Key insight: The expansion from military to civilian infrastructure is legally significant. Trump has explicitly threatened to hit power and water desalination plants — which international law experts have called a potential war crime.</span>
+          <span class="insight">The expansion from military to civilian infrastructure is legally significant. Trump has explicitly threatened to hit power and water desalination plants — which international law experts have called a potential war crime.</span>
         </p>
       </div>
     </li>
@@ -812,7 +814,7 @@
       </div>
       <div class="qa-answer">
         <p>Massively. Hundreds of drones and ballistic missiles fired at Israel and US bases in Bahrain, Jordan, Kuwait, Qatar, Saudi Arabia, and the UAE. A drone struck Britain's Akrotiri base in Cyprus. Missiles were reportedly launched at Diego Garcia. The Strait of Hormuz has been effectively closed, stranding 20,000 sailors and thousands of ships.
-          <span class="insight">Key insight: Iran cannot win this war militarily. But it can make it economically intolerable for the world — and politically untenable for Trump. The Strait closure is its most powerful weapon.</span>
+          <span class="insight">Iran cannot win this war militarily. But it can make it economically intolerable for the world — and politically untenable for Trump. The Strait closure is its most powerful weapon.</span>
         </p>
       </div>
     </li>
@@ -869,7 +871,7 @@
       </div>
       <div class="qa-answer">
         <p>On April 3, 2026 — day 35 of the war — Iran shot down a US F-15E Strike Eagle over central Iran. Both crew ejected. One was rescued on April 5 by US special forces deep inside Iranian territory — requiring "dozens of aircraft" and Israeli intelligence cooperation. The second crew member's status remains unknown, with Iran offering rewards for capture.
-          <span class="insight">Key insight: Two downed US jets in one day — after officials had claimed "total air dominance" — shattered that narrative. It is the most visible evidence that Iran's military is not as destroyed as claimed.</span>
+          <span class="insight">Two downed US jets in one day — after officials had claimed "total air dominance" — shattered that narrative. It is the most visible evidence that Iran's military is not as destroyed as claimed.</span>
         </p>
       </div>
     </li>
@@ -931,7 +933,7 @@
       </div>
       <div class="qa-answer">
         <p>Yes — from the very beginning. The opening strikes included cyberattacks that caused a 60+ hour internet blackout across Iran, dropping connectivity to 1%. Messages were sent urging Iranians to rise against their government. Iran has since restricted internet access to government-approved users only.
-          <span class="insight">Key insight: The information war is as real as the air war. Cutting a country's internet during a military strike is a new kind of warfare — and its legality under international law is entirely untested.</span>
+          <span class="insight">The information war is as real as the air war. Cutting a country's internet during a military strike is a new kind of warfare — and its legality under international law is entirely untested.</span>
         </p>
       </div>
     </li>
@@ -963,7 +965,7 @@
       </div>
       <div class="qa-answer">
         <p>Both oppose the war diplomatically. Russia condemned strikes on Natanz as a "blatant violation of international law" and evacuated 200 staff from Iran's Bushehr nuclear plant after it was hit. Putin and Erdogan jointly called for an immediate ceasefire. China has called for restraint. Neither has intervened militarily.
-          <span class="insight">Key insight: Iran expected more support from Russia and China. Their restraint leaves Iran genuinely isolated — and may ultimately force it to negotiate.</span>
+          <span class="insight">Iran expected more support from Russia and China. Their restraint leaves Iran genuinely isolated — and may ultimately force it to negotiate.</span>
         </p>
       </div>
     </li>
@@ -1025,7 +1027,7 @@
       </div>
       <div class="qa-answer">
         <p>Difficult to verify — Iran has imposed martial law and restricted internet to government-approved users. There are both pro-government rallies mourning Khamenei and anti-regime sentiment fueled by economic collapse (the rial has lost 90% of its value since 2018). The Tehran Prosecutor's Office has seized assets of 100+ individuals accused of "supporting the enemy."
-          <span class="insight">Key insight: Bombing a population to trigger regime change has a poor historical record. Iranians who hate their government may hate foreign bombs even more. National identity can override political grievance.</span>
+          <span class="insight">Bombing a population to trigger regime change has a poor historical record. Iranians who hate their government may hate foreign bombs even more. National identity can override political grievance.</span>
         </p>
       </div>
     </li>
@@ -1106,7 +1108,7 @@
       </div>
       <div class="qa-answer">
         <p>Catastrophic. A ground invasion would require 100,000+ troops, face mountainous terrain, and encounter fierce resistance. Iran is three times the size of Iraq with four times the population. Trump has not ruled it out. Iran's military has explicitly warned it would be the beginning of a quagmire that makes Afghanistan look manageable.
-          <span class="insight">Key insight: The US learned in Iraq and Afghanistan that winning from the air is possible. Winning on the ground in a country that doesn't want you is something else entirely.</span>
+          <span class="insight">The US learned in Iraq and Afghanistan that winning from the air is possible. Winning on the ground in a country that doesn't want you is something else entirely.</span>
         </p>
       </div>
     </li>
@@ -1143,7 +1145,7 @@
       </div>
       <div class="qa-answer">
         <p>Tactically, the US and Israel have destroyed most of Iran's conventional military capabilities. Strategically, the picture is different. Iran retains missile and drone capacity, the Strait closure leverage, and proxy forces. The regime survives. The popular uprising hasn't materialized. The global economy suffers.
-          <span class="insight">Key insight: Military dominance and strategic victory are not the same thing. The US has the former. Whether it achieves the latter depends on how this ends — not how it started.</span>
+          <span class="insight">Military dominance and strategic victory are not the same thing. The US has the former. Whether it achieves the latter depends on how this ends — not how it started.</span>
         </p>
       </div>
     </li>
@@ -1180,7 +1182,7 @@
       </div>
       <div class="qa-answer">
         <p>Four things: Speed — massive strikes in hours, not months. Technology — unprecedented cyber, drone, and precision munitions. Objectives — destroy capabilities, not occupy territory (so far). And risk — Iran can actually strike back, creating mutual vulnerability that was absent in Iraq and Afghanistan.
-          <span class="insight">Key insight: Iraq fell in three weeks. Iran will not. Whatever comes next, it will not resemble the opening phases of either previous war.</span>
+          <span class="insight">Iraq fell in three weeks. Iran will not. Whatever comes next, it will not resemble the opening phases of either previous war.</span>
         </p>
       </div>
     </li>
@@ -1193,7 +1195,7 @@
       </div>
       <div class="qa-answer">
         <p>That it is "surgical" or "limited." This is comprehensive warfare targeting a nation's leadership, military, economy, and infrastructure. The civilian toll is mounting. The "no boots on the ground" narrative ignores special forces operations deep inside Iran. And the stated objectives keep shifting — which is usually a sign that no one is certain what winning actually looks like.
-          <span class="insight">Key insight: The most dangerous thing about this war is not the bombs. It is the certainty — on all sides — that they are completely right.</span>
+          <span class="insight">The most dangerous thing about this war is not the bombs. It is the certainty — on all sides — that they are completely right.</span>
         </p>
       </div>
     </li>
@@ -1227,7 +1229,7 @@
   </ul>
 
   <!-- CTA -->
-    <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+  <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
     <div>
       <p style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.4rem;">Next Topic</p>
       <a href="rare-earths.html" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">Rare Earth Minerals: The Hidden War Behind Your Phone →</a>
@@ -1243,7 +1245,6 @@
   </footer>
 
   <script>
-    // Toggle Q&A
     function toggle(el) {
       const item = el.closest('.qa-item');
       const isOpen = item.classList.contains('open');
@@ -1254,7 +1255,6 @@
       updateCounter();
     }
 
-    // Keyboard support for accordion
     document.querySelectorAll('.qa-question').forEach(btn => {
       btn.addEventListener('keydown', e => {
         if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
@@ -1285,19 +1285,16 @@
       document.getElementById('nav-counter').textContent = `${open} / ${total} explored`;
     }
 
-    // Progress bar
     window.addEventListener('scroll', () => {
       const doc = document.documentElement;
       const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
       document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
     });
 
-    // Set dynamic question count in hero
     const qCount = document.querySelectorAll('#qa-list > .qa-item').length;
     const heroCount = document.getElementById('hero-q-count');
     if (heroCount) heroCount.textContent = qCount;
 
-    // Auto-open first question
     const firstItem = document.querySelector('#qa-list > .qa-item');
     if (firstItem) {
       firstItem.classList.add('open');
@@ -1306,6 +1303,7 @@
       firstItem.querySelector('.qa-toggle').textContent = '×';
     }
     updateCounter();
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
     }, { threshold: 0.1 });
