@@ -16,7 +16,8 @@
 
   <link rel="icon" type="image/png" href="/favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <!-- CHANGE: added display=swap to avoid render-blocking -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
 
   <style>
@@ -99,6 +100,74 @@
     }
 
     .nav-links a:hover { color: var(--accent); }
+
+    /* ── HAMBURGER BUTTON ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+      z-index: 200;
+    }
+
+    .nav-hamburger span {
+      display: block;
+      height: 2px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: transform 0.25s ease, opacity 0.25s ease;
+      transform-origin: center;
+    }
+
+    .nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-hamburger.open span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── MOBILE NAV OVERLAY ── */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--paper);
+      z-index: 150;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .mobile-nav.open { display: flex; }
+
+    .mobile-nav a {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav a:hover { color: var(--accent); }
+
+    /* ── FOCUS STATES ── */
+    .topic-card[href]:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 0;
+    }
+
+    .btn-primary:focus-visible,
+    .btn-secondary:focus-visible,
+    .btn-surprise:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: 3px;
+    }
 
     /* ── HERO ── */
     .hero {
@@ -312,11 +381,12 @@
     .preview-q {
       padding: 0.9rem 0;
       border-bottom: 1px solid var(--border);
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: var(--ink);
       display: flex;
       gap: 0.8rem;
       align-items: baseline;
+      line-height: 1.5;
     }
 
     .preview-q:last-child { border-bottom: none; }
@@ -633,6 +703,7 @@
     @media (max-width: 768px) {
       nav { padding: 1rem 1.2rem; }
       .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
       .hero { padding: 6rem 1.2rem 3rem; }
       .hero-deco { display: none; }
       .featured { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem; }
@@ -661,7 +732,17 @@
       <li><a href="#categories">Categories</a></li>
       <li><a href="#">About</a></li>
     </ul>
+    <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
+      <span></span><span></span><span></span>
+    </button>
   </nav>
+
+  <!-- MOBILE NAV OVERLAY -->
+  <div class="mobile-nav" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+    <a href="#topics" class="mobile-nav-link">Topics</a>
+    <a href="#categories" class="mobile-nav-link">Categories</a>
+    <a href="#" class="mobile-nav-link">About</a>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
@@ -682,7 +763,7 @@
   <!-- FEATURED TOPIC -->
   <section class="featured" id="featured-section">
     <div class="featured-content">
-      <p class="featured-label">Latest Topic</p>
+      <p class="featured-label">Just Published</p>
       <h2 class="featured-title" id="featured-title">—</h2>
       <p class="featured-desc" id="featured-desc">—</p>
       <div class="featured-meta">
@@ -795,7 +876,49 @@
   </footer>
 
   <script>
-    // Load topics from JSON
+    // ── HAMBURGER ──
+    const hamburger = document.getElementById('hamburger');
+    const mobileNav = document.getElementById('mobile-nav');
+
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileNav.classList.toggle('open');
+      hamburger.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+
+    // Close mobile nav on link click
+    mobileNav.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && mobileNav.classList.contains('open')) {
+        mobileNav.classList.remove('open');
+        hamburger.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+        hamburger.focus();
+      }
+    });
+
+    // ── FEATURED FALLBACK ──
+    function setFeaturedFallback() {
+      document.getElementById('featured-title').textContent = 'Topics loading…';
+      document.getElementById('featured-desc').textContent = 'Check back in a moment.';
+      document.getElementById('featured-qs').textContent = '—';
+      document.getElementById('featured-btn').removeAttribute('href');
+      document.getElementById('featured-btn').style.opacity = '0.5';
+      document.getElementById('featured-btn').style.pointerEvents = 'none';
+    }
+
+    // ── LOAD TOPICS ──
     fetch('/topics.json')
       .then(r => r.json())
       .then(topics => {
@@ -832,11 +955,20 @@
           } else if (previewList) {
             previewList.innerHTML = '<div class="preview-q" style="color:var(--muted)">Questions loading...</div>';
           }
+        } else {
+          setFeaturedFallback();
         }
 
-        renderTopics(topics);
+        // Restore category from URL ?cat=
+        const urlCat = new URLSearchParams(window.location.search).get('cat');
+        if (urlCat) {
+          filterTopics(urlCat, false);
+        } else {
+          renderTopics(topics);
+        }
       })
       .catch(() => {
+        setFeaturedFallback();
         document.getElementById('topics-grid').innerHTML =
           '<p style="padding:2rem; color:var(--muted); grid-column:1/-1;">Topics could not be loaded.</p>';
       });
@@ -846,7 +978,6 @@
       grid.innerHTML = '';
       topics.forEach(t => {
         const isPublished = t.status === 'published';
-        // CHANGE: always <a> — published ones get href, coming-soon don't (no href = not clickable, valid HTML)
         const card = document.createElement('a');
         if (isPublished) card.href = t.url;
         card.className = 'topic-card';
@@ -865,13 +996,20 @@
       }
     }
 
-    function filterTopics(cat) {
+    function filterTopics(cat, scroll = true) {
       const all = window._allTopics || [];
       const filtered = cat === 'all' ? all : all.filter(t => t.category === cat);
       renderTopics(filtered);
       document.getElementById('topics-label').textContent = cat === 'all' ? 'All Topics' : cat;
       document.querySelectorAll('.cat-item').forEach(el => el.classList.toggle('active', el.dataset.cat === cat));
-      document.getElementById('topics').scrollIntoView({ behavior: 'smooth' });
+
+      // Update URL without reload
+      const url = new URL(window.location);
+      if (cat === 'all') { url.searchParams.delete('cat'); }
+      else { url.searchParams.set('cat', cat); }
+      window.history.replaceState({}, '', url);
+
+      if (scroll) document.getElementById('topics').scrollIntoView({ behavior: 'smooth' });
     }
 
     // Nav background on scroll
@@ -880,7 +1018,6 @@
       nav.classList.toggle('scrolled', window.scrollY > 60);
     });
 
-    // CHANGE: improved fallback if topics haven't loaded yet
     function surpriseMe() {
       if (!window._publishedTopics || window._publishedTopics.length === 0) {
         window.location.href = 'topics/history/gulf-war.html';
