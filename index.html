@@ -69,8 +69,11 @@
       background: var(--paper);
       color: var(--ink);
       font-family: 'Source Serif 4', Georgia, serif;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-optical-sizing: auto;
       overflow-x: hidden;
     }
 
@@ -429,6 +432,84 @@
       min-width: 1.5rem;
     }
 
+    /* ── START HERE ── */
+    .start-here {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 5rem 2.5rem 3rem;
+    }
+
+    .start-here-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      margin-top: 2.5rem;
+    }
+
+    .start-card {
+      background: var(--paper);
+      padding: 2rem 1.8rem;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s;
+      outline: 2px solid transparent;
+      outline-offset: -2px;
+    }
+
+    .start-card:hover {
+      background: var(--paper-mid);
+      outline-color: var(--accent);
+    }
+
+    .start-card:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: -2px;
+    }
+
+    .start-condition {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: 1.2rem;
+      font-style: italic;
+    }
+
+    .start-condition strong {
+      color: var(--ink);
+      font-style: normal;
+      font-weight: 400;
+    }
+
+    .start-destination {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .start-destination::after {
+      content: '→';
+      font-family: 'Source Serif 4', serif;
+      font-weight: 400;
+      transition: transform 0.2s;
+    }
+
+    .start-card:hover .start-destination::after {
+      transform: translateX(4px);
+    }
+
+    .start-qs {
+      font-size: 0.75rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+
     /* ── CATEGORIES ── */
     .categories {
       background: var(--paper-dark);
@@ -756,6 +837,7 @@
       .hero { padding: 6rem 1.2rem 3rem; }
       .hero-deco { display: none; }
       .featured { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.2rem; }
+      .start-here { padding: 3rem 1.2rem 2rem; }
       .categories { padding: 3rem 1.2rem; }
       .topics-section { padding: 3rem 1.2rem; }
       .philosophy { padding: 3rem 1.2rem; }
@@ -837,6 +919,17 @@
     <div class="featured-preview">
       <p class="preview-title">Sample Questions</p>
       <div id="featured-preview-list"></div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- START HERE -->
+  <section class="start-here" aria-labelledby="start-here-title">
+    <p class="section-label">Where to begin</p>
+    <h2 class="section-title" id="start-here-title">Not sure where to start?</h2>
+    <div class="start-here-grid" id="start-here-grid">
+      <!-- populated by JS from topics.json -->
     </div>
   </section>
 
@@ -990,7 +1083,8 @@
         if (!r.ok) throw new Error(`HTTP ${r.status}`);
         return r.json();
       })
-      .then(topics => {
+      .then(data => {
+        const topics = data.topics || data;
         topics.sort((a, b) => {
           if (a.status === 'published' && b.status === 'published') return new Date(b.date) - new Date(a.date);
           if (a.status === 'published') return -1;
@@ -1056,6 +1150,44 @@
           filterTopics(urlCat, false);
         } else {
           renderTopics(topics);
+
+        // ── START HERE — curated entry points ──
+        const startEntries = [
+          {
+            condition: "I follow politics but don't understand how power <strong>actually works</strong>",
+            url: 'topics/politics/how-us-elections-work.html',
+            title: 'US Elections',
+            questions: 48
+          },
+          {
+            condition: "I read about markets but don't get <strong>who really pays</strong>",
+            url: 'topics/politics/trumps-tariffs.html',
+            title: "Trump's Tariffs",
+            questions: 44
+          },
+          {
+            condition: "I use AI every day but don't understand <strong>what it actually is</strong>",
+            url: 'topics/science/how-ai-works.html',
+            title: 'How AI Works',
+            questions: 48
+          },
+          {
+            condition: "I see war headlines but don't understand <strong>what's actually at stake</strong>",
+            url: 'topics/politics/iran-war.html',
+            title: 'The US–Iran War',
+            questions: 52
+          }
+        ];
+
+        const startGrid = document.getElementById('start-here-grid');
+        if (startGrid) {
+          startGrid.innerHTML = startEntries.map(e => `
+            <a href="${e.url}" class="start-card">
+              <p class="start-condition">I ${e.condition}</p>
+              <p class="start-destination">${e.title}</p>
+              <p class="start-qs">${e.questions} questions</p>
+            </a>`).join('');
+        }
         }
       })
       .catch(() => {
