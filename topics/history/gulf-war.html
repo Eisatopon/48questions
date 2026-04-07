@@ -1027,6 +1027,7 @@
     });
 
     // ── TOGGLE ──
+    function toggle(el) {
       const item = el.closest('.qa-item');
       const isOpen = item.classList.contains('open');
       item.classList.toggle('open', !isOpen);
