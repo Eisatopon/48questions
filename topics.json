@@ -1,112 +1,141 @@
-[
-  {
-    "title": "How AI Actually Works",
-    "hook": "You use AI every day. You probably don't understand how it works. Here's the honest explanation — no jargon, no hype.",
-    "category": "Science",
-    "questions": 48,
-    "url": "topics/science/how-ai-works.html",
-    "status": "published",
-    "date": "2026-04-07",
-    "preview": [
-      "What is artificial intelligence — really?",
-      "Does ChatGPT understand, or just predict?",
-      "Why does AI sometimes make things up?",
-      "Will AI take your job?",
-      "Should we be afraid?"
-    ]
-  },
-  {
-    "title": "The US–Iran War: What Is Actually Happening",
-    "hook": "On February 28, 2026, the US and Israel launched a war with Iran. Here's everything you need to understand — in 52 questions.",
-    "category": "Politics",
-    "questions": 52,
-    "url": "topics/politics/iran-war.html",
-    "status": "published",
-    "date": "2026-04-06",
-    "preview": [
-      "Is the US actually at war with Iran?",
-      "Who is in charge in Iran now?",
-      "Could Iran close the Strait of Hormuz?",
-      "Who is actually winning right now?",
-      "Could this trigger World War III?"
-    ]
-  },
-  {
-    "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
-    "hook": "They're in your phone, your car, your weapons. And one country controls the supply.",
-    "category": "Politics",
-    "questions": 41,
-    "url": "topics/politics/rare-earths.html",
-    "status": "published",
-    "date": "2026-04-05",
-    "preview": [
-      "How many rare earth elements are in your phone right now?",
-      "Why did China cut off Japan in 2010?",
-      "Could this trigger a war?",
-      "Why can't we just use something else?",
-      "Which country will be the next China in rare earths?"
-    ]
-  },
-  {
-    "title": "Trump's Tariffs Explained",
-    "hook": "You think tariffs are someone else's problem. They're not — you've already paid them.",
-    "category": "Politics",
-    "questions": 44,
-    "url": "topics/politics/trumps-tariffs.html",
-    "status": "published",
-    "date": "2026-04-04",
-    "preview": [
-      "Who actually pays a tariff?",
-      "Why did Trump target China specifically?",
-      "What happened to American farmers?",
-      "Could this lead to a recession?",
-      "Every tariff has a flag on it. The bill never does."
-    ]
-  },
-  {
-    "title": "The Gulf War",
-    "hook": "Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?",
-    "category": "History",
-    "questions": 44,
-    "url": "topics/history/gulf-war.html",
-    "status": "published",
-    "date": "2026-04-03",
-    "preview": [
-      "Why did Saddam believe no one would stop him?",
-      "Why did Arab countries join a coalition against another Arab nation?",
-      "What were Scud missiles — and why did they matter?",
-      "Why didn't the coalition march to Baghdad?",
-      "What was the long-term impact — and does it connect to 9/11?"
-    ]
-  },
-  {
-    "title": "The Fall of Constantinople",
-    "hook": "The city had survived a thousand years. What finally brought it down in 1453?",
-    "category": "History",
-    "questions": 0,
-    "url": "",
-    "status": "coming-soon",
-    "date": "",
-    "preview": []
-  },
-  {
-    "title": "The 2008 Financial Crisis",
-    "hook": "Everyone felt it. Almost no one understands what actually happened — or who let it.",
-    "category": "Business",
-    "questions": 0,
-    "url": "",
-    "status": "coming-soon",
-    "date": "",
-    "preview": []
-  },
-  {
-    "title": "How Dictatorships Rise",
-    "hook": "They never start with tanks. They start with something much more ordinary.",
-    "category": "Politics",
-    "questions": 0,
-    "url": "",
-    "status": "coming-soon",
-    "date": "",
-    "preview": []
-  }
-]
+{
+  "schema_version": "1.0",
+  "generated": "manual",
+  "topics": [
+    {
+      "title": "How US Elections Actually Work",
+      "hook": "The Electoral College. The Senate. The House. Midterms. Why does the world's oldest democracy elect its president this way — and has it always?",
+      "category": "Politics",
+      "questions": 48,
+      "url": "topics/politics/how-us-elections-work.html",
+      "status": "published",
+      "date": "2026-04-07",
+      "preview": [
+        "Do Americans actually directly elect the President?",
+        "Can a candidate win without winning the popular vote?",
+        "Why does every state get two senators regardless of population?",
+        "What is the filibuster — and why can 41 senators block everything?",
+        "Could the US ever abolish the Electoral College?"
+      ],
+      "featured": true
+    },
+    {
+      "title": "How AI Actually Works",
+      "hook": "You use AI every day. You probably don't understand how it works. Here's the honest explanation — no jargon, no hype.",
+      "category": "Science",
+      "questions": 48,
+      "url": "topics/science/how-ai-works.html",
+      "status": "published",
+      "date": "2026-04-07",
+      "preview": [
+        "What is artificial intelligence — really?",
+        "Does ChatGPT understand, or just predict?",
+        "Why does AI sometimes make things up?",
+        "Will AI take your job?",
+        "Should we be afraid?"
+      ],
+      "featured": true
+    },
+    {
+      "title": "The US–Iran War: What Is Actually Happening",
+      "hook": "On February 28, 2026, the US and Israel launched a war with Iran. Here's everything you need to understand — in 52 questions.",
+      "category": "Politics",
+      "questions": 52,
+      "url": "topics/politics/iran-war.html",
+      "status": "published",
+      "date": "2026-04-06",
+      "preview": [
+        "Is the US actually at war with Iran?",
+        "Who is in charge in Iran now?",
+        "Could Iran close the Strait of Hormuz?",
+        "Who is actually winning right now?",
+        "Could this trigger World War III?"
+      ],
+      "featured": true
+    },
+    {
+      "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
+      "hook": "They're in your phone, your car, your weapons. And one country controls the supply.",
+      "category": "Politics",
+      "questions": 41,
+      "url": "topics/politics/rare-earths.html",
+      "status": "published",
+      "date": "2026-04-05",
+      "preview": [
+        "How many rare earth elements are in your phone right now?",
+        "Why did China cut off Japan in 2010?",
+        "Could this trigger a war?",
+        "Why can't we just use something else?",
+        "Which country will be the next China in rare earths?"
+      ],
+      "featured": false
+    },
+    {
+      "title": "Trump's Tariffs Explained",
+      "hook": "You think tariffs are someone else's problem. They're not — you've already paid them.",
+      "category": "Politics",
+      "questions": 44,
+      "url": "topics/politics/trumps-tariffs.html",
+      "status": "published",
+      "date": "2026-04-04",
+      "preview": [
+        "Who actually pays a tariff?",
+        "Why did Trump target China specifically?",
+        "What happened to American farmers?",
+        "Could this lead to a recession?",
+        "Every tariff has a flag on it. The bill never does."
+      ],
+      "featured": true
+    },
+    {
+      "title": "The Gulf War",
+      "hook": "Why did Arab nations fight another Arab nation — and why did the West leave Saddam in power?",
+      "category": "History",
+      "questions": 44,
+      "url": "topics/history/gulf-war.html",
+      "status": "published",
+      "date": "2026-04-03",
+      "preview": [
+        "Why did Saddam believe no one would stop him?",
+        "Why did Arab countries join a coalition against another Arab nation?",
+        "What were Scud missiles — and why did they matter?",
+        "Why didn't the coalition march to Baghdad?",
+        "What was the long-term impact — and does it connect to 9/11?"
+      ],
+      "featured": false
+    },
+    {
+      "title": "The Fall of Constantinople",
+      "hook": "The city had survived a thousand years. What finally brought it down in 1453?",
+      "category": "History",
+      "questions": 0,
+      "url": "",
+      "status": "coming-soon",
+      "date": "",
+      "preview": [],
+      "featured": false
+    },
+    {
+      "title": "The 2008 Financial Crisis",
+      "hook": "Everyone felt it. Almost no one understands what actually happened — or who let it.",
+      "category": "Business",
+      "questions": 0,
+      "url": "",
+      "status": "coming-soon",
+      "date": "",
+      "preview": [],
+      "featured": false
+    },
+    {
+      "title": "How Dictatorships Rise",
+      "hook": "They never start with tanks. They start with something much more ordinary.",
+      "category": "Politics",
+      "questions": 0,
+      "url": "",
+      "status": "coming-soon",
+      "date": "",
+      "preview": [],
+      "featured": false
+    }
+  ]
+}
