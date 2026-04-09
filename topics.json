@@ -3,6 +3,23 @@
   "generated": "manual",
   "topics": [
     {
+      "title": "Arabs, Muslims, Persians & Islamists — What's the Difference?",
+      "hook": "These words are used as if they mean the same thing. They don't. Here is the complete map — from Abraham to Hamas, from Sharia to the Saudi-Iran rivalry.",
+      "category": "Politics",
+      "questions": 45,
+      "url": "topics/politics/arabs-muslims-persians.html",
+      "status": "published",
+      "date": "2026-04-09",
+      "preview": [
+        "Who are the Arabs — and why are Iranians not Arabs?",
+        "What is the difference between Islam and Islamism?",
+        "How did the Sunni-Shia split begin — and why does it still drive wars?",
+        "What is Hamas, Hezbollah, and ISIS — and are they the same thing?",
+        "What is Sharia — and do all Muslims want it as state law?"
+      ],
+      "featured": true
+    },
+    {
       "title": "How US Elections Actually Work",
       "hook": "The Electoral College. The Senate. The House. Midterms. Why does the world's oldest democracy elect its president this way — and has it always?",
       "category": "Politics",
