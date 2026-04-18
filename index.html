@@ -1150,6 +1150,7 @@
           filterTopics(urlCat, false);
         } else {
           renderTopics(topics);
+        }
 
         // ── START HERE — curated entry points ──
         const startEntries = [
@@ -1187,7 +1188,6 @@
               <p class="start-destination">${e.title}</p>
               <p class="start-qs">${e.questions} questions</p>
             </a>`).join('');
-        }
         }
       })
       .catch(() => {
