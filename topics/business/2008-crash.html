@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The 2008 Crash: What Really Happened — in 48 Questions | 48Questions</title>
+  <meta name="description" content="How did the global economy almost collapse in 2008? Who built the machine, who broke it, and who paid the price? 48 clear questions." />
+  <meta name="author" content="48Questions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://48questions.com/topics/business/2008-crash" />
+
+  <meta property="og:title" content="The 2008 Crash: What Really Happened — in 48 Questions" />
+  <meta property="og:description" content="Everyone felt it. Almost no one understands what actually happened — or who let it. 48 questions about the crisis that changed everything." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://48questions.com/topics/business/2008-crash" />
+  <meta property="og:site_name" content="48Questions" />
+  <meta property="og:image" content="https://48questions.com/assets/2008-crash-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The 2008 Crash: What Really Happened — in 48 Questions" />
+  <meta name="twitter:description" content="Everyone felt it. Almost no one understands what actually happened — or who let it." />
+  <meta name="twitter:image" content="https://48questions.com/assets/2008-crash-cover.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"What caused the 2008 financial crisis?","acceptedAnswer":{"@type":"Answer","text":"The 2008 crisis was caused by the collapse of a massive housing bubble inflated by reckless mortgage lending, the repackaging of those mortgages into complex securities rated as safe by credit agencies, and extreme leverage throughout the financial system. When house prices fell and mortgage defaults rose, the securities built on those mortgages became worthless — and the banks holding them were insolvent."}},
+      {"@type":"Question","name":"What was a CDO?","acceptedAnswer":{"@type":"Answer","text":"A Collateralized Debt Obligation — a financial product that pooled together thousands of mortgages and sliced them into tranches of different risk levels. The idea was that even if some mortgages defaulted, the pooling would protect investors. In practice, when housing collapsed nationwide simultaneously, the entire structure failed. CDOs were rated AAA — the safest possible rating — by credit agencies that were paid by the banks issuing them."}},
+      {"@type":"Question","name":"Why did Lehman Brothers collapse?","acceptedAnswer":{"@type":"Answer","text":"Lehman Brothers had borrowed enormous amounts to invest in mortgage-backed securities. When those securities lost value, Lehman became insolvent. Unlike Bear Stearns (rescued by JPMorgan with Fed support) and AIG (bailed out by the government), the US government allowed Lehman to file for bankruptcy on September 15, 2008 — triggering a global financial panic."}},
+      {"@type":"Question","name":"What was TARP?","acceptedAnswer":{"@type":"Answer","text":"The Troubled Asset Relief Program — a $700 billion US government bailout package passed in October 2008. It authorized the Treasury to purchase toxic assets and equity stakes in failing financial institutions. Most of the money was eventually repaid with interest. Critics argued it rescued banks that had caused the crisis while offering limited relief to ordinary homeowners who lost their homes."}},
+      {"@type":"Question","name":"Could the 2008 crisis happen again?","acceptedAnswer":{"@type":"Answer","text":"The specific mechanisms of 2008 — subprime mortgages packaged into AAA-rated CDOs — are less likely to recur due to regulatory changes. But financial systems are always capable of creating new forms of complexity and leverage that regulators haven't yet identified. The fundamental driver — the pursuit of short-term profit through risk-taking that is underpriced or passed on to others — has not been eliminated."}}
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" crossorigin href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --paper-dark: #ede8dc;
+      --accent: #c0392b;
+      --accent-soft: #e8d5d3;
+      --muted: #5a5040;
+      --border: #d4ccbc;
+      --progress-h: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-optical-sizing: auto;
+      min-height: 100vh;
+    }
+
+    #progress-bar { position: fixed; top: 0; left: 0; height: var(--progress-h); width: 0%; background: var(--accent); z-index: 100; transition: width 0.1s linear; }
+
+    nav { position: sticky; top: var(--progress-h); background: var(--paper); border-bottom: 1px solid var(--border); padding: 0.75rem 2rem; display: flex; align-items: center; justify-content: space-between; z-index: 50; }
+    .nav-brand { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1.1rem; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+    .nav-brand span { color: var(--accent); }
+    .nav-counter { font-size: 0.78rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; }
+
+    .hero-banner { background: #0f0a04; position: relative; overflow: hidden; }
+    .hero-banner::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, #1a1204 0%, #0f0a04 70%); }
+    .hero-banner-deco { position: absolute; right: 5%; top: 50%; transform: translateY(-50%); font-family: 'Playfair Display', serif; font-size: clamp(10rem, 22vw, 20rem); font-weight: 900; color: rgba(255,255,255,0.03); line-height: 1; user-select: none; pointer-events: none; letter-spacing: -0.05em; }
+    .hero-banner-inner { position: relative; z-index: 1; max-width: 760px; margin: 0 auto; padding: 5rem 2rem 4rem; }
+    .category-tag { display: inline-block; font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); border: 1px solid rgba(192,57,43,0.5); padding: 0.2rem 0.6rem; margin-bottom: 1.5rem; }
+    .hero-banner h1 { font-family: 'Playfair Display', serif; font-size: clamp(2rem, 5vw, 3.4rem); font-weight: 900; line-height: 1.1; letter-spacing: -0.02em; color: #f5f0e8; margin-bottom: 1.5rem; }
+    .hero-banner h1 em { color: var(--accent); font-style: italic; }
+    .hero-banner .hero-intro { color: rgba(245,240,232,0.95); max-width: 560px; line-height: 1.8; margin-bottom: 2rem; font-size: 1.05rem; }
+    .hero-banner .hero-meta { display: flex; gap: 2rem; font-size: 0.8rem; color: rgba(245,240,232,0.55); letter-spacing: 0.05em; }
+    .hero-banner .hero-meta strong { display: block; font-size: 1.1rem; color: rgba(245,240,232,0.95); font-weight: 400; font-family: 'Playfair Display', serif; }
+
+    .toc { max-width: 760px; margin: 2rem auto 0; padding: 1.2rem 2rem; background: var(--paper-dark); border-left: 3px solid var(--accent); }
+    .toc-title { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.8rem; }
+    .toc-links { display: flex; gap: 0.5rem; flex-wrap: wrap; list-style: none; }
+    .toc-links a { font-size: 0.82rem; color: var(--ink); text-decoration: none; border: 1px solid var(--border); padding: 0.25rem 0.7rem; transition: all 0.2s; }
+    .toc-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .part-header { max-width: 760px; margin: 3.5rem auto 0; padding: 0 2rem; }
+    .part-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--muted); display: flex; align-items: center; gap: 1rem; margin-bottom: 0.5rem; }
+    .part-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .part-title { font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 1.5rem; }
+
+    .qa-list { max-width: 760px; margin: 0 auto; padding: 0 2rem; list-style: none; }
+    .qa-item { border-bottom: 1px solid var(--border); opacity: 0; transform: translateY(16px); transition: opacity 0.4s ease, transform 0.4s ease; }
+    .qa-item.visible { opacity: 1; transform: translateY(0); }
+    .qa-question { display: flex; align-items: flex-start; gap: 1rem; padding: 1.4rem 0 1.2rem; cursor: pointer; user-select: none; }
+    .qa-question:hover .qa-text { color: var(--accent); }
+    .qa-question:hover .qa-toggle { border-color: var(--accent); }
+    .qa-number { font-family: 'Playfair Display', serif; font-size: 0.75rem; color: var(--accent); min-width: 2rem; padding-top: 0.15rem; font-weight: 700; letter-spacing: 0.05em; }
+    .qa-text { font-size: 1rem; font-weight: 400; color: var(--ink); flex: 1; line-height: 1.5; transition: color 0.2s; }
+    .qa-toggle { width: 22px; height: 22px; border: 1px solid var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 0.1rem; transition: background 0.2s, border-color 0.2s; color: var(--muted); font-size: 0.8rem; }
+    .qa-item.open .qa-toggle { background: var(--accent); border-color: var(--accent); color: white; }
+    .qa-item.auto-opened .qa-toggle { background: var(--border); border-color: var(--border); color: var(--muted); }
+    .qa-answer { display: none; padding: 0 0 1.4rem 3rem; }
+    .qa-item.open .qa-answer { display: block; animation: slideDown 0.25s ease; }
+    @keyframes slideDown { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+    .qa-answer p { font-size: 0.97rem; color: var(--ink); line-height: 1.8; font-style: italic; }
+    .qa-answer .insight { display: block; margin-top: 0.6rem; font-style: normal; font-size: 0.85rem; color: var(--ink); border-left: 2px solid var(--accent); padding: 0.6rem 0.8rem; background: var(--accent-soft); }
+    .insight::before { content: 'Key insight: '; font-weight: 400; color: var(--accent); }
+
+    .disclaimer { max-width: 760px; margin: 1.5rem auto 0; padding: 0.7rem 2rem; font-size: 0.8rem; color: var(--muted); font-style: italic; border-left: 2px solid var(--border); }
+
+    .search-wrap { max-width: 760px; margin: 2rem auto 0; padding: 0 2rem; position: relative; }
+    .search-input { width: 100%; font-family: 'Source Serif 4', Georgia, serif; font-size: 0.95rem; font-weight: 400; color: var(--ink); background: var(--paper); border: 1px solid var(--border); border-radius: 2px; padding: 0.7rem 2.8rem 0.7rem 1rem; outline: none; transition: border-color 0.2s; }
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--accent); }
+    .search-clear { position: absolute; right: 2.8rem; top: 50%; transform: translateY(-50%); background: none; border: none; cursor: pointer; color: var(--muted); font-size: 1.1rem; padding: 0 4px; display: none; }
+    .search-clear:hover { color: var(--accent); }
+    .search-count { font-size: 0.78rem; color: var(--muted); margin-top: 0.4rem; padding-left: 0.2rem; min-height: 1.2em; }
+    .qa-text mark, .qa-answer mark { background: #f9e4a0; color: var(--ink); border-radius: 2px; padding: 0 2px; }
+    .qa-item.search-hidden { display: none; }
+    .part-header.search-hidden { display: none; }
+    .search-no-results { max-width: 760px; margin: 1rem auto 0; padding: 0.5rem 2rem; font-size: 0.95rem; color: var(--muted); font-style: italic; display: none; }
+
+    .controls { max-width: 760px; margin: 1rem auto 0; padding: 0 2rem; display: flex; gap: 1rem; }
+    .btn { font-family: 'Source Serif 4', serif; font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; padding: 0.55rem 1.4rem; border: 1px solid var(--ink); background: transparent; color: var(--ink); cursor: pointer; transition: all 0.2s; }
+    .btn:hover { background: var(--ink); color: var(--paper); }
+    .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    .share-bar { max-width: 760px; margin: 2rem auto 0; padding: 1.5rem 2rem; text-align: center; border-top: 1px solid var(--border); }
+    .share-bar p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; }
+    .share-btn { display: inline-block; font-family: 'Source Serif 4', serif; font-size: 0.82rem; letter-spacing: 0.08em; color: var(--ink); text-decoration: none; border: 1px solid var(--border); padding: 0.5rem 1.4rem; transition: all 0.2s; }
+    .share-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    footer { max-width: 760px; margin: 5rem auto 0; padding: 2rem 2rem 4rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+    .footer-brand { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--muted); text-decoration: none; }
+    .footer-brand span { color: var(--accent); }
+    footer p { font-size: 0.78rem; color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .qa-list, .part-header, .controls, .search-wrap, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .hero-banner .hero-meta { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRYY70ZVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SZRYY70ZVE');
+  </script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="../../index.html" class="nav-brand"><span>48</span>Questions</a>
+    <span class="nav-counter" id="nav-counter">— / — explored</span>
+  </nav>
+
+  <div class="hero-banner">
+    <div class="hero-banner-deco" aria-hidden="true">2008</div>
+    <div class="hero-banner-inner">
+      <span class="category-tag">Business & Economics</span>
+      <h1>The 2008 Crash:<br><em>What Really Happened</em></h1>
+      <p class="hero-intro">
+        In 2008, the global financial system came within days of total collapse.<br>
+        Banks that had stood for a century vanished in a weekend.<br>
+        Millions lost their homes, their jobs, their savings.<br><br>
+        <strong style="color:#f5f0e8; font-weight:400;">48 questions. The machine, the collapse, and the rescue — explained honestly.</strong>
+      </p>
+      <p style="margin-top:1.5rem; font-size:1rem; color:#fff; line-height:1.7;">
+        The system didn't fail by accident.<br>
+        It failed exactly the way it was designed to work.
+      </p>
+      <div style="margin-top:1.8rem; font-size:0.9rem; color:rgba(245,240,232,0.85); line-height:1.7;">
+        → Why did no one stop it?<br>
+        → Who actually understood the risk?<br>
+        → And why were the people who built it saved?
+      </div>
+      <div style="margin-top:1.5rem; padding:1rem 1.2rem; border-left:2px solid rgba(192,57,43,0.6); font-size:0.9rem; color:rgba(245,240,232,0.8);">
+        ⚡ The people who built the machine that crashed got bailed out. The people who trusted it did not.
+      </div>
+      <div class="hero-meta" style="margin-top:2rem;">
+        <div><strong id="hero-q-count">—</strong> Questions</div>
+        <div><strong>6</strong> Parts</div>
+        <div><strong>~15 min</strong> Read</div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Jump to section">
+    <p class="toc-title">Jump to</p>
+    <ul class="toc-links">
+      <li><a href="#part-1">Part 1 — Why everything felt safe</a></li>
+      <li><a href="#part-2">Part 2 — How the system actually worked</a></li>
+      <li><a href="#part-3">Part 3 — When things started breaking</a></li>
+      <li><a href="#part-4">Part 4 — The moment everything collapsed</a></li>
+      <li><a href="#part-5">Part 5 — Who saved the system — and why</a></li>
+      <li><a href="#part-6">Part 6 — What changed — and what didn't</a></li>
+    </ul>
+  </nav>
+
+  <div class="toc" style="margin-top:1rem; border-left-color: var(--ink);">
+    <p style="font-size:0.95rem; line-height:1.7;">
+      <strong>Before you start:</strong> The 2008 crisis was not an accident or an act of God. It was the result of specific decisions, specific incentives, and specific failures of oversight. Understanding it is not about assigning blame — it is about understanding how complex systems fail.
+    </p>
+  </div>
+
+  <p class="disclaimer">⚠ All figures and events cited are drawn from public records, congressional testimony, Federal Reserve reports, and published accounts from participants and investigators.</p>
+
+  <div class="part-header">
+    <span id="part-1" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+    <div class="part-label">Part 1</div>
+    <h2 class="part-title">The Illusion of Safety</h2>
+  </div>
+
+  <div class="search-wrap">
+    <input type="search" class="search-input" id="qa-search" placeholder="Search questions... (or press /)" aria-label="Search questions" autocomplete="off"/>
+    <button class="search-clear" id="search-clear" aria-label="Clear search">×</button>
+    <p class="search-count" id="search-count" aria-live="polite"></p>
+  </div>
+  <p class="search-no-results" id="search-no-results">No questions match your search.</p>
+
+  <div class="controls">
+    <button class="btn" onclick="expandAll()">Expand all</button>
+    <button class="btn" onclick="collapseAll()">Collapse all</button>
+  </div>
+
+  <ul class="qa-list" id="qa-list">
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">01</span>
+        <span class="qa-text">Why did everyone believe the financial system was safe before 2008?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Because it had been safe — or appeared to be — for a very long time. The US had not experienced a major financial crisis since the Great Depression, more than 70 years earlier. Financial innovation had supposedly distributed risk so widely that no single failure could bring down the system. Home prices in the US had never fallen nationwide simultaneously — at least not within living memory. The economy had grown almost continuously since the early 1980s. Regulators, investors, rating agencies, and bank executives all believed the system was fundamentally sound. That belief was the foundation on which the crisis was built.
+          <span class="insight">The most dangerous moment in any financial system is when everyone agrees it is safe. Safety breeds risk-taking. Risk-taking breeds complexity. Complexity breeds fragility that no one notices until it breaks.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">02</span>
+        <span class="qa-text">What was the housing bubble — and why did house prices keep rising?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>From the late 1990s through 2006, US house prices rose dramatically — roughly doubling in many markets. This was driven by low interest rates after the dot-com crash of 2000 and the September 11 attacks, which made the Federal Reserve cut rates to stimulate the economy. Cheap credit meant cheap mortgages. Cheap mortgages meant more buyers. More buyers meant higher prices. Higher prices attracted investors and speculators. The rising market convinced lenders that even risky loans were safe — if a borrower defaulted, the house could be sold at a profit. The entire logic required prices to keep rising. They could not.
+          <span class="insight">Between 2000 and 2006, US house prices rose by roughly 124%. The conventional wisdom — stated openly by figures including Alan Greenspan — was that housing was a local market and could not fall nationally. That assumption was wrong. When it was proven wrong, the entire financial system built on top of it collapsed.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">03</span>
+        <span class="qa-text">What made the credit rating agencies so important — and so wrong?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Credit rating agencies — primarily Moody's, Standard & Poor's, and Fitch — assess the risk of financial instruments and assign ratings from AAA (safest) to D (default). Their ratings determined which institutions could buy which securities: pension funds, insurance companies, and money market funds could only hold highly rated assets. The agencies rated enormous quantities of mortgage-backed securities as AAA — the same rating as US government bonds. This was catastrophically wrong. The agencies' models assumed house prices could not fall nationally. And crucially, the agencies were paid by the banks issuing the securities — giving them every incentive to provide favorable ratings.
+          <span class="insight">This is the clearest conflict of interest in the entire crisis. The banks creating the securities chose which rating agency to hire. The rating agencies competed for business. The incentive was to give ratings the banks wanted. The result was trillions of dollars of toxic securities rated as completely safe.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">04</span>
+        <span class="qa-text">What is "moral hazard" — and how did it shape the crisis?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Moral hazard is the tendency to take greater risks when you believe the consequences of failure will fall on someone else. It permeated every level of the 2008 crisis. Mortgage brokers earned fees for originating loans regardless of whether borrowers could repay — so they had no incentive to care about loan quality. Banks packaged and sold those loans to investors — so they transferred the risk and had no incentive to care about loan quality. Rating agencies were paid per rating — so they had no incentive to be harsh. And bank executives earned enormous bonuses based on short-term profits — so they had no incentive to worry about long-term risk.
+          <span class="insight">The crisis was a system in which almost no one involved bore the consequences of the risks they were taking. When risk and consequence are separated, behavior changes — and not for the better. This is not human weakness. It is rational response to perverse incentives.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">05</span>
+        <span class="qa-text">What role did deregulation play?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A significant one. The Gramm-Leach-Bliley Act of 1999 repealed key provisions of the Glass-Steagall Act, which since 1933 had separated commercial banking (taking deposits, making loans) from investment banking (securities trading). The repeal allowed banks to combine these activities — and to use depositors' money to fund speculative trading. The Commodity Futures Modernization Act of 2000 exempted derivatives — including credit default swaps — from regulation. These decisions were made on the belief that markets were self-correcting and that regulation was unnecessary friction. That belief proved disastrously wrong.
+          <span class="insight">The deregulation of the late 1990s was bipartisan — supported by both Republican and Democratic administrations. The argument was that innovation required freedom from regulatory constraint. The 2008 crisis was the cost of that freedom — paid not by the financiers who lobbied for deregulation, but by ordinary people who lost their jobs, homes, and savings.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">06</span>
+        <span class="qa-text">Why did smart people at major banks not see the crisis coming?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Some did — and were ignored. But most were caught in institutional dynamics that discouraged dissent. Traders and executives making money on mortgage securities had no incentive to question the system generating their bonuses. Risk managers who raised concerns were often overruled or sidelined. The models used to assess risk were calibrated on historical data that did not include a nationwide housing collapse — so they systematically underestimated risk. And perhaps most importantly: being wrong along with everyone else is professionally safe. Being right alone — and going against the consensus — requires courage that institutions rarely reward.
+          <span class="insight">This is sometimes called the "IBGYBG" problem — "I'll be gone, you'll be gone." Traders who booked profits on mortgage securities would receive their bonuses years before the securities collapsed. The person bearing the loss would not be the person who took the risk. That time mismatch between reward and consequence is one of the deepest structural problems in finance.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">07</span>
+        <span class="qa-text">Were there warnings — and were they ignored?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Many. Economist Robert Shiller warned of a housing bubble from the early 2000s. Raghuram Rajan presented a paper to central bankers in 2005 warning that financial innovation had created dangerous hidden risks. A small number of hedge fund managers identified the bubble and bet against mortgage securities — famously documented in Michael Lewis's "The Big Short." The FBI warned in 2004 of an "epidemic" of mortgage fraud. These warnings were dismissed, marginalized, or simply ignored by those with the power to act on them. The assumption that the system was sound proved more powerful than the evidence that it wasn't.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">08</span>
+        <span class="qa-text">What is leverage — and why did it make everything worse?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Leverage means borrowing money to amplify investment returns. If you have $1 and borrow $9 more, you have $10 to invest. A 10% gain on $10 gives you $1 profit — a 100% return on your original $1. But a 10% loss on $10 wipes out your entire $1 and leaves you owing money. Major investment banks in 2007 were leveraged at ratios of 30:1 or more — meaning a 3% decline in their assets was enough to make them insolvent. Leverage amplifies both gains and losses. In a rising market, it made banks appear extraordinarily profitable. In a falling market, it made them instantaneously insolvent.
+          <span class="insight">Lehman Brothers was leveraged approximately 30:1 at the time of its collapse. This meant that a 3.3% fall in the value of its assets — a relatively small move in any market — was enough to eliminate its entire equity. When mortgage-backed securities fell far more than that, Lehman didn't just have a problem. It ceased to exist.</span>
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 2 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-2" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 2</div>
+      <h2 class="part-title">The Machine</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">09</span>
+        <span class="qa-text">What is a subprime mortgage?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A mortgage extended to a borrower with poor credit history or limited ability to repay — someone who would not qualify for a standard ("prime") mortgage. Subprime mortgages carry higher interest rates to compensate for higher risk. In the early 2000s, subprime lending expanded dramatically as rising house prices made lenders confident that even risky loans were secure — if a borrower defaulted, the house could be sold at a profit. By 2006, subprime mortgages accounted for roughly 20% of all new mortgages. Many came with features designed to be initially affordable — "teaser rates" that reset sharply upward after two or three years.
+          <span class="insight">NINJA loans — "No Income, No Job, No Assets" — became a well-known category in the pre-crisis lending boom. Lenders issued mortgages to people with no demonstrated ability to repay them, on the theory that rising house prices would cover any losses. When prices fell, there was nothing underneath.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">10</span>
+        <span class="qa-text">What is securitization — and how did it spread the risk?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Securitization is the process of bundling individual loans — mortgages, car loans, credit card debts — into pools, then selling shares of those pools to investors as securities. The theory was elegant: by pooling thousands of mortgages from across the country, the risk of any individual default was diversified away. What the theory failed to account for was correlation — the possibility that all those mortgages might default simultaneously, for the same reason. When house prices fell nationally, the diversification that was supposed to protect investors offered no protection at all.
+          <span class="insight">Securitization was originally a sensible innovation that made mortgages more widely available by connecting homebuyers to global capital markets. The problem was not securitization itself but what was securitized — increasingly low-quality mortgages — and the volume and leverage involved. A good idea, taken too far, in the wrong direction, became catastrophic.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">11</span>
+        <span class="qa-text">What was a CDO — and how did it create the illusion of safety?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A Collateralized Debt Obligation — a security created by pooling mortgage-backed securities and slicing the pool into "tranches" of different risk levels. The senior tranches were paid first from the cash flows and got AAA ratings. The junior tranches absorbed losses first and got lower ratings. The mathematical models used to rate CDOs assumed that mortgage defaults were only weakly correlated — that failures in one region would not spread to others. When housing collapsed nationwide, defaults were perfectly correlated, the model assumptions proved false, and even the AAA-rated senior tranches became worthless.
+          <span class="insight">CDOs were sometimes described as turning "lead into gold" — taking pools of BBB-rated mortgages and producing AAA-rated securities. The alchemy relied entirely on assumptions about diversification and correlation that were wrong. When the assumptions broke, the gold turned back into lead — instantly and simultaneously across the entire financial system.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">12</span>
+        <span class="qa-text">What were credit default swaps — and why did they matter?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A credit default swap (CDS) is essentially insurance against a debt default. The buyer of a CDS pays periodic premiums; if the underlying debt defaults, the seller pays out. CDSs allowed investors to bet on or hedge against mortgage defaults without actually owning the mortgages. AIG, the insurance giant, sold enormous quantities of CDSs on mortgage-backed securities — effectively insuring trillions of dollars of mortgage risk. When mortgages began defaulting, AIG faced claims it could not pay. Because AIG's CDSs had been used by virtually every major bank as protection, AIG's failure would have immediately made those banks insolvent. This is why the US government bailed out AIG at a cost of $182 billion.
+          <span class="insight">AIG's CDS business was run out of a 400-person unit in London with minimal regulatory oversight. That unit wrote contracts insuring $440 billion in securities at its peak — without setting aside adequate capital to cover potential losses. When the losses materialized, the parent company, with 116,000 employees worldwide, was destroyed by its smallest division.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">13</span>
+        <span class="qa-text">Who were the mortgage brokers — and what role did they play?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Independent agents who originated mortgages on behalf of banks, earning a commission for each loan closed — regardless of whether the borrower could repay. Mortgage brokers were the front line of the lending boom: they found borrowers, filled out applications, and closed deals. They had every incentive to maximize volume and no incentive to assess quality. Predatory practices — encouraging borrowers to take out larger loans than they could afford, misrepresenting terms, steering minority borrowers into higher-cost loans — were widespread. When the loans were sold to banks and packaged into securities, the brokers had already collected their fees and moved on.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">14</span>
+        <span class="qa-text">What were "shadow banks" — and why were they dangerous?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Financial institutions that performed bank-like functions — borrowing short-term, lending long-term, creating and holding mortgage securities — without being subject to the regulations that applied to banks. Investment banks, money market funds, hedge funds, and various special purpose vehicles constituted the "shadow banking system." By 2007, the shadow banking system was larger than the traditional banking system. But unlike banks, shadow banks had no access to Federal Reserve emergency lending, no deposit insurance, and no regulatory requirements to hold capital buffers. When confidence collapsed, the shadow banking system had no defenses.
+          <span class="insight">Traditional banks are regulated because they are systemically important — their failure harms everyone. Shadow banks performed the same systemic functions but without the same oversight. The regulatory framework was designed for a world that no longer existed. By the time regulators recognized the shadow banking system's size and fragility, it was already collapsing.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">15</span>
+        <span class="qa-text">How much money was involved — what were the actual numbers?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>At the peak of the housing bubble, the US mortgage market was approximately $10 trillion. Mortgage-backed securities totaled roughly $7 trillion. CDOs and related products added trillions more. Total notional value of credit default swaps outstanding reached approximately $62 trillion by 2007 — nearly four times US GDP. When the crisis hit, the losses were staggering: US households lost $13 trillion in wealth between 2007 and 2009 — the equivalent of one year's entire economic output. Global stock markets lost approximately $25 trillion in value. These are not abstract numbers — they represent destroyed retirement savings, lost jobs, and foreclosed homes.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">16</span>
+        <span class="qa-text">What did the Federal Reserve do — and what did it miss?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Federal Reserve, led by Alan Greenspan until 2006, maintained historically low interest rates after the 2001 recession — fueling the housing boom. Greenspan famously believed that markets were self-correcting and that regulation was unnecessary. The Fed had authority to regulate mortgage lending practices and failed to use it. When Greenspan testified before Congress after the crisis, he acknowledged that his ideology — the belief that banks' self-interest would protect shareholders and the system — had proven to be a "flaw." His successor Ben Bernanke, a scholar of the Great Depression, recognized the systemic risk more quickly and used the Fed's emergency powers aggressively to prevent a complete collapse.
+          <span class="insight">"I made a mistake in presuming that the self-interests of organizations, specifically banks and others, were such that they were best capable of protecting their own shareholders." — Alan Greenspan, congressional testimony, October 2008. This was not a minor correction. This was the intellectual foundation of decades of financial policy admitting it was wrong.</span>
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 3 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-3" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 3</div>
+      <h2 class="part-title">The Breaking Point</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">17</span>
+        <span class="qa-text">When did house prices start falling — and what happened first?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>US house prices peaked in mid-2006 and began declining. The decline was initially slow and geographically uneven — concentrated in markets like Florida, Nevada, Arizona, and California where speculation had been most intense. As prices fell, borrowers with adjustable-rate mortgages — whose payments reset upward — began defaulting. Subprime defaults rose steadily through 2006 and into 2007. The financial industry initially dismissed this as a localized problem in a small segment of the market. That dismissal proved catastrophically wrong — because the entire financial system had loaded up on securities backed by those same mortgages.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">18</span>
+        <span class="qa-text">What happened to Bear Stearns in 2007?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>In June 2007, two Bear Stearns hedge funds that had invested heavily in CDOs collapsed — losing virtually all their value almost overnight. This was the first major crack in the wall. Bear Stearns initially tried to stabilize the funds with internal financing, then let them fail. The episode revealed to sophisticated investors that CDOs backed by subprime mortgages were worth far less than their ratings suggested. It triggered the beginning of a "repricing of risk" — the realization that the financial system had been operating on false assumptions. Markets began to tighten, but most participants still believed the problems were containable.
+          <span class="insight">The collapse of the Bear Stearns hedge funds in June 2007 is the moment when the crisis actually began — more than a year before Lehman Brothers. But because the losses appeared contained and the financial system continued to function, most observers concluded the worst was over. They were wrong. The system was beginning to seize up — slowly, then all at once.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">19</span>
+        <span class="qa-text">What is a "liquidity freeze" — and when did it happen?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A liquidity freeze occurs when lenders stop lending — not because borrowers are definitely insolvent, but because no one is sure who holds toxic assets or how much they are worth. In August 2007, the interbank lending market — the short-term loans that banks make to each other daily to manage their balance sheets — began to seize. The "TED spread" (the difference between what banks charged each other versus what the US government paid on short-term debt) spiked — a sign that banks didn't trust each other. The BNP Paribas announcement in August 2007 that it could not value three investment funds because of exposure to US subprime assets triggered a global shock.
+          <span class="insight">The interbank market is the circulatory system of the global financial system. When banks stop lending to each other, the system doesn't just slow — it begins to die. The liquidity freeze of August 2007 was the financial equivalent of a cardiac arrest. The patient survived — temporarily — but the underlying disease was not treated.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">20</span>
+        <span class="qa-text">What happened to Bear Stearns in March 2008?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Bear Stearns — one of the five largest US investment banks — collapsed in a matter of days in March 2008. As rumors spread about its exposure to mortgage securities, counterparties began refusing to do business with it, and clients withdrew funds. Bear Stearns went from appearing solvent to needing emergency rescue in 72 hours. The Federal Reserve arranged an emergency sale to JPMorgan Chase at $2 per share — a fraction of its previous value — and provided $29 billion in guarantees to facilitate the deal. It was the first time the Fed had intervened to rescue a non-bank financial institution since the 1930s. The message seemed to be: major institutions would be rescued.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">21</span>
+        <span class="qa-text">What were Fannie Mae and Freddie Mac — and why did they fail?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Government-sponsored enterprises (GSEs) that purchased mortgages from lenders and either held them or packaged them into mortgage-backed securities — providing liquidity to the housing market. Between them, they guaranteed or held nearly half of all US mortgages. As housing collapsed, their losses mounted to the point of insolvency. In September 2008, the US government took them into "conservatorship" — effectively a nationalization — committing up to $200 billion to keep them solvent. The rescue kept the mortgage market functioning but confirmed to global investors that the US financial system's foundations had cracked.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">22</span>
+        <span class="qa-text">How widespread was the damage by summer 2008?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>By summer 2008, the damage was vast but not yet fully visible. US house prices had fallen roughly 15% from their peak. Mortgage defaults were accelerating. Major financial institutions had written down hundreds of billions in losses. The stock market was down significantly from its 2007 highs. But most analysts still believed the worst was manageable — that the financial system, while damaged, would avoid catastrophic failure. That assessment was about to be proven catastrophically wrong by a decision made in Washington over a September weekend.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">23</span>
+        <span class="qa-text">What is a "bank run" — and how does it apply to the 2008 crisis?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A bank run occurs when depositors or creditors simultaneously try to withdraw their funds, fearing the institution is about to fail. The act of running causes the failure it fears — a self-fulfilling prophecy. The 2008 crisis featured a new kind of bank run: not retail depositors queuing outside branches, but institutional investors withdrawing from money market funds, repo markets, and short-term lending facilities. When these sophisticated investors lost confidence, they pulled funds simultaneously — causing the liquidity crisis that made healthy-seeming institutions insolvent almost overnight.
+          <span class="insight">The bank run of 2008 was invisible to most people. It happened not in queues outside bank branches but in institutional fund management offices and trading desks around the world. The result was the same as a 1930s bank run — a self-reinforcing panic that made the feared outcome inevitable — but it moved at electronic speed.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">24</span>
+        <span class="qa-text">What was the "repo market" — and why did its collapse matter so much?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The repurchase agreement ("repo") market is where financial institutions borrow short-term cash by temporarily selling securities with an agreement to repurchase them the next day. Trillions of dollars flowed through this market daily, funding the operations of investment banks, money market funds, and shadow banks. When confidence collapsed, repo lenders began refusing to accept mortgage-backed securities as collateral — or demanding enormous "haircuts" (discounts) on their value. Investment banks that had financed their mortgage portfolios in the repo market overnight suddenly found their funding had evaporated. This "repo run" was the immediate cause of several major bank failures.
+        </p>
+      </div>
+    </li>
+
+    <!-- MID-SCROLL HOOK -->
+    <li style="list-style:none; padding:0;">
+      <div style="max-width:760px; margin:1.5rem 0; text-align:center; font-size:1rem; color:var(--ink); font-style:italic; padding:1.2rem 0; border-top:1px solid var(--border); border-bottom:1px solid var(--border);">
+        The system didn't collapse because one thing went wrong.<br>
+        It collapsed because everything was connected — and everything failed at once.
+      </div>
+    </li>
+
+    <!-- PART 4 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-4" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 4</div>
+      <h2 class="part-title">The Collapse</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">25</span>
+        <span class="qa-text">What happened when Lehman Brothers failed?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>On September 15, 2008, Lehman Brothers — the fourth-largest US investment bank — filed for bankruptcy. It was the largest bankruptcy in US history. The immediate effect was a global financial panic. Lehman was so deeply interconnected with other financial institutions that its failure sent shockwaves through every major market in the world. Money market funds "broke the buck" — falling below $1 per share — triggering massive withdrawals. Interbank lending froze. Stock markets plunged. The Federal Reserve and Treasury later described the days after Lehman's failure as the closest the global financial system had come to total collapse since the 1930s.
+          <span class="insight">In the week after Lehman's bankruptcy, the US commercial paper market — where companies borrow short-term to fund daily operations — essentially froze. Companies that had nothing to do with mortgages or finance suddenly could not borrow money to pay their employees and suppliers. The financial crisis was becoming an economic crisis in real time.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">26</span>
+        <span class="qa-text">Why did the government let Lehman fail when it had rescued Bear Stearns?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>This remains one of the most debated decisions in modern financial history. Treasury Secretary Hank Paulson and Fed Chairman Ben Bernanke have argued that they lacked the legal authority to rescue Lehman without a private buyer, and that no buyer could be found willing to absorb the losses. Critics argue the decision was motivated by political concerns about using public money to bail out another Wall Street firm. Others argue the decision was made based on incorrect assessments of how interconnected Lehman was. Regardless of the reason, the consequence was catastrophic: the market concluded that no institution was too big to fail — and panicked accordingly.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">27</span>
+        <span class="qa-text">What happened to AIG — and why was it different from Lehman?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The day after Lehman failed, the US government bailed out AIG — the world's largest insurance company — with an $85 billion emergency loan that eventually grew to $182 billion. AIG had sold credit default swap protection on $440 billion in mortgage securities. When those securities collapsed, AIG faced claims it could not pay. But unlike Lehman, allowing AIG to fail would have immediately made every major bank that had bought CDS protection from AIG insolvent — effectively wiping out the global financial system simultaneously. The government concluded it had no choice. AIG was rescued. The banks that had bought protection from AIG were made whole.
+          <span class="insight">Goldman Sachs received $12.9 billion from AIG's bailout — 100 cents on the dollar for insurance contracts that, had AIG been allowed to fail, would have been worth nothing. Many of Goldman's former executives were in senior government positions at the time. Whether this influenced the bailout decision has never been definitively answered.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">28</span>
+        <span class="qa-text">What happened to other major financial institutions?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The crisis swept through virtually every major financial institution. Washington Mutual — the largest US savings and loan institution — was seized by regulators and sold to JPMorgan in September 2008. Wachovia, the fourth-largest US bank, was rescued through a forced merger with Wells Fargo. Merrill Lynch was sold to Bank of America in an emergency weekend deal. Goldman Sachs and Morgan Stanley converted to bank holding companies to access Fed emergency lending. Citigroup required multiple government interventions totaling over $300 billion in support. The five major US investment banks that had existed before the crisis — Bear Stearns, Lehman, Merrill Lynch, Goldman Sachs, Morgan Stanley — either failed, merged, or fundamentally transformed within six months.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">29</span>
+        <span class="qa-text">How close did the system come to total collapse?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Extremely close. Fed Chairman Bernanke testified that of the 13 largest financial institutions in the US, 12 were at risk of failure within two weeks of Lehman's bankruptcy. Treasury Secretary Paulson later recounted that he came close to vomiting from stress during the peak of the crisis. President George W. Bush was told that without immediate government action, the US could be in a second Great Depression within days. The global financial system did not collapse — but avoiding collapse required an unprecedented mobilization of government resources and a series of emergency interventions that would have been considered unthinkable weeks earlier.
+          <span class="insight">On September 18, 2008 — three days after Lehman — the Fed detected a sudden massive withdrawal from money market accounts: $550 billion was pulled out in less than two hours. Bernanke and Paulson concluded that if they did not act, within 24 hours there would be no money in the economy. The announcement of a guarantee for money market funds stopped the run — but only just.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">30</span>
+        <span class="qa-text">What happened to ordinary people during the crisis?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>While the financial system teetered, the consequences for ordinary Americans were devastating and lasting. Between 2007 and 2010, approximately 3.8 million homes were foreclosed. US unemployment rose from 4.7% in November 2007 to 10% in October 2009 — the highest since the 1980s. Retirement savings — invested in now-worthless securities or simply in a collapsed stock market — evaporated. Small businesses lost access to credit and closed. The burden fell disproportionately on minority communities, who had been targeted by predatory subprime lenders during the boom and who had less financial cushion to absorb the shock.
+          <span class="insight">The median net worth of American families fell 39% between 2007 and 2010 — from $126,400 to $77,300. That loss of wealth was concentrated among those who owned homes that fell in value. The financial industry executives who created the crisis generally kept their wealth. The asymmetry of outcome between those who caused the crisis and those who suffered it is one of the most corrosive legacies of 2008.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">31</span>
+        <span class="qa-text">How did the crisis spread globally?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The crisis spread through multiple channels. European banks had purchased enormous quantities of US mortgage-backed securities and CDOs — their losses were just as severe as American banks'. The collapse of global trade finance made it difficult for companies to fund international shipments — contributing to the sharpest decline in global trade since World War II. Emerging market economies that had relied on capital flows from wealthy countries suddenly found those flows reversed. Iceland's banking system effectively collapsed entirely. Ireland, Spain, and Portugal faced sovereign debt crises partly triggered by banking system losses. The global recession of 2008–2009 was the worst since the Great Depression.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">32</span>
+        <span class="qa-text">What was "mark to market" — and why did it accelerate the crisis?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>An accounting rule requiring financial institutions to value assets at their current market price rather than their original purchase price. When mortgage-backed securities markets seized and virtually no buyers could be found, the "market price" of these securities approached zero — even for securities that would ultimately pay out significant amounts. Under mark-to-market rules, banks were forced to report massive losses on assets that might not actually be worthless. These reported losses reduced their capital ratios below required minimums — forcing them to raise capital or sell assets. Selling into a panicked market drove prices down further, creating a self-reinforcing spiral.
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 5 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-5" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 5</div>
+      <h2 class="part-title">The Rescue</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">33</span>
+        <span class="qa-text">What was TARP — and did it work?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Troubled Asset Relief Program — a $700 billion fund authorized by Congress in October 2008 to stabilize the financial system. Initially conceived to purchase toxic mortgage assets from banks, TARP was quickly redirected to purchase equity stakes in major banks — effectively a partial nationalization. The money was used to recapitalize Citigroup, Bank of America, and other major institutions. By the narrow financial measure of preventing the banking system's collapse, TARP worked — and most of the money was eventually repaid with interest. By the broader measure of whether it was fair, just, or adequate, the judgment is far more negative.
+          <span class="insight">TARP's final cost to taxpayers was approximately $31 billion — far less than the initial commitment, as most banks repaid their loans. But TARP did almost nothing for ordinary homeowners facing foreclosure. The contrast between the swiftness and generosity of the bank bailout and the inadequacy of homeowner relief became one of the defining political grievances of the following decade.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">34</span>
+        <span class="qa-text">What did the Federal Reserve do — and how unprecedented was it?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Federal Reserve took extraordinary actions that had no peacetime precedent. It cut interest rates to near zero and kept them there for years. It purchased trillions of dollars in mortgage-backed securities and government bonds — a process called "quantitative easing" (QE) — injecting money into the financial system. It extended emergency loans to non-bank financial institutions for the first time since the 1930s. It established multiple emergency lending facilities to support money market funds, commercial paper markets, and other key financial markets. The Fed's balance sheet expanded from roughly $900 billion before the crisis to over $4 trillion by 2015.
+          <span class="insight">Quantitative easing was controversial for a simple reason: it primarily benefited holders of financial assets — stocks, bonds, real estate — who tended to be wealthier. By lowering interest rates and inflating asset prices, QE made existing wealth more valuable. Critics argued it exacerbated inequality. Defenders argued it prevented a depression that would have harmed everyone far more severely.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">35</span>
+        <span class="qa-text">What was the Obama stimulus — and was it enough?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The American Recovery and Reinvestment Act of 2009 — an $831 billion package of tax cuts, spending on infrastructure, education, and healthcare, and aid to state governments. It was the largest fiscal stimulus in US history at the time. Most economists who have studied it conclude it helped — that without it, unemployment would have risen higher and the recession would have been longer. Many economists also argued it was too small, given the scale of the contraction — a view supported by the fact that unemployment remained above 9% for most of 2009–2010 and the recovery was historically slow. Political constraints made a larger stimulus impossible.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">36</span>
+        <span class="qa-text">Were the banks "too big to fail" — and is that still true?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>"Too big to fail" describes institutions so large and interconnected that their failure would devastate the broader economy — giving them an implicit government guarantee and, therefore, an unfair competitive advantage. The five largest US banks were bigger after the crisis than before — JPMorgan absorbed Bear Stearns and Washington Mutual, Bank of America absorbed Merrill Lynch, Wells Fargo absorbed Wachovia. Dodd-Frank introduced "systemically important financial institution" (SIFI) designation with extra regulation and resolution plans. But many economists argue the fundamental problem — institutions whose failure cannot be allowed — has not been solved, merely managed differently.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">37</span>
+        <span class="qa-text">Why were so few bankers prosecuted?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>One of the most persistent and legitimate public grievances of the post-crisis period. The Department of Justice pursued civil cases against major institutions — extracting tens of billions in settlements from JPMorgan, Bank of America, Citigroup, and others. But criminal prosecutions of senior executives were almost nonexistent. The Obama DOJ argued that proving criminal intent — as opposed to recklessness or negligence — was extremely difficult, and that the risk of losing high-profile cases was too great. Critics argued the government lacked the will to take on powerful institutions, and that without criminal accountability, the deterrent effect of the crisis was minimal.
+          <span class="insight">Angelo Mozilo, CEO of Countrywide Financial — the nation's largest subprime lender — settled civil charges for $67.5 million without admitting wrongdoing and without criminal prosecution. His company had originated approximately $97 billion in subprime mortgages in 2006 alone. The settlement was paid primarily by Bank of America, which had acquired Countrywide. Mozilo personally had made hundreds of millions during the boom years. He kept it.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">38</span>
+        <span class="qa-text">What was Dodd-Frank — and did it fix the problem?</span>
+        <span class="qa-toggle" aria-expanded="false" tabindex="0">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Dodd-Frank Wall Street Reform and Consumer Protection Act of 2010 — the most sweeping financial regulation since the New Deal. Key provisions: the Volcker Rule (limiting banks' ability to trade with their own capital), the Consumer Financial Protection Bureau (CFPB), enhanced oversight of derivatives, the SIFI designation for large banks, and "living will" requirements (resolution plans for large institutions). It also created the Financial Stability Oversight Council to monitor systemic risk. In 2018, Congress rolled back some Dodd-Frank provisions for smaller and mid-size banks. The broader debate about whether Dodd-Frank made the system fundamentally safer — or merely more complicated — continues.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">39</span>
+        <span class="qa-text">Was the bailout fair?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>By almost any conventional measure of fairness, no. The institutions whose reckless behavior caused the crisis were rescued with public money. The executives who ran those institutions generally kept their wealth and faced no criminal consequences. The ordinary Americans who trusted the system — and in many cases were actively misled by it — lost their homes, jobs, and savings with far less government support. The banks were stabilized quickly and returned to profitability within years. The communities devastated by the crisis took a decade or more to recover. Whether the bailout was necessary — and it almost certainly was — does not make it fair. These are different questions.
+          <span class="insight">The perception of unfairness from the 2008 bailout had enormous political consequences. It fueled the Tea Party movement on the right and the Occupy movement on the left. It contributed to the political environment that produced both Bernie Sanders and Donald Trump. The economic crisis was contained. The political crisis it generated is still unfolding.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">40</span>
+        <span class="qa-text">How long did the recovery take?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The official recession ended in June 2009 — making it the longest since World War II at 18 months. But recovery was historically slow. US employment did not return to its pre-crisis peak until May 2014 — nearly five years later. Median household income did not return to its 2007 level until 2016. The homeownership rate continued falling until 2016. Many economists refer to it as a "scarred" recovery — one in which the economy never fully returned to its pre-crisis growth trajectory. The lost decade of growth and wealth accumulation, concentrated in middle-class and working-class households, contributed directly to the political disruptions that followed.
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 6 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-6" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 6</div>
+      <h2 class="part-title">What It Really Changed</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">41</span>
+        <span class="qa-text">How did the crisis change inequality?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>It dramatically widened it. The crisis disproportionately destroyed the wealth of the middle class — primarily through housing. The recovery disproportionately benefited the wealthy — through the stock market appreciation and asset price inflation driven by quantitative easing. By 2012, the top 1% captured 93% of income growth in the recovery. Wealth inequality, already significant before 2008, widened sharply. The homeownership gap between white and minority households increased. Young people entering the labor market during and after the crisis faced a decade of lower wages and reduced opportunity that has permanently affected their lifetime earnings.
+          <span class="insight">The Federal Reserve's response to the crisis — near-zero interest rates and quantitative easing — was the right policy to prevent depression. But its primary effect was to inflate the value of financial assets: stocks, bonds, and real estate. Those assets are owned disproportionately by wealthy households. The cure for the crisis systematically rewarded the wealthy and was structurally unable to help those who had no assets to inflate.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">42</span>
+        <span class="qa-text">How did the crisis change political trust?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Profoundly and lastingly. Trust in financial institutions, government, and elites collapsed — and did not recover. The perception that banks had caused a crisis, been bailed out with public money, faced no consequences, and emerged richer while ordinary people suffered created a reservoir of grievance that shaped politics for a decade. The Tea Party movement emerged in 2009, fueled partly by anger at the bailouts. Occupy Wall Street emerged in 2011. The Sanders and Trump campaigns of 2016 both, in different ways, mobilized voters angry at financial elites and a system perceived as rigged. The political consequences of 2008 are still unfolding.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">43</span>
+        <span class="qa-text">What happened to the people who saw the crisis coming and bet against the market?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>They became very rich. Michael Burry, a hedge fund manager who identified the housing bubble in 2005 and bought credit default swaps against mortgage securities, returned approximately 489% to his investors in 2007. John Paulson made approximately $4 billion personally. A small number of traders who correctly identified the systemic fraud and risk in the mortgage market — and bet against it using the very financial instruments the banks had created — profited enormously from the collapse. Their story, told in Michael Lewis's "The Big Short," is both intellectually fascinating and morally uncomfortable: their profits came directly from the losses of ordinary homeowners and pension funds.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">44</span>
+        <span class="qa-text">How did the crisis change central banking forever?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Before 2008, central bank policy was primarily about setting interest rates to manage inflation and employment. After 2008, central banks became the buyers of last resort for financial assets, managers of financial stability, and de facto fiscal policy actors through their balance sheet operations. Quantitative easing — once an exotic theoretical concept — became standard policy. The Fed's balance sheet went from under $1 trillion to over $8 trillion by 2022. Central banks in Europe, Japan, and the UK followed similar paths. The line between monetary policy and fiscal policy blurred in ways that remain controversial and incompletely understood.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">45</span>
+        <span class="qa-text">What did the crisis reveal about economic expertise?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>That it had serious blind spots — specifically about financial stability and systemic risk. The dominant economic models used by central banks and academic economists in the pre-crisis period largely excluded the financial system from their models of the real economy. The efficient market hypothesis — the theory that market prices reflect all available information — had become dogma, leading to the belief that if markets were pricing mortgage securities at high values, they must be worth those values. The crisis exposed both the limits of economic models and the institutional capture of economists by the financial industry they were supposed to analyze objectively.
+          <span class="insight">"The music is still playing, so we must keep dancing." — Citigroup CEO Chuck Prince, July 2007, explaining why Citigroup was still making leveraged buyout loans despite warning signs. Prince was forced out four months later. Citigroup required over $300 billion in government support during the crisis.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">46</span>
+        <span class="qa-text">Could the 2008 crisis happen again?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Not in exactly the same way — the specific mechanisms of 2008 are less likely to recur. Banks hold more capital. Subprime mortgage securitization is more regulated. Derivatives are better supervised. But financial systems are perpetually inventive in finding new ways to accumulate leverage and create complexity that regulators have not yet identified. The 2023 collapse of Silicon Valley Bank showed that bank runs can still happen, and that regulatory blind spots still exist. The fundamental driver of financial crises — the pursuit of short-term profit through risk-taking that is underpriced or passed on to others — has not been eliminated. A different crisis, in a different form, remains a matter of when, not if.
+          <span class="insight">Every generation believes it has learned the lessons of the previous crisis and built a safer system. Every generation eventually discovers a new form of the same problem. The lesson of financial history is not that we solve crises — it is that we solve each crisis only to create the conditions for the next one.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">47</span>
+        <span class="qa-text">What is the most important lesson of 2008?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>That complexity and apparent safety are not the same thing — and may be opposites. The financial system of 2008 was extraordinarily complex. It had spread risk through securitization, derivatives, and structured products in ways that no single person or institution fully understood. This complexity was mistaken for resilience. In fact, it had created fragility: a system so interconnected that a failure in one part immediately propagated everywhere. The instruments designed to manage risk had instead concentrated it and hidden it. When hidden risk revealed itself, the system collapsed faster than anyone thought possible.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">48</span>
+        <span class="qa-text">What should you take away from all of this?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The 2008 crisis was not a natural disaster or an act of God. It was the result of specific human decisions, specific incentive structures, and specific failures of oversight and accountability. It was a system that rewarded short-term risk-taking, separated those who bore risk from those who faced its consequences, and operated on assumptions that were never seriously tested. When those assumptions proved wrong, the system collapsed — and the costs were paid primarily by people who had no part in building it. The financial system has been reformed. The incentive structures that produced the crisis are largely intact. The lesson of 2008 is not that catastrophe is inevitable — it is that it requires active, sustained effort to prevent, and that vigilance is not the natural state of any system that profits from confidence.
+          <span class="insight">Final thought: At the peak of the housing bubble, the people building the machine knew it was fragile. Some admitted it privately. None stopped. The question "who stopped the machine?" has no good answer — because stopping it required forgoing profits in the present to prevent catastrophe in the future. That trade-off is the oldest problem in financial regulation. We have not solved it.</span>
+        </p>
+      </div>
+    </li>
+
+  </ul>
+
+  <div style="max-width:760px; margin:2rem auto 0; padding:1.5rem 2rem; border-left:3px solid var(--ink); background:var(--paper-dark);">
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:0.8rem;">Why this still matters today</h3>
+    <p style="font-size:0.9rem; color:var(--muted); line-height:1.7;">
+      The next crisis will not look like 2008.<br>
+      It may come from AI, private credit, sovereign debt, or something no one is watching yet.<br><br>
+      But the pattern will be the same:<br>
+      risk will build quietly,<br>
+      confidence will hide it,<br>
+      and when it breaks — it will break fast.
+    </p>
+  </div>
+
+  <div style="max-width:760px; margin:2rem auto 0; padding:1.5rem 2rem; border-left:3px solid var(--accent); background:var(--paper-dark);">
+    <p style="font-size:0.85rem; line-height:1.7; color:var(--muted);">
+      <strong style="color:var(--ink);">Methodology:</strong> This article draws on congressional testimony, Federal Reserve and Treasury records, FCIC (Financial Crisis Inquiry Commission) findings, academic research, and published accounts by participants including Ben Bernanke, Hank Paulson, Timothy Geithner, and investigative journalism from the Wall Street Journal, New York Times, and ProPublica. It presents events and causes as established by the public record.
+    </p>
+  </div>
+
+  <div style="max-width:760px; margin:2rem auto 0; padding:2rem; border-top:1px solid var(--border);">
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:1rem;">Sources &amp; Further Reading</h3>
+    <ul style="font-size:0.88rem; line-height:1.9; color:var(--muted); padding-left:1.2rem;">
+      <li>Financial Crisis Inquiry Commission — Final Report (2011)</li>
+      <li>Ben Bernanke — <em>The Courage to Act</em> (2015)</li>
+      <li>Timothy Geithner — <em>Stress Test</em> (2014)</li>
+      <li>Michael Lewis — <em>The Big Short</em> (2010)</li>
+      <li>Federal Reserve Bank of New York — Crisis timeline and documentation</li>
+      <li>ProPublica — Bailout Tracker</li>
+      <li>Congressional Oversight Panel — TARP reports (2009–2011)</li>
+    </ul>
+  </div>
+
+  <div class="share-bar">
+    <p>If this changed how you see the financial system — share it.</p>
+    <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+      <a class="share-btn" href="https://twitter.com/intent/tweet?text=The+2008+crash+explained+in+48+questions.+Who+built+the+machine%2C+who+broke+it%2C+and+who+paid%3A+https%3A%2F%2F48questions.com%2Ftopics%2Fbusiness%2F2008-crash.html" target="_blank" rel="noopener">Share on X ↗</a>
+      <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u=https://48questions.com/topics/business/2008-crash.html" target="_blank" rel="noopener">Share on Facebook ↗</a>
+    </div>
+  </div>
+
+  <footer>
+    <a href="../../index.html" class="footer-brand"><span>48</span>Questions</a>
+    <p>Understand anything. One question at a time.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('qa-search');
+    const searchClear = document.getElementById('search-clear');
+    const searchCount = document.getElementById('search-count');
+    const searchNone  = document.getElementById('search-no-results');
+
+    function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+    function highlight(el, term) {
+      el.querySelectorAll('mark').forEach(m => m.replaceWith(document.createTextNode(m.textContent)));
+      el.normalize();
+      if (!term) return;
+      const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+      const nodes = [];
+      while (walk.nextNode()) nodes.push(walk.currentNode);
+      nodes.forEach(node => {
+        if (!regex.test(node.textContent)) return;
+        regex.lastIndex = 0;
+        const frag = document.createDocumentFragment();
+        let last = 0, m;
+        while ((m = regex.exec(node.textContent)) !== null) {
+          frag.appendChild(document.createTextNode(node.textContent.slice(last, m.index)));
+          const mark = document.createElement('mark');
+          mark.textContent = m[1];
+          frag.appendChild(mark);
+          last = regex.lastIndex;
+        }
+        frag.appendChild(document.createTextNode(node.textContent.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+
+    function runSearch() {
+      const term = searchInput.value.trim().toLowerCase();
+      searchClear.style.display = term ? 'block' : 'none';
+      const items = document.querySelectorAll('#qa-list > .qa-item');
+      const headers = document.querySelectorAll('#qa-list > .part-header');
+      let visible = 0;
+      items.forEach(item => {
+        const qText = item.querySelector('.qa-text');
+        const aText = item.querySelector('.qa-answer');
+        if (!qText) return;
+        const matches = !term ||
+          qText.textContent.toLowerCase().includes(term) ||
+          (aText && aText.textContent.toLowerCase().includes(term));
+        item.classList.toggle('search-hidden', !matches);
+        if (matches) {
+          visible++;
+          highlight(qText, term);
+          if (aText) highlight(aText, term);
+          if (term && !item.classList.contains('open')) {
+            item.classList.add('open', 'auto-opened');
+            const t = item.querySelector('.qa-toggle');
+            if (t) t.textContent = '×';
+          }
+        } else {
+          highlight(qText, '');
+          if (aText) highlight(aText, '');
+          if (item.classList.contains('auto-opened')) {
+            item.classList.remove('open', 'auto-opened');
+            const t = item.querySelector('.qa-toggle');
+            if (t) t.textContent = '+';
+          }
+        }
+      });
+      headers.forEach(header => {
+        let next = header.nextElementSibling;
+        let hasVisible = false;
+        while (next && !next.classList.contains('part-header')) {
+          if (next.classList.contains('qa-item') && !next.classList.contains('search-hidden')) { hasVisible = true; break; }
+          next = next.nextElementSibling;
+        }
+        header.classList.toggle('search-hidden', !hasVisible);
+      });
+      const total = document.querySelectorAll('#qa-list > .qa-item').length;
+      if (term) {
+        searchCount.textContent = `${visible} of ${total} questions match`;
+        searchNone.style.display = visible === 0 ? 'block' : 'none';
+      } else {
+        searchCount.textContent = '';
+        searchNone.style.display = 'none';
+      }
+      updateCounter();
+    }
+
+    searchInput.addEventListener('input', runSearch);
+    searchClear.addEventListener('click', () => { searchInput.value = ''; runSearch(); searchInput.focus(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== searchInput) { e.preventDefault(); searchInput.focus(); }
+    });
+
+    function toggle(el) {
+      const item = el.closest('.qa-item');
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      item.classList.remove('auto-opened');
+      el.querySelector('.qa-toggle').textContent = isOpen ? '+' : '×';
+      el.setAttribute('aria-expanded', String(!isOpen));
+      updateCounter();
+    }
+
+    document.querySelectorAll('.qa-question').forEach(btn => {
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
+      });
+    });
+
+    function expandAll() {
+      document.querySelectorAll('#qa-list > .qa-item').forEach(item => {
+        if (!item.classList.contains('open')) {
+          item.classList.add('open', 'auto-opened');
+          item.querySelector('.qa-toggle').textContent = '×';
+        }
+      });
+      updateCounter();
+    }
+
+    function collapseAll() {
+      document.querySelectorAll('#qa-list > .qa-item').forEach(item => {
+        item.classList.remove('open', 'auto-opened');
+        item.querySelector('.qa-toggle').textContent = '+';
+      });
+      updateCounter();
+    }
+
+    function updateCounter() {
+      const total = document.querySelectorAll('#qa-list > .qa-item:not(.part-header)').length;
+      const open  = document.querySelectorAll('#qa-list > .qa-item.open:not(.part-header)').length;
+      document.getElementById('nav-counter').textContent = `${open} / ${total} explored`;
+    }
+
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
+      document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
+    });
+
+    const qCount = document.querySelectorAll('#qa-list > .qa-item:not(.part-header)').length;
+    const heroCount = document.getElementById('hero-q-count');
+    if (heroCount) heroCount.textContent = qCount;
+
+    const firstItems = document.querySelectorAll('#qa-list > .qa-item');
+    firstItems.forEach((item, i) => {
+      if (i < 2) {
+        item.classList.add('open');
+        const btn = item.querySelector('.qa-question');
+        if (btn) btn.setAttribute('aria-expanded', 'true');
+        item.querySelector('.qa-toggle').textContent = '×';
+      }
+    });
+    updateCounter();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.qa-item').forEach((el, index) => {
+      if (index < 3) el.classList.add('visible');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
