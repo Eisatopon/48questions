@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Climate Change: Truth, Uncertainty, and Reality in 48 Questions | 48Questions</title>
+  <meta name="description" content="What we know for certain, what is genuinely uncertain, and what is often misunderstood. 48 clear questions about climate change." />
+  <meta name="author" content="48Questions" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://48questions.com/topics/science/climate-change" />
+
+  <meta property="og:title" content="Climate Change: Truth, Uncertainty, and Reality in 48 Questions" />
+  <meta property="og:description" content="What is solid science, what is genuinely uncertain, and what is political noise? 48 questions with no slogans." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://48questions.com/topics/science/climate-change" />
+  <meta property="og:site_name" content="48Questions" />
+  <meta property="og:image" content="https://48questions.com/assets/climate-cover.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Climate Change: Truth, Uncertainty, and Reality in 48 Questions" />
+  <meta name="twitter:description" content="What is solid science, what is genuinely uncertain, and what is political noise?" />
+  <meta name="twitter:image" content="https://48questions.com/assets/climate-cover.png" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type":"Question","name":"Is the Earth actually warming?","acceptedAnswer":{"@type":"Answer","text":"Yes. Global average temperature has risen approximately 1.1–1.2°C since the late 19th century, confirmed by multiple independent datasets including NASA, NOAA, and the UK Met Office. The trend is not disputed by mainstream science."}},
+      {"@type":"Question","name":"What causes climate change?","acceptedAnswer":{"@type":"Answer","text":"Scientific consensus indicates that human emissions of greenhouse gases — primarily CO₂ from burning fossil fuels — are the dominant cause of warming since the mid-20th century. Natural factors like solar variability and volcanic activity play a role but cannot explain recent trends on their own."}},
+      {"@type":"Question","name":"What is genuinely uncertain about climate change?","acceptedAnswer":{"@type":"Answer","text":"The pace of change, regional impacts, tipping points, and feedback mechanisms remain areas of genuine scientific uncertainty. The basic warming trend is not disputed; the precise consequences are."}},
+      {"@type":"Question","name":"What are the consequences of climate change?","acceptedAnswer":{"@type":"Answer","text":"Sea level rise, more intense extreme weather events, ecosystem disruption, threats to food and water security, and increased health risks. The scale of each depends on how much warming occurs and how quickly."}},
+      {"@type":"Question","name":"Can climate change be stopped?","acceptedAnswer":{"@type":"Answer","text":"It can be significantly slowed. Eliminating greenhouse gas emissions would halt further human-caused warming, though temperatures would remain elevated for decades due to the climate system's inertia. Some level of adaptation to current warming is already necessary regardless of mitigation efforts."}}
+    ]
+  }
+  </script>
+
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" crossorigin href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,400;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #1a1612;
+      --paper: #f5f0e8;
+      --paper-dark: #ede8dc;
+      --accent: #c0392b;
+      --accent-soft: #e8d5d3;
+      --muted: #5a5040;
+      --border: #d4ccbc;
+      --progress-h: 3px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-weight: 400;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-optical-sizing: auto;
+      min-height: 100vh;
+    }
+
+    #progress-bar {
+      position: fixed;
+      top: 0; left: 0;
+      height: var(--progress-h);
+      width: 0%;
+      background: var(--accent);
+      z-index: 100;
+      transition: width 0.1s linear;
+    }
+
+    nav {
+      position: sticky;
+      top: var(--progress-h);
+      background: var(--paper);
+      border-bottom: 1px solid var(--border);
+      padding: 0.75rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 50;
+    }
+
+    .nav-brand {
+      font-family: 'Playfair Display', serif;
+      font-weight: 900;
+      font-size: 1.1rem;
+      color: var(--ink);
+      text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+
+    .nav-brand span { color: var(--accent); }
+
+    .nav-counter {
+      font-size: 0.78rem;
+      color: var(--muted);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero-banner {
+      background: #0a120a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 50%, #0d200d 0%, #0a120a 70%);
+    }
+
+    .hero-banner-deco {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(10rem, 22vw, 20rem);
+      font-weight: 900;
+      color: rgba(255,255,255,0.03);
+      line-height: 1;
+      user-select: none;
+      pointer-events: none;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-banner-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 5rem 2rem 4rem;
+    }
+
+    .category-tag {
+      display: inline-block;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      border: 1px solid rgba(192,57,43,0.5);
+      padding: 0.2rem 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-banner h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #f5f0e8;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-banner h1 em { color: var(--accent); font-style: italic; }
+
+    .hero-banner .hero-intro {
+      color: rgba(245,240,232,0.95);
+      max-width: 560px;
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+    }
+
+    .hero-banner .hero-meta {
+      display: flex;
+      gap: 2rem;
+      font-size: 0.8rem;
+      color: rgba(245,240,232,0.55);
+      letter-spacing: 0.05em;
+    }
+
+    .hero-banner .hero-meta strong {
+      display: block;
+      font-size: 1.1rem;
+      color: rgba(245,240,232,0.95);
+      font-weight: 400;
+      font-family: 'Playfair Display', serif;
+    }
+
+    .toc {
+      max-width: 760px;
+      margin: 2rem auto 0;
+      padding: 1.2rem 2rem;
+      background: var(--paper-dark);
+      border-left: 3px solid var(--accent);
+    }
+
+    .toc-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.8rem;
+    }
+
+    .toc-links { display: flex; gap: 0.5rem; flex-wrap: wrap; list-style: none; }
+
+    .toc-links a {
+      font-size: 0.82rem;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.25rem 0.7rem;
+      transition: all 0.2s;
+    }
+
+    .toc-links a:hover { border-color: var(--accent); color: var(--accent); }
+
+    .part-header {
+      max-width: 760px;
+      margin: 3.5rem auto 0;
+      padding: 0 2rem;
+    }
+
+    .part-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .part-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    .part-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .qa-list {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      list-style: none;
+    }
+
+    .qa-item {
+      border-bottom: 1px solid var(--border);
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .qa-item.visible { opacity: 1; transform: translateY(0); }
+
+    .qa-question {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.4rem 0 1.2rem;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .qa-question:hover .qa-text { color: var(--accent); }
+    .qa-question:hover .qa-toggle { border-color: var(--accent); }
+
+    .qa-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 0.75rem;
+      color: var(--accent);
+      min-width: 2rem;
+      padding-top: 0.15rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+    }
+
+    .qa-text {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      flex: 1;
+      line-height: 1.5;
+      transition: color 0.2s;
+    }
+
+    .qa-toggle {
+      width: 22px;
+      height: 22px;
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+      transition: background 0.2s, border-color 0.2s;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    .qa-item.open .qa-toggle { background: var(--accent); border-color: var(--accent); color: white; }
+    .qa-item.auto-opened .qa-toggle { background: var(--border); border-color: var(--border); color: var(--muted); }
+
+    .qa-answer { display: none; padding: 0 0 1.4rem 3rem; }
+    .qa-item.open .qa-answer { display: block; animation: slideDown 0.25s ease; }
+
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .qa-answer p { font-size: 0.97rem; color: var(--ink); line-height: 1.8; font-style: italic; }
+
+    .qa-answer .insight {
+      display: block;
+      margin-top: 0.6rem;
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--ink);
+      border-left: 2px solid var(--accent);
+      padding: 0.6rem 0.8rem;
+      background: var(--accent-soft);
+    }
+
+    .insight::before { content: 'Key insight: '; font-weight: 400; color: var(--accent); }
+
+    .disclaimer {
+      max-width: 760px;
+      margin: 1.5rem auto 0;
+      padding: 0.7rem 2rem;
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-style: italic;
+      border-left: 2px solid var(--border);
+    }
+
+    .search-wrap {
+      max-width: 760px;
+      margin: 2rem auto 0;
+      padding: 0 2rem;
+      position: relative;
+    }
+
+    .search-input {
+      width: 100%;
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--ink);
+      background: var(--paper);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 0.7rem 2.8rem 0.7rem 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input::placeholder { color: var(--muted); }
+    .search-input:focus { border-color: var(--accent); }
+
+    .search-clear {
+      position: absolute;
+      right: 2.8rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: var(--muted);
+      font-size: 1.1rem;
+      padding: 0 4px;
+      display: none;
+    }
+
+    .search-clear:hover { color: var(--accent); }
+
+    .search-count {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      padding-left: 0.2rem;
+      min-height: 1.2em;
+    }
+
+    .qa-text mark, .qa-answer mark {
+      background: #f9e4a0;
+      color: var(--ink);
+      border-radius: 2px;
+      padding: 0 2px;
+    }
+
+    .qa-item.search-hidden { display: none; }
+    .part-header.search-hidden { display: none; }
+
+    .search-no-results {
+      max-width: 760px;
+      margin: 1rem auto 0;
+      padding: 0.5rem 2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      font-style: italic;
+      display: none;
+    }
+
+    .controls {
+      max-width: 760px;
+      margin: 1rem auto 0;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.55rem 1.4rem;
+      border: 1px solid var(--ink);
+      background: transparent;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .btn:hover { background: var(--ink); color: var(--paper); }
+    .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+    .share-bar {
+      max-width: 760px;
+      margin: 2rem auto 0;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--border);
+    }
+
+    .share-bar p { font-size: 0.9rem; color: var(--muted); margin-bottom: 0.8rem; }
+
+    .share-btn {
+      display: inline-block;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      color: var(--ink);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      padding: 0.5rem 1.4rem;
+      transition: all 0.2s;
+    }
+
+    .share-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+    footer {
+      max-width: 760px;
+      margin: 5rem auto 0;
+      padding: 2rem 2rem 4rem;
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-brand { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 1rem; color: var(--muted); text-decoration: none; }
+    .footer-brand span { color: var(--accent); }
+    footer p { font-size: 0.78rem; color: var(--muted); }
+
+    @media (max-width: 600px) {
+      .qa-list, .part-header, .controls, .search-wrap, footer { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .hero-banner .hero-meta { flex-direction: column; gap: 1rem; }
+    }
+  </style>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SZRYY70ZVE"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-SZRYY70ZVE');
+  </script>
+</head>
+<body>
+
+  <div id="progress-bar"></div>
+
+  <nav aria-label="Main navigation">
+    <a href="../../index.html" class="nav-brand"><span>48</span>Questions</a>
+    <span class="nav-counter" id="nav-counter">— / — explored</span>
+  </nav>
+
+  <div class="hero-banner">
+    <div class="hero-banner-deco" aria-hidden="true">°C</div>
+    <div class="hero-banner-inner">
+      <span class="category-tag">Science</span>
+      <h1>Climate Change:<br><em>Truth, Uncertainty, and Reality</em></h1>
+      <p class="hero-intro">
+        Everyone has an opinion on climate change.<br>
+        Almost no one has read the actual data.<br><br>
+        What is settled? What is genuinely uncertain? What is political noise dressed as fact?
+        <br><br>
+        <strong style="color:#f5f0e8; font-weight:400;">48 questions. No slogans. No denial. Just the science — and its limits.</strong>
+      </p>
+      <div class="hero-meta">
+        <div><strong id="hero-q-count">—</strong> Questions</div>
+        <div><strong>6</strong> Parts</div>
+        <div><strong>~15 min</strong> Read</div>
+      </div>
+    </div>
+  </div>
+
+  <nav class="toc" aria-label="Jump to section">
+    <p class="toc-title">Jump to</p>
+    <ul class="toc-links">
+      <li><a href="#part-1">Part 1 — The Basics</a></li>
+      <li><a href="#part-2">Part 2 — The Causes</a></li>
+      <li><a href="#part-3">Part 3 — The Evidence</a></li>
+      <li><a href="#part-4">Part 4 — The Controversies</a></li>
+      <li><a href="#part-5">Part 5 — The Consequences</a></li>
+      <li><a href="#part-6">Part 6 — What We Can Do</a></li>
+    </ul>
+  </nav>
+
+  <div class="toc" style="margin-top:1rem; border-left-color: var(--ink);">
+    <p style="font-size:0.95rem; line-height:1.7;">
+      <strong>Before you start:</strong> This article does not take a political position. It takes the scientific evidence seriously — including its uncertainties. Where scientists agree, we say so. Where they don't, we say that too.
+    </p>
+  </div>
+
+  <p class="disclaimer">⚠ All data cited is drawn from peer-reviewed research, IPCC reports, NASA, NOAA, and WMO datasets. Where figures are estimates or projections, this is noted.</p>
+
+  <div class="part-header">
+    <span id="part-1" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+    <div class="part-label">Part 1</div>
+    <h2 class="part-title">The Basics</h2>
+  </div>
+
+  <div class="search-wrap">
+    <input type="search" class="search-input" id="qa-search" placeholder="Search questions... (or press /)" aria-label="Search questions" autocomplete="off"/>
+    <button class="search-clear" id="search-clear" aria-label="Clear search">×</button>
+    <p class="search-count" id="search-count" aria-live="polite"></p>
+  </div>
+  <p class="search-no-results" id="search-no-results">No questions match your search.</p>
+
+  <div class="controls">
+    <button class="btn" onclick="expandAll()">Expand all</button>
+    <button class="btn" onclick="collapseAll()">Collapse all</button>
+  </div>
+
+  <ul class="qa-list" id="qa-list">
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">01</span>
+        <span class="qa-text">What is climate change?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Long-term shifts in global temperatures, precipitation patterns, and weather systems — occurring over decades and centuries, not seasons. Climate change includes both natural variability and human-caused change. The current scientific debate is not about whether climate is changing, but about the relative contributions of natural and human factors, the pace of change, and its consequences.
+          <span class="insight">The word "climate" refers to patterns over 30+ years. Weather is what happens this week. Confusing the two is one of the most common sources of misunderstanding in public debate.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">02</span>
+        <span class="qa-text">Is the Earth actually warming?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Yes. Global average surface temperature has risen approximately 1.1–1.2°C since the pre-industrial period (roughly 1850–1900). This is confirmed by multiple independent datasets: NASA GISS, NOAA, the UK Met Office Hadley Centre, Berkeley Earth, and others. These datasets use different methods and different station networks — and reach the same conclusion.
+          <span class="insight">The warming trend is not dependent on any single dataset, model, or institution. Multiple independent measurement systems, using different methods, all show the same signal. That convergence is significant.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">03</span>
+        <span class="qa-text">What does "1.1°C of warming" actually mean in practice?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>It means the global average temperature — averaged across every location on Earth, every season, every day and night — is 1.1°C higher than it was 150 years ago. That sounds small. But the global average masks enormous regional variation. The Arctic has warmed by 3–4°C. Some regions have warmed by less. The global average is a summary, not a description of any specific place.
+          <span class="insight">During the last Ice Age, global average temperature was only about 6°C cooler than today — yet ice sheets covered much of North America and Europe. Small changes in global average have very large physical consequences.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">04</span>
+        <span class="qa-text">Has the Earth been warmer before?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Yes — many times. During the Cretaceous period (~66–145 million years ago), global temperatures were 8–10°C warmer than today, and there were no polar ice caps. More recently, during the Holocene Optimum (~6,000–9,000 years ago), some regions were 1–2°C warmer than pre-industrial times. The Earth's climate has always varied — the question is whether current warming is occurring at an unusual pace and whether its causes are different.
+          <span class="insight">The fact that Earth has been warmer before does not mean current warming is harmless. The concern is not the temperature itself but the rate of change — which determines whether ecosystems and human societies can adapt.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">05</span>
+        <span class="qa-text">How do scientists measure past temperatures without thermometers?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Through proxy records — indirect evidence preserved in natural archives. Ice cores from Antarctica and Greenland contain trapped air bubbles that preserve ancient atmospheric composition. Tree rings record annual growth and reflect temperature and rainfall. Coral skeletons, ocean sediments, cave deposits (speleothems), and pollen records all provide temperature signals. Multiple proxies, cross-checked against each other, allow scientists to reconstruct temperature back hundreds of thousands of years.
+          <span class="insight">Ice cores from Antarctica contain continuous records of atmospheric CO₂ going back 800,000 years. They show that CO₂ and temperature have tracked each other closely across eight glacial cycles — providing essential context for interpreting current changes.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">06</span>
+        <span class="qa-text">What is the greenhouse effect?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A natural process by which certain gases in the atmosphere — primarily water vapor, CO₂, methane, and nitrous oxide — absorb outgoing infrared radiation from Earth's surface and re-emit it in all directions, including back toward Earth. Without any greenhouse effect, Earth's average temperature would be about –18°C rather than the current +15°C. The process itself is not a problem. The problem is that human emissions are enhancing it beyond its natural level.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">07</span>
+        <span class="qa-text">What is "global warming" vs "climate change"?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Global warming refers specifically to the rise in average global surface temperature. Climate change is the broader term — encompassing warming, but also changes in precipitation, extreme weather frequency, sea level rise, ice coverage, and ocean chemistry. Scientists increasingly prefer "climate change" because warming is only one manifestation of a broader set of changes. In political discourse, the terms are often used interchangeably.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">08</span>
+        <span class="qa-text">What is the IPCC — and why does it matter?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Intergovernmental Panel on Climate Change — a UN body established in 1988 that reviews and synthesizes published climate research. The IPCC does not conduct original research; it assesses existing peer-reviewed literature. Its Assessment Reports, published roughly every 6–7 years, represent the broadest synthesis of climate science available. The Sixth Assessment Report (AR6), published 2021–2023, is the current standard reference.
+          <span class="insight">The IPCC is sometimes criticized for being too conservative — its consensus process means findings reflect what a broad coalition of scientists agrees on, which can lag behind the most recent research. Its conclusions are a floor, not a ceiling.</span>
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 2 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-2" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 2</div>
+      <h2 class="part-title">The Causes</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">09</span>
+        <span class="qa-text">What is causing current warming?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The scientific consensus, based on multiple lines of evidence, is that human emissions of greenhouse gases — primarily from burning fossil fuels, deforestation, and agriculture — are the dominant cause of observed warming since the mid-20th century. The IPCC AR6 states with "unequivocal" certainty that human influence has warmed the atmosphere, ocean, and land. Natural factors including solar variability and volcanic activity cannot explain recent warming patterns on their own.
+          <span class="insight">Scientists can distinguish human-caused warming from natural variability by the pattern of warming — the way different layers of the atmosphere warm, the way nights warm faster than days, and the geographic distribution of warming. These patterns match the fingerprint of greenhouse gas forcing, not solar forcing.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">10</span>
+        <span class="qa-text">What is CO₂ — and why does it matter?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Carbon dioxide is a naturally occurring greenhouse gas. Its pre-industrial atmospheric concentration was approximately 280 parts per million (ppm). By 2024, it has exceeded 420 ppm — a level not seen in at least 800,000 years of ice core records, and likely not in 3–5 million years of Earth history. The increase is directly attributable to human fossil fuel burning and land use change, confirmed by isotopic analysis of atmospheric CO₂.
+          <span class="insight">The isotopic signature of CO₂ is like a fingerprint. Fossil fuel-derived CO₂ has a distinct isotopic ratio (depleted in carbon-14 and carbon-13) that is measurably different from natural CO₂. Scientists can track exactly how much of the atmospheric increase comes from fossil fuels.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">11</span>
+        <span class="qa-text">Is water vapor more important than CO₂?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Water vapor is indeed the most abundant greenhouse gas and responsible for roughly 50% of the greenhouse effect. But water vapor in the atmosphere is controlled by temperature — it is a feedback, not a forcing. When CO₂ warms the atmosphere, more water evaporates, which amplifies the warming. CO₂ is the "control knob" that sets the baseline temperature; water vapor amplifies whatever CO₂ initiates.
+          <span class="insight">This is why water vapor doesn't drive long-term climate change on its own. If CO₂ dropped, the atmosphere would cool, less water would evaporate, water vapor would decrease, and the cooling would continue. CO₂ is the thermostat. Water vapor is the amplifier.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">12</span>
+        <span class="qa-text">What role does the sun play?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Solar output has been measured by satellites since 1979. It varies in an 11-year cycle but shows no long-term increase that could explain recent warming. In fact, solar output has slightly declined since the 1980s while warming has continued. Attribution studies consistently find that solar forcing can explain at most a fraction of 20th century warming, and essentially none of the warming since the 1980s.
+          <span class="insight">If the sun were causing warming, the stratosphere (upper atmosphere) would warm along with the troposphere (lower atmosphere). Instead, the stratosphere is cooling while the troposphere warms — the expected signature of greenhouse gas forcing, not solar forcing.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">13</span>
+        <span class="qa-text">What is methane — and why is it getting more attention?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Methane (CH₄) is a greenhouse gas roughly 80 times more potent than CO₂ over a 20-year period, though it breaks down in the atmosphere after about a decade. Its sources include natural gas production and distribution, cattle and livestock digestion, rice paddies, landfills, and wetlands. Atmospheric methane has more than doubled since pre-industrial times. Because of its short lifetime, reducing methane emissions could produce relatively rapid climate benefits.
+          <span class="insight">Methane is receiving increasing attention because some researchers believe methane from natural gas ("fracking") infrastructure may be leaking at higher rates than official estimates — potentially undermining some of natural gas's claimed climate advantages over coal.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">14</span>
+        <span class="qa-text">What sectors emit the most greenhouse gases?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Globally, electricity and heat production account for roughly 25% of emissions. Agriculture, forestry, and land use account for about 24%. Industry (cement, steel, chemicals) about 21%. Transportation about 14%. Buildings about 6%. The remaining share comes from other energy uses. These proportions vary significantly by country — in the US, transportation is the largest sector.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">15</span>
+        <span class="qa-text">Which countries emit the most?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>China is currently the world's largest emitter of CO₂ — approximately 30% of global emissions. The United States is second at roughly 14%. The EU as a bloc accounts for about 7%. India around 7%. Russia about 5%. However, cumulative historical emissions tell a different story: the US has emitted more total CO₂ since industrialization than any other country, followed by the EU.
+          <span class="insight">Current emissions determine how fast the problem grows. Historical emissions determine who is most responsible for the warming already baked in. These two framings lead to very different conversations about responsibility and burden-sharing in climate negotiations.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">16</span>
+        <span class="qa-text">What is climate sensitivity — and why does it matter?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Climate sensitivity is how much global average temperature rises for a doubling of atmospheric CO₂ from pre-industrial levels. The IPCC AR6 estimates "equilibrium climate sensitivity" at 2.5–4°C, with a best estimate of 3°C. This range reflects genuine scientific uncertainty. If sensitivity is at the low end, the climate crisis is serious but manageable. If at the high end, consequences become much more severe. Narrowing this range is one of the most important goals in climate science.
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 3 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-3" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 3</div>
+      <h2 class="part-title">The Evidence</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">17</span>
+        <span class="qa-text">What does the temperature record show?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Instrumental temperature records going back to the mid-19th century show a clear upward trend, with the rate of warming accelerating after about 1970. The last decade (2014–2023) was the warmest on record. Each of the last four decades has been successively warmer than any decade since records began. The 19 hottest years on record have all occurred since 2000.
+          <span class="insight">2023 was the warmest year in recorded history by a significant margin — about 0.17°C above the previous record. 2024 is on track to exceed it. The acceleration is notable.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">18</span>
+        <span class="qa-text">What is happening to glaciers and ice sheets?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The vast majority of the world's glaciers are retreating. The Greenland and Antarctic ice sheets are losing mass at an accelerating rate — together contributing significantly to sea level rise. Arctic sea ice has declined dramatically in extent and thickness since satellite observations began in 1979. The summer Arctic sea ice minimum has declined by roughly 13% per decade.
+          <span class="insight">Glacier retreat is perhaps the most visually striking evidence of warming because it is directly observable. Glaciers that took thousands of years to form are disappearing within human lifetimes. Some of the world's most iconic glaciers will be gone within decades.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">19</span>
+        <span class="qa-text">How much has sea level risen?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Global mean sea level has risen approximately 20–22 cm since 1900, with the rate accelerating in recent decades. Satellite altimeter data shows sea level rising at about 3.7 mm per year currently — roughly double the 20th century average rate. Sea level rise comes from two main sources: thermal expansion (water expands as it warms) and ice melt from glaciers and ice sheets.
+          <span class="insight">20 cm of sea level rise sounds modest. But coastal flooding is not linear — small rises in average sea level dramatically increase the frequency of extreme flooding events. A coastline that floods once per century can begin flooding once per decade with 30 cm of sea level rise.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">20</span>
+        <span class="qa-text">What is happening to the oceans?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The oceans have absorbed approximately 90% of the excess heat from greenhouse warming, and about 25–30% of human CO₂ emissions. This has two significant consequences: ocean warming (which affects marine ecosystems and drives more intense hurricanes) and ocean acidification (CO₂ dissolved in seawater forms carbonic acid, lowering pH). Ocean pH has declined by about 0.1 units since pre-industrial times — a 26% increase in acidity.
+          <span class="insight">The ocean's role as a heat and carbon sink has masked how much warming would otherwise have occurred in the atmosphere. It has bought time — but the heat stored in the ocean will influence climate for centuries, and the acidification is already damaging coral reefs and shellfish.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">21</span>
+        <span class="qa-text">Are extreme weather events increasing?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>For some types, yes — with high scientific confidence. Heat waves have become more frequent, more intense, and longer-lasting. Heavy precipitation events have intensified. Wildfire conditions have worsened across many regions. The attribution science linking individual extreme events to climate change has advanced significantly — scientists can now quantify how much more likely a specific event was made by human-caused warming.
+          <span class="insight">The 2021 Pacific Northwest heat dome — which killed hundreds in Canada and the US — was estimated to be "virtually impossible" without human-caused climate change. Events once considered 1-in-1000-year occurrences are becoming far more frequent.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">22</span>
+        <span class="qa-text">What about hurricanes and tropical storms?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The evidence is more nuanced here. Overall hurricane frequency may not increase significantly — but the proportion of hurricanes reaching Category 4 and 5 intensity is likely increasing. Warmer ocean temperatures provide more energy, allowing storms that do form to intensify more rapidly and reach higher intensities. Storms are also producing more rainfall and their geographical range may be shifting.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">23</span>
+        <span class="qa-text">Is there a "pause" or "hiatus" in warming?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Between roughly 1998 and 2012, the rate of surface warming appeared to slow, leading to claims of a "pause." This was misleading for several reasons: the period started from an exceptionally warm El Niño year (1998), ocean heat uptake continued unabated, and subsequent years eliminated any apparent pause entirely. The decade 2014–2023 shattered records. The "pause" was a statistical artifact of cherry-picked start and end points.
+          <span class="insight">Climate skeptics used the "pause" to argue that warming had stopped. Scientists at the time identified multiple explanations including ocean heat uptake and aerosol effects. When the pause ended — dramatically — the explanations proved accurate.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">24</span>
+        <span class="qa-text">What do satellites show?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Satellite-based temperature measurements of the lower troposphere have been available since 1979. They show warming trends broadly consistent with surface records, though with some differences in magnitude. Satellites also provide crucial data on ice sheet mass balance, sea level, ocean heat content, Arctic sea ice extent, and vegetation changes — all of which confirm warming trends from multiple independent angles.
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 4 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-4" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 4</div>
+      <h2 class="part-title">The Controversies: What Is Actually Disputed</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">25</span>
+        <span class="qa-text">What is NOT disputed in climate science?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Several things are established with very high confidence: Earth is warming. Human greenhouse gas emissions are the dominant cause of recent warming. CO₂ concentration is at its highest level in at least 800,000 years. Sea level is rising. Arctic sea ice is declining. Extreme heat events are becoming more frequent. These findings are replicated across independent research groups, datasets, and methods.
+          <span class="insight">Distinguishing what is settled from what is uncertain is crucial. When people say "scientists disagree about climate change," they are usually conflating disagreement about projections and policy with disagreement about basic physical facts — which are not genuinely disputed in mainstream science.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">26</span>
+        <span class="qa-text">What IS genuinely uncertain?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Genuine uncertainties include: the precise value of climate sensitivity; the timing and magnitude of tipping points; regional precipitation changes; the pace of ice sheet collapse; cloud feedbacks (clouds can either amplify or dampen warming depending on type and altitude); the behavior of permafrost carbon; and the future rate of sea level rise. These uncertainties are real — and they are reasons for concern rather than comfort, because they include the possibility of outcomes worse than central projections.
+          <span class="insight">Uncertainty in science is not the same as ignorance. A doctor who says your surgery carries a 10–30% risk of a specific complication is expressing genuine uncertainty — but that uncertainty does not mean you should ignore the risk. Scientific uncertainty about climate projections works the same way.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">27</span>
+        <span class="qa-text">Are climate models reliable?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Climate models are tools — approximations of a complex system. They are reliable for large-scale, long-term projections: they correctly predicted stratospheric cooling, polar amplification, and the magnitude of global warming since the 1970s. They are less reliable for precise regional projections (e.g., how much rainfall will change in a specific region over the next 30 years). No model is perfect — but models' track record of predicting broad trends is better than commonly acknowledged.
+          <span class="insight">In 1988, climate scientist James Hansen projected future warming using computer models. His projections have proven remarkably accurate — the actual warming has tracked closely with his predictions made 35 years ago. Models are imperfect, but they are not baseless.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">28</span>
+        <span class="qa-text">What are tipping points — and how real are they?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Tipping points are thresholds beyond which a system shifts to a new state — potentially irreversibly. Examples include the collapse of the West Antarctic Ice Sheet, dieback of the Amazon rainforest, loss of Arctic summer sea ice, and thawing of permafrost releasing stored carbon. Evidence suggests multiple tipping points may be closer than previously thought, and some may interact — triggering each other in "cascades." The science here is less settled than basic warming trends, but the risk is taken seriously.
+          <span class="insight">Tipping points are genuinely frightening because they represent changes that are difficult or impossible to reverse. Once the West Antarctic Ice Sheet destabilizes, it cannot be re-stabilized on human timescales. The uncertainty about tipping points is not reassuring — it means we don't know how close we are.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">29</span>
+        <span class="qa-text">Is CO₂ "plant food" — does more CO₂ help vegetation?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>CO₂ does enhance plant growth under controlled conditions — a fact sometimes cited to argue that higher CO₂ is beneficial. The reality is more complex. Higher CO₂ increases plant growth, but also reduces the nutritional quality of crops (lower protein and micronutrient content). The benefits of CO₂ fertilization are offset by heat stress, drought, flooding, and changing growing seasons associated with warming. Studies of real-world agricultural yields show mixed and region-dependent effects.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">30</span>
+        <span class="qa-text">Why do some scientists seem to disagree with the consensus?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>A small minority of credentialed scientists do dispute aspects of climate science. Some question the magnitude of human influence; others accept warming but dispute the severity of consequences. These views are represented in the scientific literature but are not supported by the weight of evidence. It is also important to note that the history of organized climate denial includes deliberate strategies — modeled on tobacco industry tactics — to manufacture the appearance of scientific debate where consensus exists.
+          <span class="insight">In 2010, a study found that 97% of actively publishing climate scientists agreed that human activities are causing warming. Subsequent studies using different methods found similar proportions. The "scientific debate" often publicized in media is not a reflection of the actual distribution of expert opinion.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">31</span>
+        <span class="qa-text">Where does legitimate scientific debate actually happen?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>In peer-reviewed journals, at scientific conferences, and in IPCC working group discussions. The real debates in climate science are about: the precise value of climate sensitivity; the contribution of different feedback mechanisms; the pace and extent of ice sheet instability; the response of the carbon cycle to warming; regional impacts; and the feasibility and consequences of various mitigation strategies. These are substantive scientific questions — but they are debates within a framework of accepted basic facts, not about those facts.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">32</span>
+        <span class="qa-text">How much does the media distort climate science?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>In two opposite directions. "False balance" journalism — presenting a climate scientist and a climate skeptic as equally credible — has historically misrepresented the actual scientific consensus by implying more uncertainty than exists. At the same time, some media coverage overstates certainty about specific projections or presents worst-case scenarios as inevitable. The actual science is more nuanced than either the "it's all fine" or "we're all doomed" framings suggest.
+          <span class="insight">The most accurate framing is probably: the basic facts are not in serious dispute; the consequences are serious and likely worse than current policies address; specific projections carry genuine uncertainty; and both denial and paralysis are poor responses to the evidence.</span>
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 5 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-5" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 5</div>
+      <h2 class="part-title">The Consequences</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">33</span>
+        <span class="qa-text">How much will sea levels rise?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>IPCC AR6 projects likely sea level rise of 0.3–1.0 meters by 2100 under different emissions scenarios. Under high emissions, a 2-meter rise by 2100 is considered possible, with higher amounts in subsequent centuries. The uncertainty is substantial — particularly around the behavior of the West Antarctic Ice Sheet. Even the lower end of projections would displace hundreds of millions of people living in coastal and low-lying areas.
+          <span class="insight">Low-lying island nations like the Maldives, Tuvalu, and Kiribati face an existential threat. Bangladesh, Vietnam, Egypt, and the Netherlands face massive infrastructure challenges. Miami, Jakarta, and Mumbai are already experiencing increased flooding. Sea level rise is not a future problem — it is already happening.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">34</span>
+        <span class="qa-text">What happens to food and water?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Climate change is already affecting agricultural yields in some regions — reducing productivity in tropical and subtropical areas, while modestly increasing it in some higher-latitude regions. Water availability is changing as glaciers (which provide dry-season water to hundreds of millions) retreat, rainfall patterns shift, and droughts intensify. The regions most vulnerable to food and water insecurity are also among the least responsible for emissions — a profound ethical asymmetry.
+          <span class="insight">The IPCC projects that without adaptation, climate change could reduce global crop yields by 2–6% per decade in coming decades — at the same time as global population continues to grow. The challenge is not just total production but distribution: food insecurity will intensify where it is already worst.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">35</span>
+        <span class="qa-text">What are the health consequences?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Heat-related illness and death are increasing — heat is already the deadliest weather phenomenon in many countries. The geographic range of disease vectors (mosquitoes carrying malaria and dengue, ticks carrying Lyme disease) is expanding as temperatures rise. Air quality worsens during heat events and with increased wildfire smoke. Mental health impacts from climate-related disasters, displacement, and "eco-anxiety" are increasingly documented. The health burden falls disproportionately on the elderly, poor, and those in tropical regions.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">36</span>
+        <span class="qa-text">What are the economic costs?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Economic impact estimates vary widely and are difficult to calculate, but consistent findings suggest climate change will reduce global GDP — with the losses concentrated in lower-income tropical nations that are already most vulnerable. A 2018 study in Nature found that even 1.5°C of warming could reduce global GDP by 1–2% by 2100, with 4°C causing losses of 15–25% or more. These are averages — some regions will be hit far harder. The costs of inaction consistently exceed the costs of mitigation.
+          <span class="insight">The Stern Review (2006) estimated the economic cost of unmitigated climate change at 5–20% of global GDP — compared to 1% of GDP to stabilize emissions. More recent analyses suggest Stern's estimates were conservative. The economic case for action is as strong as the physical science case.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">37</span>
+        <span class="qa-text">What happens to ecosystems and biodiversity?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Species are already shifting their ranges poleward and to higher elevations in response to warming. Coral reefs — which support roughly 25% of all marine species — have experienced mass bleaching events as ocean temperatures rise, and face near-total loss at 2°C of warming. Scientists estimate that 1 million species face extinction risk from climate change combined with other human pressures. Ecosystem services (pollination, clean water filtration, flood protection) that underpin human welfare are at risk.
+          <span class="insight">The Great Barrier Reef experienced five mass bleaching events between 2016 and 2024. Each event kills portions of the reef that may take decades to recover — if temperatures don't rise further. By 2°C of warming, 99% of coral reefs are projected to decline significantly. By 1.5°C, 70–90% would be at risk.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">38</span>
+        <span class="qa-text">What is climate migration — and how large could it become?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Climate migration occurs when people are forced to leave their homes due to climate-related changes — sea level rise, flooding, desertification, extreme heat making regions uninhabitable, or crop failure. The World Bank projected in 2021 that without action, 216 million people could become internal climate migrants by 2050 within their own countries. The actual number depends heavily on emissions trajectories and adaptation investments. Climate migration will interact with existing political instabilities in ways that are difficult to predict.
+          <span class="insight">Climate migration is not a future scenario — it is already occurring. Millions of people in the Sahel, Central America, and South Asia are moving due to climate-related pressures on water and food. The political conflicts this generates are already visible.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">39</span>
+        <span class="qa-text">What is the difference between 1.5°C and 2°C of warming?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The Paris Agreement set targets of limiting warming to 1.5°C and well below 2°C. Research shows the difference is significant: at 1.5°C, coral reefs decline by 70–90%; at 2°C, by over 99%. At 1.5°C, Arctic summers remain ice-free once per century; at 2°C, once per decade. Crop yield losses, sea level rise, extreme weather intensity, and species extinction risk all increase substantially between 1.5°C and 2°C. Each fraction of a degree matters.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">40</span>
+        <span class="qa-text">Are we on track to meet the Paris Agreement targets?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>No. Current national commitments under the Paris Agreement, if fully implemented, would lead to approximately 2.5–2.9°C of warming by 2100. Actual policies are weaker still. The 1.5°C target now requires rapid, deep reductions in emissions starting immediately — the window is essentially closed for reaching 1.5°C without significant overshoot. The 2°C target remains technically achievable but requires policy ambition far beyond current trajectories.
+          <span class="insight">The gap between what science says is necessary and what governments have committed to doing is the central political failure of the climate crisis. This is not a scientific failure — the science is clear. It is a political and economic one.</span>
+        </p>
+      </div>
+    </li>
+
+    <!-- PART 6 -->
+    <li class="part-header" style="list-style:none; padding-left:0; padding-right:0;">
+      <span id="part-6" style="display:block; position:relative; top:-80px; visibility:hidden;"></span>
+      <div class="part-label">Part 6</div>
+      <h2 class="part-title">What We Can Do: What Works, What Doesn't, Who Pays</h2>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">41</span>
+        <span class="qa-text">What actually works to reduce emissions?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The most impactful proven approaches: transitioning electricity generation from fossil fuels to wind, solar, and nuclear; electrifying transportation (especially cars and trucks); improving energy efficiency in buildings and industry; reducing methane from agriculture and fossil fuel infrastructure; protecting and restoring forests; and carbon pricing that makes emissions economically costly. The good news is that renewable energy has become dramatically cheaper — solar and wind are now the cheapest source of new electricity generation in most of the world.
+          <span class="insight">The cost of solar photovoltaic power has fallen by approximately 90% since 2010. Wind power costs have fallen by 60%. These are not marginal improvements — they represent a fundamental shift in the economics of energy that makes the clean energy transition financially viable in a way it was not a decade ago.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">42</span>
+        <span class="qa-text">What about carbon capture and removal?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Carbon capture and storage (CCS) — capturing CO₂ from power plants or industrial facilities before it reaches the atmosphere — has been technically demonstrated but remains expensive and limited in scale. Direct air capture (DAC) — machines that remove CO₂ directly from the atmosphere — exists but currently costs $300–1,000 per tonne of CO₂, compared to $5–30 to avoid a tonne through renewable energy. Natural solutions (reforestation, soil carbon, wetland restoration) are cheaper but limited in scale. Carbon removal is necessary according to most climate scenarios — but it supplements, not replaces, emissions reductions.
+          <span class="insight">Many scenarios that limit warming to 1.5°C assume large-scale carbon removal — essentially "borrowing" against the carbon budget and paying it back later. This is a risky strategy because the technology needed at scale does not yet exist, and banking on it provides cover for delays in cutting emissions now.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">43</span>
+        <span class="qa-text">What is carbon pricing — and does it work?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Carbon pricing puts a direct cost on greenhouse gas emissions — either through a carbon tax (a set price per tonne of CO₂) or a cap-and-trade system (a limit on total emissions, with permits traded between companies). Evidence from real-world implementations shows carbon pricing reduces emissions when the price is high enough. The EU Emissions Trading System, British Columbia's carbon tax, and other schemes have been associated with measurable emission reductions. The challenge is political: carbon pricing is effective but unpopular because it raises energy costs directly.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">44</span>
+        <span class="qa-text">What doesn't work — or is overstated?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Individual behavioral changes — switching light bulbs, recycling, reducing shower time — have negligible impact at the scale needed. "Carbon offsets" sold to consumers are frequently unreliable and difficult to verify. Biofuels have proven to have limited climate benefit and significant land use costs. Geoengineering approaches like stratospheric aerosol injection could theoretically cool the planet but carry serious risks and moral hazard (allowing emissions to continue). Net-zero pledges without specific near-term action plans are often not credible.
+          <span class="insight">The "carbon footprint" concept — focusing on individual consumer choices — was popularized in part by BP's marketing campaigns in the early 2000s. Shifting attention to individual behavior conveniently diverts focus from systemic changes to energy infrastructure and corporate responsibility.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">45</span>
+        <span class="qa-text">Who pays for climate action — and who should?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>This is one of the most contested questions in climate policy. Rich countries industrialized using cheap fossil fuels, accumulated wealth, and emitted most of the CO₂ currently in the atmosphere. Developing countries face the worst climate impacts and have the fewest resources to adapt. The Paris Agreement includes commitments by wealthy nations to provide $100 billion per year in climate finance to developing countries — a target that has not been consistently met. The question of who bears the cost of both mitigation and adaptation is as much a question of justice as economics.
+          <span class="insight">A person in Chad emits less than 0.1 tonnes of CO₂ per year. A person in the US emits about 15 tonnes. Yet Chad faces severe climate impacts — drought, flooding, displacement — that it did almost nothing to cause. The moral arithmetic of climate change is stark.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">46</span>
+        <span class="qa-text">What is adaptation — and why is it necessary regardless of mitigation?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Adaptation means adjusting to current and anticipated climate impacts — building sea walls, developing drought-resistant crops, redesigning cities for extreme heat, relocating vulnerable communities, reforming insurance systems, and updating infrastructure standards. Because of emissions already in the atmosphere, some degree of further warming is inevitable regardless of what we do now. Adaptation is not surrender — it is necessary alongside mitigation, not instead of it.
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">47</span>
+        <span class="qa-text">Can nuclear energy solve the climate problem?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>Nuclear power produces negligible greenhouse gas emissions during operation and provides reliable baseload power — addressing a key weakness of intermittent renewables. Most climate scenarios that limit warming to 1.5–2°C include some role for nuclear. The challenges are cost (new nuclear plants have proven extremely expensive in Western countries), construction time (a decade or more), waste disposal, public acceptance, and proliferation risks. Small modular reactors (SMRs) are being developed as a potentially cheaper and faster option, but remain unproven at commercial scale.
+          <span class="insight">The debate over nuclear is one of the most politically charged in climate policy. Environmentalists are divided: some see nuclear as essential for a low-carbon grid; others reject it on safety and cost grounds. The physics and economics both suggest nuclear has a role — the question is how large and how fast.</span>
+        </p>
+      </div>
+    </li>
+
+    <li class="qa-item">
+      <div class="qa-question" onclick="toggle(this)" role="button" aria-expanded="false" tabindex="0">
+        <span class="qa-number">48</span>
+        <span class="qa-text">What should you take away from all of this?</span>
+        <span class="qa-toggle" aria-hidden="true">+</span>
+      </div>
+      <div class="qa-answer">
+        <p>The basic science is not seriously in dispute — Earth is warming, humans are the primary cause, and consequences are already visible. The genuine uncertainties are about pace, magnitude, and regional specifics — not about whether the problem is real. The good news: the technology to address climate change largely exists, and clean energy has become dramatically cheaper. The bad news: the pace of political and economic transition is far slower than the science says is necessary. The space between what is possible and what is happening is the climate problem in its most essential form.
+          <span class="insight">Final thought: Climate change is not primarily a scientific problem — science has been clear for decades. It is a political, economic, and social problem. The question of whether humanity will respond adequately is not one that physics can answer. That question belongs to the realm of collective human choice.</span>
+        </p>
+      </div>
+    </li>
+
+  </ul>
+
+  <div style="max-width:760px; margin: 4rem auto 0; padding: 2rem; border-top: 1px solid var(--border); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+    <div>
+      <p style="font-size:0.78rem; letter-spacing:0.1em; text-transform:uppercase; color:var(--muted); margin-bottom:0.4rem;">Related Topic</p>
+      <a href="ai-energy.html" style="font-family:'Playfair Display',serif; font-size:1.2rem; font-weight:700; color:var(--ink); text-decoration:none; border-bottom: 1px solid var(--accent);">The Hidden Cost of AI: Energy →</a>
+      <p style="font-size:0.88rem; color:var(--muted); margin-top:1rem; font-style:italic;">If you read this far, you understand climate science better than most people who have opinions about it.</p>
+    </div>
+    <a href="../../index.html" style="font-size:0.82rem; color:var(--muted); text-decoration:none; border: 1px solid var(--border); padding: 0.5rem 1.2rem; transition: all 0.2s;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--muted)'">All Topics</a>
+  </div>
+
+  <div class="share-bar">
+    <p>If this changed how you think about it, share it.</p>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=What+is+settled+science%2C+what+is+genuinely+uncertain%2C+and+what+is+political+noise%3F+48+questions+on+climate+change%3A+https%3A%2F%2F48questions.com%2Ftopics%2Fscience%2Fclimate-change.html" target="_blank" rel="noopener">Share on X ↗</a>
+  </div>
+
+  <div style="max-width:760px; margin:3rem auto 0; padding:1.5rem 2rem; border-left:3px solid var(--accent); background:var(--paper-dark);">
+    <p style="font-size:0.85rem; line-height:1.7; color:var(--muted);">
+      <strong style="color:var(--ink);">Methodology:</strong> This article synthesizes findings from peer-reviewed research, IPCC AR6 reports, NASA, NOAA, and WMO datasets. It distinguishes between high-confidence conclusions and areas of active scientific uncertainty. Where projections are cited, the underlying scenario assumptions are noted.
+    </p>
+  </div>
+
+  <div style="max-width:760px; margin:2rem auto 0; padding:2rem; border-top:1px solid var(--border);">
+    <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; font-weight:700; margin-bottom:1rem;">Sources</h3>
+    <ul style="font-size:0.88rem; line-height:1.9; color:var(--muted); padding-left:1.2rem;">
+      <li>IPCC Sixth Assessment Report (AR6), Working Groups I, II, III — 2021–2023</li>
+      <li>NASA Global Climate Change: <em>vital.signs.nasa.gov</em></li>
+      <li>NOAA National Centers for Environmental Information</li>
+      <li>World Meteorological Organization (WMO) — State of the Global Climate reports</li>
+      <li>Berkeley Earth Surface Temperature Dataset</li>
+      <li>Our World in Data — CO₂ and Greenhouse Gas Emissions</li>
+      <li>Copernicus Climate Change Service (C3S), European Centre for Medium-Range Weather Forecasts</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="../../index.html" class="footer-brand"><span>48</span>Questions</a>
+    <p>Understand anything. One question at a time.</p>
+  </footer>
+
+  <script>
+    const searchInput = document.getElementById('qa-search');
+    const searchClear = document.getElementById('search-clear');
+    const searchCount = document.getElementById('search-count');
+    const searchNone  = document.getElementById('search-no-results');
+
+    function escapeRegex(s) { return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); }
+
+    function highlight(el, term) {
+      el.querySelectorAll('mark').forEach(m => m.replaceWith(document.createTextNode(m.textContent)));
+      el.normalize();
+      if (!term) return;
+      const walk = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+      const regex = new RegExp(`(${escapeRegex(term)})`, 'gi');
+      const nodes = [];
+      while (walk.nextNode()) nodes.push(walk.currentNode);
+      nodes.forEach(node => {
+        if (!regex.test(node.textContent)) return;
+        regex.lastIndex = 0;
+        const frag = document.createDocumentFragment();
+        let last = 0, m;
+        while ((m = regex.exec(node.textContent)) !== null) {
+          frag.appendChild(document.createTextNode(node.textContent.slice(last, m.index)));
+          const mark = document.createElement('mark');
+          mark.textContent = m[1];
+          frag.appendChild(mark);
+          last = regex.lastIndex;
+        }
+        frag.appendChild(document.createTextNode(node.textContent.slice(last)));
+        node.parentNode.replaceChild(frag, node);
+      });
+    }
+
+    function runSearch() {
+      const term = searchInput.value.trim().toLowerCase();
+      searchClear.style.display = term ? 'block' : 'none';
+      const items = document.querySelectorAll('#qa-list > .qa-item');
+      const headers = document.querySelectorAll('#qa-list > .part-header');
+      let visible = 0;
+      items.forEach(item => {
+        const qText = item.querySelector('.qa-text');
+        const aText = item.querySelector('.qa-answer');
+        if (!qText) return;
+        const matches = !term ||
+          qText.textContent.toLowerCase().includes(term) ||
+          (aText && aText.textContent.toLowerCase().includes(term));
+        item.classList.toggle('search-hidden', !matches);
+        if (matches) {
+          visible++;
+          highlight(qText, term);
+          if (aText) highlight(aText, term);
+          if (term && !item.classList.contains('open')) {
+            item.classList.add('open', 'auto-opened');
+            const t = item.querySelector('.qa-toggle');
+            if (t) t.textContent = '×';
+          }
+        } else {
+          highlight(qText, '');
+          if (aText) highlight(aText, '');
+          if (item.classList.contains('auto-opened')) {
+            item.classList.remove('open', 'auto-opened');
+            const t = item.querySelector('.qa-toggle');
+            if (t) t.textContent = '+';
+          }
+        }
+      });
+      headers.forEach(header => {
+        let next = header.nextElementSibling;
+        let hasVisible = false;
+        while (next && !next.classList.contains('part-header')) {
+          if (next.classList.contains('qa-item') && !next.classList.contains('search-hidden')) { hasVisible = true; break; }
+          next = next.nextElementSibling;
+        }
+        header.classList.toggle('search-hidden', !hasVisible);
+      });
+      const total = document.querySelectorAll('#qa-list > .qa-item').length;
+      if (term) {
+        searchCount.textContent = `${visible} of ${total} questions match`;
+        searchNone.style.display = visible === 0 ? 'block' : 'none';
+      } else {
+        searchCount.textContent = '';
+        searchNone.style.display = 'none';
+      }
+      updateCounter();
+    }
+
+    searchInput.addEventListener('input', runSearch);
+    searchClear.addEventListener('click', () => { searchInput.value = ''; runSearch(); searchInput.focus(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== searchInput) { e.preventDefault(); searchInput.focus(); }
+    });
+
+    function toggle(el) {
+      const item = el.closest('.qa-item');
+      const isOpen = item.classList.contains('open');
+      item.classList.toggle('open', !isOpen);
+      item.classList.remove('auto-opened');
+      el.querySelector('.qa-toggle').textContent = isOpen ? '+' : '×';
+      el.setAttribute('aria-expanded', String(!isOpen));
+      updateCounter();
+    }
+
+    document.querySelectorAll('.qa-question').forEach(btn => {
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(btn); }
+      });
+    });
+
+    function expandAll() {
+      document.querySelectorAll('#qa-list > .qa-item').forEach(item => {
+        if (!item.classList.contains('open')) {
+          item.classList.add('open', 'auto-opened');
+          item.querySelector('.qa-toggle').textContent = '×';
+        }
+      });
+      updateCounter();
+    }
+
+    function collapseAll() {
+      document.querySelectorAll('#qa-list > .qa-item').forEach(item => {
+        item.classList.remove('open', 'auto-opened');
+        item.querySelector('.qa-toggle').textContent = '+';
+      });
+      updateCounter();
+    }
+
+    function updateCounter() {
+      const total = document.querySelectorAll('#qa-list > .qa-item:not(.part-header)').length;
+      const open  = document.querySelectorAll('#qa-list > .qa-item.open:not(.part-header)').length;
+      document.getElementById('nav-counter').textContent = `${open} / ${total} explored`;
+    }
+
+    window.addEventListener('scroll', () => {
+      const doc = document.documentElement;
+      const scrolled = doc.scrollTop / (doc.scrollHeight - doc.clientHeight);
+      document.getElementById('progress-bar').style.width = (scrolled * 100) + '%';
+    });
+
+    const qCount = document.querySelectorAll('#qa-list > .qa-item:not(.part-header)').length;
+    const heroCount = document.getElementById('hero-q-count');
+    if (heroCount) heroCount.textContent = qCount;
+
+    const firstItem = document.querySelector('#qa-list > .qa-item');
+    if (firstItem) {
+      firstItem.classList.add('open');
+      const btn = firstItem.querySelector('.qa-question');
+      if (btn) btn.setAttribute('aria-expanded', 'true');
+      firstItem.querySelector('.qa-toggle').textContent = '×';
+    }
+    updateCounter();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.qa-item').forEach((el, index) => {
+      if (index < 3) el.classList.add('visible');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
