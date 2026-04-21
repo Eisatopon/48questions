@@ -37,6 +37,23 @@
       ]
     },
     {
+      "title": "Climate Change: Truth, Uncertainty, and Reality",
+      "hook": "What is settled science, what is genuinely uncertain, and what is political noise? 48 questions with no slogans and no denial.",
+      "category": "Science",
+      "questions": 48,
+      "url": "topics/science/climate-change.html",
+      "status": "published",
+      "date": "2026-04-21",
+      "featured": false,
+      "preview": [
+        "Is the Earth actually warming — and how do we know?",
+        "What is genuinely uncertain in climate science?",
+        "Are climate models reliable?",
+        "What is the difference between 1.5°C and 2°C of warming?",
+        "Who pays for climate action — and who should?"
+      ]
+    },
+    {
       "title": "How AI Actually Works",
       "hook": "You use AI every day. You probably don't understand how it works. Here's the honest explanation — no jargon, no hype.",
       "category": "Science",
