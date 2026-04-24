@@ -3,6 +3,40 @@
   "generated": "manual",
   "topics": [
     {
+      "title": "Will China Invade Taiwan? The Conflict Explained",
+      "hook": "A 75-year conflict with no war — yet. Semiconductors, superpowers, and the question that could reshape the global economy.",
+      "category": "Politics",
+      "questions": 48,
+      "url": "topics/politics/china-taiwan.html",
+      "status": "published",
+      "date": "2026-04-24",
+      "featured": false,
+      "preview": [
+        "Is Taiwan actually a country?",
+        "Why does Taiwan make 90% of the world's most advanced chips?",
+        "What is 'strategic ambiguity' — and is it still working?",
+        "Would the US actually fight to defend Taiwan?",
+        "What could a Chinese blockade look like — and how would the world respond?"
+      ]
+    },
+    {
+      "title": "The 2008 Crash: What Really Happened",
+      "hook": "Everyone felt it. Almost no one understands what actually happened — or who let it. 48 questions about the crisis that changed everything.",
+      "category": "Business",
+      "questions": 48,
+      "url": "topics/business/2008-crash.html",
+      "status": "published",
+      "date": "2026-04-24",
+      "featured": false,
+      "preview": [
+        "Why did everyone believe the financial system was safe before 2008?",
+        "What was a CDO — and how did it create the illusion of safety?",
+        "Why did the government let Lehman fail when it had rescued Bear Stearns?",
+        "Were the banks 'too big to fail' — and is that still true?",
+        "Could the 2008 crisis happen again?"
+      ]
+    },
+    {
       "title": "How US Elections Actually Work",
       "hook": "The Electoral College. The Senate. The House. Midterms. Why does the world's oldest democracy elect its president this way — and has it always?",
       "category": "Politics",
@@ -10,14 +44,14 @@
       "url": "topics/politics/how-us-elections-work.html",
       "status": "published",
       "date": "2026-04-07",
+      "featured": true,
       "preview": [
         "Do Americans actually directly elect the President?",
         "Can a candidate win without winning the popular vote?",
         "Why does every state get two senators regardless of population?",
         "What is the filibuster — and why can 41 senators block everything?",
         "Could the US ever abolish the Electoral College?"
-      ],
-      "featured": true
+      ]
     },
     {
       "title": "The Hidden Cost of AI: Energy",
@@ -61,14 +95,14 @@
       "url": "topics/science/how-ai-works.html",
       "status": "published",
       "date": "2026-04-07",
+      "featured": true,
       "preview": [
         "What is artificial intelligence — really?",
         "Does ChatGPT understand, or just predict?",
         "Why does AI sometimes make things up?",
         "Will AI take your job?",
         "Should we be afraid?"
-      ],
-      "featured": true
+      ]
     },
     {
       "title": "The US–Iran War: What Is Actually Happening",
@@ -78,14 +112,14 @@
       "url": "topics/politics/iran-war.html",
       "status": "published",
       "date": "2026-04-06",
+      "featured": true,
       "preview": [
         "Is the US actually at war with Iran?",
         "Who is in charge in Iran now?",
         "Could Iran close the Strait of Hormuz?",
         "Who is actually winning right now?",
         "Could this trigger World War III?"
-      ],
-      "featured": true
+      ]
     },
     {
       "title": "Rare Earth Minerals: The Hidden War Behind Your Phone",
@@ -95,14 +129,14 @@
       "url": "topics/politics/rare-earths.html",
       "status": "published",
       "date": "2026-04-05",
+      "featured": false,
       "preview": [
         "How many rare earth elements are in your phone right now?",
         "Why did China cut off Japan in 2010?",
         "Could this trigger a war?",
         "Why can't we just use something else?",
         "Which country will be the next China in rare earths?"
-      ],
-      "featured": false
+      ]
     },
     {
       "title": "Trump's Tariffs Explained",
@@ -112,14 +146,14 @@
       "url": "topics/politics/trumps-tariffs.html",
       "status": "published",
       "date": "2026-04-04",
+      "featured": true,
       "preview": [
         "Who actually pays a tariff?",
         "Why did Trump target China specifically?",
         "What happened to American farmers?",
         "Could this lead to a recession?",
         "Every tariff has a flag on it. The bill never does."
-      ],
-      "featured": true
+      ]
     },
     {
       "title": "The Gulf War",
@@ -129,30 +163,19 @@
       "url": "topics/history/gulf-war.html",
       "status": "published",
       "date": "2026-04-03",
+      "featured": false,
       "preview": [
         "Why did Saddam believe no one would stop him?",
         "Why did Arab countries join a coalition against another Arab nation?",
         "What were Scud missiles — and why did they matter?",
         "Why didn't the coalition march to Baghdad?",
         "What was the long-term impact — and does it connect to 9/11?"
-      ],
-      "featured": false
+      ]
     },
     {
       "title": "The Fall of Constantinople",
       "hook": "The city had survived a thousand years. What finally brought it down in 1453?",
       "category": "History",
-      "questions": 0,
-      "url": "",
-      "status": "coming-soon",
-      "date": "",
-      "preview": [],
-      "featured": false
-    },
-    {
-      "title": "The 2008 Financial Crisis",
-      "hook": "Everyone felt it. Almost no one understands what actually happened — or who let it.",
-      "category": "Business",
       "questions": 0,
       "url": "",
       "status": "coming-soon",
